@@ -36,7 +36,7 @@
       --vk: #0077FF;
       --yt: #FF0000;
     }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
     body {
       font-family: 'Inter', sans-serif;
       background: var(--bg);
@@ -1057,6 +1057,26 @@
       .footer-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 768px) {
+	
+	  /* Уменьшить декоративные шары */
+.bg-orb { opacity: 0.3; }
+.bg-orb-1 { width: 300px; height: 300px; top: -100px; left: -100px; }
+.bg-orb-2 { width: 250px; height: 250px; right: -80px; }
+.bg-orb-3 { width: 200px; height: 200px; }
+
+/* Бейджи не вылезают за край */
+.fb-1 { right: 4px; }
+.fb-2 { left: 4px; }
+
+/* Убрать свечение (вылезает вправо) */
+.about-glow { display: none; }
+
+/* Анимации — только вертикально, без бокового сдвига */
+.reveal-left { transform: translateY(30px); }
+.reveal-right { transform: translateY(30px); }
+
+/* Обрезать вылезающее содержимое hero */
+.hero-visual { overflow: hidden; }
       nav { display: none; }
       .h-cta { display: none; }
       .mbtn { display: flex; }
