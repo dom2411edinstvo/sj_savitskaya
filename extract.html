@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html><head><title>CSS Extractor</title></head>
+<body>
+<h2>Extracting CSS from remote file...</h2>
+<pre id="out" style="white-space:pre-wrap; font-size:11px; max-height:90vh; overflow:auto;"></pre>
+<script>
+(async () => {
+  try {
+    const resp = await fetch('https://api.github.com/repos/dom2411edinstvo/sj_savitskaya/git/blobs/fb0a428a034c6463f85faaf8ca8aa799ea54498e');
+    const data = await resp.json();
+    const decoded = atob(data.content.replace(/\n/g, ''));
+    
+    // Extract only <style> content
+    const styleMatch = decoded.match(/<style>([\s\S]*?)<\/style>/);
+    if (styleMatch) {
+      const css = styleMatch[1];
+      const lines = css.split('\n');
+      const out = document.getElementById('out');
+      
+      // Find lines containing hero, @media, display, or visual
+      const results = [];
+      let inMedia = false;
+      let braceCount = 0;
+      
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        
+        // Capture everything related to hero-visual, @media, and display:none
+        if (line.match(/hero-visual|hero-right|hero-img|\.hero\b|@media/i) || inMedia) {
+          results.push(`${i+1}: ${line}`);
+          
+          if (line.includes('@media')) {
+            inMedia = true;
+            braceCount = 0;
+          }
+          
+          if (inMedia) {
+            for (const ch of line) {
+              if (ch === '{') braceCount++;
+              if (ch === '}') braceCount--;
+            }
+            if (braceCount <= 0 && results.length > 1) {
+              inMedia = false;
+              results.push('---END MEDIA---');
+            }
+          }
+        }
+      }
+      
+      out.textContent = results.join('\n');
+    } else {
+      document.getElementById('out').textContent = 'No <style> tag found';
+    }
+  } catch(e) {
+    document.getElementById('out').textContent = 'Error: ' + e.message;
+  }
+})();
+</script>
+</body>
+</html>
