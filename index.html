@@ -1087,40 +1087,12 @@
       .about-stats { grid-template-columns: 1fr 1fr; }
       .gallery-grid { grid-template-columns: repeat(3, 1fr); }
     }
-	  @media (max-width: 768px) {
-  .hero-badge {  /* ← реальный класс подставится автоматически */
-    transform: scale(0.33) !important;
-  }
-}
     @media (max-width: 480px) {
       .hero-stats { gap: 16px; }
       .stat-divider { display: none; }
       .about-stats { grid-template-columns: 1fr; }
       .gallery-grid { grid-template-columns: repeat(2, 1fr); }
     }
-	  @media (max-width: 768px) {
-  .hero-visual { display: block !important; order: -1; margin: 0 auto 24px; max-width: 320px; }
-}
-	  /* =============================================
-   Уменьшение плашек hero-фото в 3 раза (мобильные)
-   ============================================= */
-@media (max-width: 768px) {
-  .hero-badge {
-    transform: scale(0.33) !important;
-    transform-origin: bottom right !important;
-    margin-top: -20px !important;
-  }
-}
-
-/* Если плашки НЕ уменьшились — замените класс выше
-   на один из этих вариантов (раскомментируйте):
-   
-   .hero-badge { ... }
-   .hero-info  { ... }
-   .hero-float { ... }
-   Или универсальный (все дочерние блоки hero-visual кроме фото):
-   .hero-visual > div:not(:first-child) { ... }
-*/
   </style>
 </head>
 <body>
@@ -1246,25 +1218,6 @@
         <div class="reveal">
           <img src="img/desc.jpg" alt="Super Jump — описание метода" class="hero-banner-img">
         </div>
-		  <!-- ===== DESC IMAGE ===== -->
-<section class="desc-section" id="desc">
-  <div class="con">
-    <div class="desc-wrap" id="descWrap">
-      <img src="img/desc.jpg" alt="Описание программы" class="desc-img">
-      <div class="desc-hint">
-        <span>🔍</span> Нажмите, чтобы увеличить
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Lightbox для desc.jpg -->
-<div class="desc-lb" id="descLb">
-  <span class="desc-lb-x" id="descLbClose">&times;</span>
-  <div class="desc-lb-scroll">
-    <img src="img/desc.jpg" alt="Описание программы">
-  </div>
-</div>
         <div class="video-block reveal">
           <h2 class="video-block-title">Что такое <span class="grad-text">Super Jump</span></h2>
           <div class="video-wrapper">
