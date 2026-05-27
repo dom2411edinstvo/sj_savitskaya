@@ -62,6 +62,7 @@
       margin: 0 auto;
       padding: 0 clamp(16px, 4vw, 40px);
     }
+
     /* ===================== ДЕКОР ФОНА ===================== */
     .bg-orb {
       position: fixed;
@@ -92,6 +93,7 @@
     @keyframes orbDrift1 { 0% { transform: translate(0,0); } 100% { transform: translate(80px, 60px); } }
     @keyframes orbDrift2 { 0% { transform: translate(0,0); } 100% { transform: translate(-60px, -80px); } }
     @keyframes orbDrift3 { 0% { transform: translate(0,0); } 100% { transform: translate(40px, -50px); } }
+
     /* ===================== HEADER ===================== */
     header {
       position: fixed; top: 0; left: 0; right: 0;
@@ -150,6 +152,7 @@
       white-space: nowrap; flex-shrink: 0;
     }
     .h-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(168,85,247,0.4); }
+
     /* Hamburger */
     .mbtn {
       display: none; width: 32px; height: 22px;
@@ -174,6 +177,7 @@
       margin-top: 10px; padding: 14px 36px; border-radius: 50px;
       background: var(--grad); font-size: 15px; font-weight: 700; color: #fff;
     }
+
     /* ===================== REVEAL ANIMATION ===================== */
     .reveal {
       opacity: 0; transform: translateY(30px);
@@ -189,6 +193,7 @@
     .reveal-d3 { transition-delay: 0.3s; }
     .reveal-d4 { transition-delay: 0.4s; }
     .reveal-d5 { transition-delay: 0.5s; }
+
     /* ===================== HERO ===================== */
     .hero {
       min-height: 100vh;
@@ -277,6 +282,7 @@
       background: transparent; cursor: pointer;
     }
     .btn-secondary:hover { border-color: rgba(168,85,247,0.6); color: #fff; background: rgba(168,85,247,0.08); }
+
     /* HERO VISUAL */
     .hero-visual {
       display: flex; align-items: center; justify-content: center;
@@ -309,32 +315,34 @@
       object-fit: cover;
       object-position: top center;
     }
-    /* Floating badges */
+
+    /* Floating badges — оригинальный размер (×3 от уменьшённого) */
     .float-badge {
       position: absolute; z-index: 2;
       background: rgba(12,12,24,0.85);
       backdrop-filter: blur(16px);
       border: 1px solid rgba(168,85,247,0.25);
-      border-radius: 16px; padding: 10px 14px;
+      border-radius: 14px; padding: 9px 15px;
       display: flex; align-items: center; gap: 9px;
       box-shadow: 0 8px 30px rgba(0,0,0,0.4);
       white-space: nowrap;
     }
-    .float-badge .fb-icon { font-size: 22px; flex-shrink: 0; }
-    .float-badge .fb-val { font-size: 14px; font-weight: 700; line-height: 1.1; }
-    .float-badge .fb-lbl { font-size: 10px; color: var(--text-muted); font-weight: 500; }
+    .float-badge .fb-icon { font-size: 21px; flex-shrink: 0; }
+    .float-badge .fb-val { font-size: 15px; font-weight: 700; line-height: 1.1; }
+    .float-badge .fb-lbl { font-size: 9px; color: var(--text-muted); font-weight: 500; }
     .fb-1 {
-      top: 10%; right: -18px;
+      top: 10%; right: -20px;
       animation: floatUD 3.5s ease-in-out infinite;
     }
     .fb-2 {
-      bottom: 14%; left: -18px;
+      bottom: 14%; left: -20px;
       animation: floatUD 3.5s ease-in-out infinite 1.5s;
     }
     @keyframes floatUD {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
     }
+
     /* Hero stats line */
     .hero-stats {
       display: flex; gap: 24px; margin-top: 34px; flex-wrap: wrap;
@@ -347,12 +355,14 @@
     }
     .hero-stat-lbl { font-size: 11px; color: var(--text-muted); font-weight: 500; letter-spacing: 0.3px; }
     .stat-divider { width: 1px; background: rgba(255,255,255,0.08); align-self: stretch; }
+
     /* Decorative line */
     .hero-line {
       width: 60px; height: 2px;
       background: var(--grad);
       border-radius: 2px; margin-bottom: 22px;
     }
+
     /* ===================== SECTION COMMON ===================== */
     section { padding: clamp(60px, 8vw, 100px) 0; position: relative; }
     .sec-label {
@@ -392,6 +402,7 @@
       background: linear-gradient(90deg, transparent, rgba(168,85,247,0.3), rgba(236,72,153,0.2), transparent);
       margin: 0;
     }
+
     /* ===================== HERO BANNER (desc.jpg + video) ===================== */
     .hero-banner-section {
       padding: clamp(40px, 6vw, 70px) 0;
@@ -432,6 +443,7 @@
       width: 100%; height: 100%;
       border: none;
     }
+
     /* ===================== ABOUT ===================== */
     .about-sec { background: var(--bg2); }
     .about-grid {
@@ -485,6 +497,7 @@
     .about-hl-text { flex: 1; }
     .about-hl-text strong { font-size: 14px; font-weight: 700; display: block; margin-bottom: 3px; }
     .about-hl-text span { font-size: 12px; color: var(--text-muted); }
+
     /* Stats cards */
     .about-stats {
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
@@ -539,6 +552,7 @@
     .about-img-role {
       font-size: 12px; color: var(--text-muted); font-weight: 500; letter-spacing: 0.5px;
     }
+
     /* Decorative glow bg */
     .about-glow {
       position: absolute; top: -60px; right: -60px;
@@ -547,6 +561,7 @@
       border-radius: 50%;
       pointer-events: none;
     }
+
     /* ===================== GALLERY ===================== */
     .gallery-sec {
       padding: clamp(50px, 7vw, 80px) 0;
@@ -568,93 +583,115 @@
       transition: transform 0.3s, border-color 0.3s;
     }
     .gallery-item:hover { transform: scale(1.03); border-color: rgba(168,85,247,0.4); }
-    .gallery-item img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s;
-    }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
     .gallery-item:hover img { transform: scale(1.08); }
-    .gallery-item-overlay {
+    .gallery-item::after {
+      content: '🔍';
       position: absolute; inset: 0;
-      background: linear-gradient(180deg, transparent 50%, rgba(8,8,15,0.7) 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+      background: rgba(168,85,247,0.3);
       opacity: 0; transition: opacity 0.3s;
-      display: flex; align-items: flex-end; padding: 12px;
     }
-    .gallery-item:hover .gallery-item-overlay { opacity: 1; }
+    .gallery-item:hover::after { opacity: 1; }
+
     /* Lightbox */
     .lightbox {
       position: fixed; inset: 0; z-index: 200;
-      background: rgba(0,0,0,0.92);
-      backdrop-filter: blur(10px);
+      background: rgba(0,0,0,0.93);
       display: flex; align-items: center; justify-content: center;
       opacity: 0; visibility: hidden; transition: 0.3s;
+      padding: 20px;
     }
     .lightbox.open { opacity: 1; visibility: visible; }
-    .lightbox img { max-width: 90vw; max-height: 85vh; border-radius: 16px; object-fit: contain; }
-    .lb-close {
-      position: absolute; top: 20px; right: 24px;
-      font-size: 28px; cursor: pointer; color: #fff; opacity: 0.7;
-      transition: opacity 0.2s; z-index: 201; background: none; border: none; font-family: inherit;
+    .lightbox-inner {
+      position: relative; max-width: 900px; width: 100%;
     }
-    .lb-close:hover { opacity: 1; }
-    .lb-nav {
-      position: absolute; top: 50%; transform: translateY(-50%);
-      font-size: 36px; cursor: pointer; color: #fff; opacity: 0.6;
-      transition: opacity 0.2s; z-index: 201;
-      background: rgba(255,255,255,0.08); border: none; border-radius: 50%;
-      width: 52px; height: 52px; display: flex; align-items: center; justify-content: center;
+    .lightbox-inner img {
+      width: 100%; border-radius: 16px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.7);
     }
-    .lb-nav:hover { opacity: 1; background: rgba(255,255,255,0.16); }
-    .lb-prev { left: 20px; }
-    .lb-next { right: 20px; }
-    /* ===================== DESC LIGHTBOX ===================== */
+    .lb-close, .lb-prev, .lb-next {
+      position: absolute;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: #fff; cursor: pointer; border-radius: 50%;
+      width: 44px; height: 44px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+      transition: background 0.3s;
+    }
+    .lb-close:hover, .lb-prev:hover, .lb-next:hover { background: rgba(168,85,247,0.4); }
+    .lb-close { top: -50px; right: 0; }
+    .lb-prev { left: -55px; top: 50%; transform: translateY(-50%); }
+    .lb-next { right: -55px; top: 50%; transform: translateY(-50%); }
+
+    /* Desc lightbox */
     .desc-lightbox {
       position: fixed; inset: 0; z-index: 200;
-      background: rgba(0,0,0,0.92);
-      backdrop-filter: blur(10px);
+      background: rgba(0,0,0,0.95);
       display: flex; align-items: center; justify-content: center;
       opacity: 0; visibility: hidden; transition: 0.3s;
+      padding: 20px;
+      cursor: zoom-out;
     }
     .desc-lightbox.open { opacity: 1; visibility: visible; }
-    .desc-lightbox img { max-width: 92vw; max-height: 90vh; border-radius: 16px; object-fit: contain; }
-    .desc-lb-close {
-      position: absolute; top: 20px; right: 24px;
-      font-size: 28px; cursor: pointer; color: #fff; opacity: 0.7;
-      transition: opacity 0.2s; z-index: 201; background: none; border: none; font-family: inherit;
+    .desc-lightbox img {
+      max-width: 95vw; max-height: 95vh;
+      border-radius: 16px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+      cursor: default;
     }
-    .desc-lb-close:hover { opacity: 1; }
+    .desc-lb-close {
+      position: fixed; top: 20px; right: 20px;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: #fff; cursor: pointer; border-radius: 50%;
+      width: 44px; height: 44px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+      transition: background 0.3s;
+    }
+    .desc-lb-close:hover { background: rgba(168,85,247,0.4); }
+
     /* ===================== SERVICES ===================== */
+    .services-sec { background: var(--bg); }
     .services-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
     .srv-card {
+      padding: 28px 24px;
       background: var(--card);
       border: 1px solid var(--card-border);
-      border-radius: 22px;
-      padding: 28px;
+      border-radius: 20px;
       transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
       position: relative; overflow: hidden;
     }
     .srv-card::before {
       content: '';
       position: absolute; top: 0; left: 0; right: 0; height: 2px;
-      background: var(--grad); opacity: 0;
-      transition: opacity 0.3s;
+      background: var(--grad);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 0.4s;
     }
-    .srv-card:hover { border-color: rgba(168,85,247,0.3); transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
-    .srv-card:hover::before { opacity: 1; }
-    .srv-icon { font-size: 36px; margin-bottom: 18px; }
+    .srv-card:hover { border-color: rgba(168,85,247,0.3); transform: translateY(-6px); box-shadow: 0 20px 50px rgba(168,85,247,0.1); }
+    .srv-card:hover::before { transform: scaleX(1); }
+    .srv-icon { font-size: 36px; margin-bottom: 16px; }
     .srv-title { font-size: 17px; font-weight: 700; margin-bottom: 10px; }
-    .srv-desc { font-size: 13px; color: var(--text-muted); line-height: 1.7; margin-bottom: 18px; }
+    .srv-desc { font-size: 13px; color: var(--text-muted); line-height: 1.7; margin-bottom: 16px; }
     .srv-tag {
       display: inline-block; padding: 4px 12px;
       background: rgba(168,85,247,0.1);
       border: 1px solid rgba(168,85,247,0.2);
-      border-radius: 50px;
-      font-size: 11px; font-weight: 600; color: #c084fc;
+      border-radius: 20px;
+      font-size: 10px; font-weight: 600; letter-spacing: 0.5px;
+      color: #c084fc; text-transform: uppercase;
     }
+
     /* ===================== PROGRAM ===================== */
     .program-sec { background: var(--bg2); }
     .program-grid {
@@ -663,29 +700,31 @@
       gap: 16px;
     }
     .prog-card {
+      padding: 22px 18px;
       background: var(--card);
       border: 1px solid var(--card-border);
-      border-radius: 20px;
-      padding: 24px 20px;
-      position: relative; overflow: hidden;
+      border-radius: 18px;
       transition: border-color 0.3s, transform 0.3s;
+      position: relative;
     }
     .prog-card:hover { border-color: rgba(168,85,247,0.35); transform: translateY(-4px); }
     .prog-num {
-      font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
-      color: var(--text-muted); margin-bottom: 14px;
+      font-size: 12px; font-weight: 800; letter-spacing: 1px;
+      color: var(--text-muted); margin-bottom: 10px;
     }
-    .prog-icon { font-size: 30px; margin-bottom: 12px; }
+    .prog-icon { font-size: 28px; margin-bottom: 12px; }
     .prog-title { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
-    .prog-desc { font-size: 12px; color: var(--text-muted); line-height: 1.65; margin-bottom: 14px; }
+    .prog-desc { font-size: 12px; color: var(--text-muted); line-height: 1.7; margin-bottom: 12px; }
     .prog-tag {
       display: inline-block; padding: 3px 10px;
-      background: rgba(168,85,247,0.08);
-      border: 1px solid rgba(168,85,247,0.18);
-      border-radius: 50px;
-      font-size: 10px; font-weight: 600; color: #c084fc;
+      background: rgba(168,85,247,0.1);
+      border-radius: 20px;
+      font-size: 10px; font-weight: 600;
+      color: #c084fc;
     }
+
     /* ===================== APPROACH ===================== */
+    .approach-sec { background: var(--bg); }
     .approach-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -694,23 +733,23 @@
     }
     .approach-items { display: flex; flex-direction: column; gap: 20px; }
     .approach-item {
-      display: flex; align-items: flex-start; gap: 20px;
+      display: flex; gap: 18px; align-items: flex-start;
       padding: 22px;
       background: var(--card);
       border: 1px solid var(--card-border);
       border-radius: 18px;
-      transition: border-color 0.3s;
+      transition: border-color 0.3s, transform 0.3s;
     }
-    .approach-item:hover { border-color: rgba(168,85,247,0.3); }
+    .approach-item:hover { border-color: rgba(168,85,247,0.3); transform: translateX(4px); }
     .approach-item-icon {
-      font-size: 28px; flex-shrink: 0;
-      width: 52px; height: 52px;
+      font-size: 30px; flex-shrink: 0;
+      width: 54px; height: 54px;
       background: linear-gradient(135deg, rgba(168,85,247,0.15), rgba(236,72,153,0.1));
       border-radius: 14px;
       display: flex; align-items: center; justify-content: center;
     }
-    .approach-item h4 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
-    .approach-item p { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
+    .approach-item h4 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+    .approach-item p { font-size: 13px; color: var(--text-muted); line-height: 1.7; }
     .approach-card {
       background: var(--card);
       border: 1px solid var(--card-border);
@@ -718,38 +757,55 @@
       padding: 32px;
       position: sticky; top: 100px;
     }
-    .approach-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 22px; }
-    .approach-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 26px; }
+    .approach-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 700; margin-bottom: 20px;
+    }
+    .approach-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
     .approach-list li {
-      display: flex; align-items: center; gap: 12px;
+      display: flex; gap: 10px; align-items: center;
       font-size: 14px; color: var(--text-light);
+      padding: 10px 14px;
+      background: rgba(168,85,247,0.04);
+      border-radius: 10px;
+      border: 1px solid rgba(168,85,247,0.08);
     }
     .approach-list li span:first-child { font-size: 18px; flex-shrink: 0; }
-    .approach-note { font-size: 13px; color: var(--text-muted); line-height: 1.7; margin-bottom: 22px; }
+    .approach-desc {
+      font-size: 13px; color: var(--text-muted); line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
     /* ===================== BOOK ===================== */
-    .book-sec { background: var(--bg3); }
+    .book-sec { background: var(--bg2); }
     .book-grid {
       display: grid;
       grid-template-columns: auto 1fr;
-      gap: clamp(30px, 5vw, 70px);
+      gap: clamp(30px, 5vw, 60px);
       align-items: center;
     }
-    .book-img-wrap {
-      width: clamp(180px, 22vw, 280px);
-    }
+    .book-img-wrap { position: relative; }
     .book-img {
-      width: 100%;
-      border-radius: 18px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(168,85,247,0.2);
+      width: clamp(160px, 20vw, 240px);
+      border-radius: 16px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 40px rgba(168,85,247,0.2);
+      transition: transform 0.4s;
     }
+    .book-img:hover { transform: rotate(-3deg) scale(1.05); }
     .book-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 6px 14px;
-      background: rgba(251,191,36,0.1);
-      border: 1px solid rgba(251,191,36,0.3);
-      border-radius: 50px;
-      font-size: 11px; font-weight: 600; color: var(--gold);
-      margin-bottom: 16px;
+      position: absolute; top: -14px; right: -14px;
+      background: var(--grad);
+      border-radius: 50%;
+      width: 56px; height: 56px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; font-weight: 700; text-align: center;
+      line-height: 1.2;
+      box-shadow: 0 8px 20px rgba(168,85,247,0.4);
+    }
+    .book-label {
+      font-size: 11px; font-weight: 600; letter-spacing: 2px;
+      text-transform: uppercase; color: #a855f7;
+      margin-bottom: 10px;
     }
     .book-title {
       font-family: 'Playfair Display', serif;
@@ -757,151 +813,190 @@
       font-weight: 800; line-height: 1.2;
       margin-bottom: 16px;
     }
-    .book-desc {
-      font-size: clamp(13px, 1.4vw, 15px);
-      color: var(--text-light); line-height: 1.8;
-      margin-bottom: 26px;
+    .book-title .grad-text {
+      background: var(--grad);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
+    .book-desc {
+      font-size: clamp(13px, 1.3vw, 15px);
+      color: var(--text-light); line-height: 1.85;
+      margin-bottom: 24px;
+    }
+    .book-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 28px; border-radius: 50px;
+      background: var(--grad);
+      font-size: 14px; font-weight: 700; color: #fff;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .book-cta:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(168,85,247,0.4); }
+
     /* ===================== REVIEWS ===================== */
+    .reviews-sec { background: var(--bg); }
     .reviews-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
     .review-card {
+      padding: 26px;
       background: var(--card);
       border: 1px solid var(--card-border);
-      border-radius: 22px;
-      padding: 28px;
-      position: relative;
+      border-radius: 20px;
       transition: border-color 0.3s, transform 0.3s;
     }
     .review-card:hover { border-color: rgba(168,85,247,0.25); transform: translateY(-4px); }
-    .review-stars { color: var(--gold); font-size: 14px; margin-bottom: 14px; letter-spacing: 2px; }
+    .review-stars { font-size: 14px; margin-bottom: 14px; letter-spacing: 2px; }
     .review-text {
-      font-size: 14px; color: var(--text-light);
-      line-height: 1.75; margin-bottom: 20px;
-      font-style: italic;
+      font-size: 14px; color: var(--text-light); line-height: 1.8;
+      margin-bottom: 18px; font-style: italic;
     }
-    .review-author { display: flex; align-items: center; gap: 12px; }
-    .review-avatar {
-      width: 40px; height: 40px; border-radius: 50%;
-      background: linear-gradient(135deg, rgba(168,85,247,0.3), rgba(236,72,153,0.2));
-      display: flex; align-items: center; justify-content: center;
-      font-size: 20px; flex-shrink: 0;
-    }
+    .review-author { display: flex; align-items: center; gap: 10px; }
+    .review-avatar { font-size: 28px; }
     .review-name { font-size: 13px; font-weight: 700; }
-    .review-loc { font-size: 11px; color: var(--text-muted); }
-    /* ===================== CTA ===================== */
+    .review-meta { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+
+    /* ===================== CTA BANNER ===================== */
     .cta-sec {
       background: var(--bg2);
       text-align: center;
     }
-    .cta-icon { font-size: 48px; margin-bottom: 16px; }
+    .cta-inner {
+      max-width: 700px; margin: 0 auto;
+    }
+    .cta-icon { font-size: 48px; margin-bottom: 20px; }
     .cta-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(26px, 4vw, 46px);
+      font-size: clamp(26px, 4vw, 44px);
       font-weight: 800; line-height: 1.15;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
-    .cta-desc { font-size: clamp(14px, 1.5vw, 16px); color: var(--text-light); max-width: 520px; margin: 0 auto 32px; }
-    .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .cta-title .grad-text {
+      background: var(--grad);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .cta-desc {
+      font-size: clamp(14px, 1.4vw, 16px);
+      color: var(--text-light); line-height: 1.8;
+      margin-bottom: 30px;
+    }
+    .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
     /* ===================== CONTACTS ===================== */
     .contacts-sec { background: var(--bg3); }
     .contacts-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: clamp(30px, 5vw, 70px);
+      align-items: start;
     }
-    .soc-links { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+    .contacts-label {
+      font-size: 11px; font-weight: 600; letter-spacing: 2.5px;
+      text-transform: uppercase; color: #a855f7;
+      margin-bottom: 10px;
+    }
+    .contacts-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(24px, 3.5vw, 38px);
+      font-weight: 800; line-height: 1.15;
+      margin-bottom: 10px;
+    }
+    .contacts-title .grad-text {
+      background: var(--grad);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .contacts-desc {
+      font-size: clamp(13px, 1.3vw, 15px);
+      color: var(--text-light); line-height: 1.8;
+      margin-bottom: 28px;
+    }
+    .soc-links { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
     .soc-link {
       display: flex; align-items: center; gap: 14px;
-      padding: 16px 20px;
+      padding: 14px 18px;
       background: var(--card);
       border: 1px solid var(--card-border);
-      border-radius: 16px;
-      transition: transform 0.3s, background 0.3s;
-      cursor: pointer;
+      border-radius: 14px;
+      transition: transform 0.3s, border-color 0.3s;
     }
-    .soc-link:hover { transform: translateX(6px); background: rgba(255,255,255,0.06); }
+    .soc-link:hover { transform: translateX(4px); }
     .soc-icon {
-      width: 44px; height: 44px; border-radius: 12px;
+      width: 40px; height: 40px; border-radius: 10px; flex-shrink: 0;
       display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
     }
-    .soc-icon svg { width: 22px; height: 22px; fill: currentColor; }
-    .soc-link.tg .soc-icon { background: rgba(38,165,228,0.15); color: #26A5E4; }
-    .soc-link.wa .soc-icon { background: rgba(37,211,102,0.15); color: #25D366; }
-    .soc-link.vk .soc-icon { background: rgba(0,119,255,0.15); color: #0077FF; }
-    .soc-link.yt .soc-icon { background: rgba(255,0,0,0.15); color: #FF0000; }
+    .soc-icon svg { width: 20px; height: 20px; fill: #fff; }
+    .soc-link.tg .soc-icon { background: rgba(38,165,228,0.15); }
+    .soc-link.wa .soc-icon { background: rgba(37,211,102,0.15); }
+    .soc-link.vk .soc-icon { background: rgba(0,119,255,0.15); }
+    .soc-link.yt .soc-icon { background: rgba(255,0,0,0.15); }
     .soc-text { flex: 1; }
     .soc-name { font-size: 14px; font-weight: 700; }
-    .soc-handle { font-size: 12px; color: var(--text-muted); }
-    .soc-arrow { font-size: 18px; color: var(--text-muted); }
+    .soc-handle { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+    .soc-arrow { font-size: 16px; color: var(--text-muted); transition: color 0.3s, transform 0.3s; }
+    .soc-link:hover .soc-arrow { color: #a855f7; transform: translateX(3px); }
     .contacts-phone {
-      display: flex; align-items: center; gap: 12px;
-      font-size: 22px; font-weight: 700;
-      padding: 16px 20px;
+      display: flex; align-items: center; gap: 10px;
+      font-size: 22px; font-weight: 800;
+      padding: 18px 22px;
       background: var(--card);
       border: 1px solid var(--card-border);
-      border-radius: 16px;
-      transition: border-color 0.3s;
+      border-radius: 14px;
+      transition: border-color 0.3s, transform 0.3s;
     }
-    .contacts-phone:hover { border-color: rgba(168,85,247,0.4); }
+    .contacts-phone:hover { border-color: rgba(168,85,247,0.3); transform: translateX(4px); }
     .ph-icon { font-size: 24px; }
-    /* ===================== FORM ===================== */
+
+    /* Contact form */
     .contact-form {
       background: var(--card);
       border: 1px solid var(--card-border);
       border-radius: 24px;
-      padding: clamp(24px, 3vw, 36px);
+      padding: 32px;
     }
     .form-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(20px, 2.5vw, 26px);
-      font-weight: 700; margin-bottom: 8px;
+      font-size: 22px; font-weight: 700; margin-bottom: 6px;
     }
     .form-sub {
-      font-size: 13px; color: var(--text-muted); margin-bottom: 24px; line-height: 1.6;
+      font-size: 13px; color: var(--text-muted); margin-bottom: 22px; line-height: 1.6;
     }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
-    .form-label { font-size: 12px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.3px; }
+    .form-label { font-size: 12px; font-weight: 600; color: var(--text-light); letter-spacing: 0.3px; }
     .form-input, .form-select, .form-textarea {
+      padding: 12px 16px;
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 12px;
-      padding: 12px 16px;
-      font-size: 14px; color: var(--text);
-      font-family: inherit;
-      transition: border-color 0.3s;
-      outline: none; width: 100%;
+      border-radius: 10px;
+      color: var(--text);
+      font-size: 14px;
+      font-family: 'Inter', sans-serif;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      outline: none;
     }
     .form-input:focus, .form-select:focus, .form-textarea:focus {
       border-color: rgba(168,85,247,0.5);
-      background: rgba(168,85,247,0.05);
+      box-shadow: 0 0 0 3px rgba(168,85,247,0.1);
     }
-    .form-select { cursor: pointer; -webkit-appearance: none; }
+    .form-select { cursor: pointer; }
     .form-select option { background: #1a1030; }
     .form-textarea { resize: vertical; min-height: 100px; }
     .form-submit {
       width: 100%;
       padding: 14px;
       background: var(--grad);
-      border: none; border-radius: 50px;
+      border: none; border-radius: 12px;
       font-size: 15px; font-weight: 700; color: #fff;
-      cursor: pointer;
-      transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
-      font-family: inherit;
-      margin-top: 6px;
+      cursor: pointer; transition: transform 0.3s, box-shadow 0.3s;
     }
-    .form-submit:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(168,85,247,0.4); }
-    .form-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+    .form-submit:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(168,85,247,0.4); }
+    .form-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; box-shadow: none; }
+
     /* ===================== FOOTER ===================== */
     footer {
-      background: var(--bg);
-      border-top: 1px solid rgba(255,255,255,0.06);
-      padding: clamp(50px, 6vw, 80px) 0 30px;
+      background: rgba(5,5,12,1);
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 60px 0 30px;
     }
     .footer-grid {
       display: grid;
@@ -909,101 +1004,109 @@
       gap: 40px;
       margin-bottom: 40px;
     }
+    .footer-brand {}
     .footer-logo {
       display: flex; align-items: center; gap: 10px;
-      cursor: pointer; margin-bottom: 16px;
+      margin-bottom: 14px; cursor: pointer;
     }
     .footer-desc {
-      font-size: 13px; color: var(--text-muted); line-height: 1.7;
+      font-size: 13px; color: var(--text-muted); line-height: 1.8;
       max-width: 280px; margin-bottom: 20px;
     }
-    .footer-socials { display: flex; gap: 10px; }
+    .footer-socials { display: flex; gap: 8px; }
     .footer-soc {
-      width: 38px; height: 38px; border-radius: 10px;
+      width: 36px; height: 36px; border-radius: 10px;
       display: flex; align-items: center; justify-content: center;
-      transition: transform 0.3s, background 0.3s;
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: border-color 0.3s, background 0.3s, transform 0.3s;
     }
-    .footer-soc svg { width: 16px; height: 16px; fill: currentColor; }
-    .footer-soc.tg { color: #26A5E4; }
-    .footer-soc.tg:hover { background: rgba(38,165,228,0.15); transform: translateY(-3px); }
-    .footer-soc.wa { color: #25D366; }
-    .footer-soc.wa:hover { background: rgba(37,211,102,0.15); transform: translateY(-3px); }
-    .footer-soc.vk { color: #0077FF; }
-    .footer-soc.vk:hover { background: rgba(0,119,255,0.15); transform: translateY(-3px); }
-    .footer-soc.yt { color: #FF0000; }
-    .footer-soc.yt:hover { background: rgba(255,0,0,0.15); transform: translateY(-3px); }
-    .footer-col h4 { font-size: 13px; font-weight: 700; margin-bottom: 16px; letter-spacing: 0.5px; }
-    .footer-links { display: flex; flex-direction: column; gap: 10px; }
-    .footer-links a { font-size: 13px; color: var(--text-muted); transition: color 0.3s; }
-    .footer-links a:hover { color: var(--text); }
+    .footer-soc svg { width: 16px; height: 16px; fill: var(--text-muted); transition: fill 0.3s; }
+    .footer-soc.tg:hover { background: rgba(38,165,228,0.15); border-color: rgba(38,165,228,0.4); }
+    .footer-soc.wa:hover { background: rgba(37,211,102,0.15); border-color: rgba(37,211,102,0.4); }
+    .footer-soc.vk:hover { background: rgba(0,119,255,0.15); border-color: rgba(0,119,255,0.4); }
+    .footer-soc.yt:hover { background: rgba(255,0,0,0.15); border-color: rgba(255,0,0,0.4); }
+    .footer-soc:hover svg { fill: #fff; }
+    .footer-soc:hover { transform: translateY(-2px); }
+    .footer-col h4 { font-size: 13px; font-weight: 700; margin-bottom: 14px; letter-spacing: 0.5px; }
+    .footer-links { display: flex; flex-direction: column; gap: 8px; }
+    .footer-links a {
+      font-size: 13px; color: var(--text-muted);
+      transition: color 0.3s, transform 0.3s;
+      display: inline-block;
+    }
+    .footer-links a:hover { color: var(--text); transform: translateX(3px); }
     .footer-bot {
-      border-top: 1px solid rgba(255,255,255,0.06);
+      display: flex; align-items: center; justify-content: space-between;
       padding-top: 24px;
-      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      flex-wrap: wrap; gap: 12px;
     }
     .footer-copy { font-size: 12px; color: var(--text-muted); }
     .footer-reg-link {
-      font-size: 12px; font-weight: 600;
-      color: #c084fc;
-      transition: color 0.3s;
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 8px 18px; border-radius: 50px;
+      background: rgba(168,85,247,0.1);
+      border: 1px solid rgba(168,85,247,0.2);
+      font-size: 12px; font-weight: 600; color: #c084fc;
+      transition: background 0.3s, border-color 0.3s;
     }
-    .footer-reg-link:hover { color: #a855f7; }
+    .footer-reg-link:hover { background: rgba(168,85,247,0.2); border-color: rgba(168,85,247,0.4); }
+
     /* ===================== TOAST ===================== */
     .toast {
-      position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(20px);
-      padding: 14px 24px;
-      border-radius: 14px;
+      position: fixed; bottom: 24px; right: 24px;
+      padding: 14px 20px;
+      border-radius: 12px;
       font-size: 14px; font-weight: 600;
-      z-index: 999;
-      opacity: 0; visibility: hidden;
-      transition: opacity 0.4s, transform 0.4s, visibility 0.4s;
-      max-width: 90vw; text-align: center;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+      z-index: 300; max-width: 360px;
+      transform: translateY(20px); opacity: 0;
+      transition: transform 0.4s, opacity 0.4s;
+      pointer-events: none;
     }
-    .toast.show {
-      opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0);
-    }
-    .toast.ok { background: linear-gradient(135deg, #1a1a3e, #2d1b4e); border: 1px solid rgba(168,85,247,0.4); color: #d8b4fe; }
-    .toast.err { background: linear-gradient(135deg, #2d0f1e, #3d1020); border: 1px solid rgba(239,68,68,0.4); color: #fca5a5; }
+    .toast.show { transform: translateY(0); opacity: 1; }
+    .toast.ok { background: rgba(34,197,94,0.15); border: 1px solid rgba(34,197,94,0.3); color: #86efac; }
+    .toast.err { background: rgba(239,68,68,0.15); border: 1px solid rgba(239,68,68,0.3); color: #fca5a5; }
+
     /* ===================== RESPONSIVE ===================== */
     @media (max-width: 1024px) {
       .services-grid { grid-template-columns: repeat(2, 1fr); }
       .program-grid { grid-template-columns: repeat(2, 1fr); }
       .reviews-grid { grid-template-columns: repeat(2, 1fr); }
-      .gallery-grid { grid-template-columns: repeat(3, 1fr); }
     }
     @media (max-width: 768px) {
-      nav { display: none; }
-      .h-cta { display: none; }
+      nav, .h-cta { display: none; }
       .mbtn { display: flex; }
       .hero-grid { grid-template-columns: 1fr; }
-      .hero-visual { order: -1; }
-      .hero-avatar-wrap { width: clamp(220px, 70vw, 320px); }
-      .fb-1 { right: -8px; }
-      .fb-2 { left: -8px; }
+      .hero-visual { display: none; }
       .about-grid { grid-template-columns: 1fr; }
-      .about-img-wrap { position: static; }
-      .approach-grid { grid-template-columns: 1fr; }
-      .contacts-grid { grid-template-columns: 1fr; }
+      .about-img-wrap { position: relative; top: 0; }
+      .gallery-grid { grid-template-columns: repeat(3, 1fr); }
       .services-grid { grid-template-columns: 1fr; }
       .program-grid { grid-template-columns: repeat(2, 1fr); }
+      .approach-grid { grid-template-columns: 1fr; }
+      .book-grid { grid-template-columns: 1fr; text-align: center; }
+      .book-img-wrap { display: flex; justify-content: center; }
       .reviews-grid { grid-template-columns: 1fr; }
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-      .book-grid { grid-template-columns: 1fr; }
-      .book-img-wrap { width: 160px; margin: 0 auto; }
-      .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+      .contacts-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .lb-prev { left: 0; }
+      .lb-next { right: 0; }
       .form-row { grid-template-columns: 1fr; }
-      .about-stats { grid-template-columns: repeat(2, 1fr); }
+
+      /* Бейджики на мобильных — обычный (маленький) размер */
+      .float-badge {
+        border-radius: 5px; padding: 3px 5px; gap: 3px;
+      }
+      .float-badge .fb-icon { font-size: 7px; }
+      .float-badge .fb-val { font-size: 5px; }
+      .float-badge .fb-lbl { font-size: 3px; }
     }
     @media (max-width: 480px) {
-      .program-grid { grid-template-columns: 1fr; }
       .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-      .hero-stats { gap: 14px; }
-      .stat-divider { display: none; }
+      .program-grid { grid-template-columns: 1fr; }
+      .about-stats { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
-
 </head>
 
 <body>
@@ -1013,13 +1116,24 @@
   <div class="bg-orb bg-orb-2"></div>
   <div class="bg-orb bg-orb-3"></div>
 
-  <!-- ===================== HEADER ===================== -->
+  <!-- Mobile menu -->
+  <div class="mmenu" id="mmenu">
+    <a href="#about">Обо мне</a>
+    <a href="#services">Направления</a>
+    <a href="#program">Программа</a>
+    <a href="#approach">Подход</a>
+    <a href="#reviews">Отзывы</a>
+    <a href="#contacts">Контакты</a>
+    <a href="https://account.superjump.com/register/38867" target="_blank" rel="noopener" class="mmenu-cta">Записаться на курс ⚡</a>
+  </div>
+
+  <!-- Header -->
   <header id="header">
     <div class="con">
       <div class="header-inner">
         <div class="logo" id="logoTop">
-          <img src="img/logo.png" alt="Логотип" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-          <div class="logo-icon" style="display:none">⚡</div>
+          <img src="img/logo.png" alt="Логотип" class="logo-img" onerror="this.style.display='none'">
+          <div class="logo-icon" style="display:none" id="logoIconFallback">⚡</div>
           <div class="logo-text">
             <span class="logo-name">Юлия Савицкая</span>
             <span class="logo-sub">Super Jump</span>
@@ -1033,7 +1147,7 @@
           <a href="#reviews">Отзывы</a>
           <a href="#contacts">Контакты</a>
         </nav>
-        <a href="#contacts" class="h-cta">Записаться ⚡</a>
+        <a href="https://account.superjump.com/register/38867" target="_blank" rel="noopener" class="h-cta">Записаться ⚡</a>
         <button class="mbtn" id="mbtn" aria-label="Меню">
           <span></span><span></span><span></span>
         </button>
@@ -1041,24 +1155,13 @@
     </div>
   </header>
 
-  <!-- Mobile menu -->
-  <div class="mmenu" id="mmenu">
-    <a href="#about">Обо мне</a>
-    <a href="#services">Направления</a>
-    <a href="#program">Программа</a>
-    <a href="#approach">Подход</a>
-    <a href="#reviews">Отзывы</a>
-    <a href="#contacts">Контакты</a>
-    <a href="#contacts" class="mmenu-cta">Записаться ⚡</a>
-  </div>
-
   <main>
 
     <!-- ===================== HERO ===================== -->
     <section class="hero" id="home">
       <div class="con">
         <div class="hero-grid">
-          <!-- Left: text -->
+          <!-- Left -->
           <div>
             <div class="hero-tag reveal">Интеллект-тренер · Super Jump</div>
             <div class="hero-line reveal reveal-d1"></div>
@@ -1074,7 +1177,7 @@
               Помогаю людям открыть внутренние ресурсы, восстановить энергию и выстроить жизнь, где есть место и успеху, и радости. Без магии — только рабочие инструменты для ума.
             </p>
             <div class="hero-btns reveal reveal-d4">
-              <a href="#contacts" class="btn-primary">Записаться на курс ⚡</a>
+              <a href="https://account.superjump.com/register/38867" target="_blank" rel="noopener" class="btn-primary">Записаться на курс ⚡</a>
               <a href="#about" class="btn-secondary">Узнать подробнее →</a>
             </div>
             <div class="hero-stats reveal reveal-d5">
@@ -1106,6 +1209,7 @@
               <div class="hero-avatar">
                 <img src="img/1.jpg" alt="Юлия Савицкая — интеллект-тренер Super Jump" loading="eager">
               </div>
+              <!-- Float badge 1 — увеличен в 3 раза (только десктоп) -->
               <div class="float-badge fb-1">
                 <span class="fb-icon">🌍</span>
                 <div>
@@ -1113,6 +1217,7 @@
                   <div class="fb-lbl">20+ стран мира</div>
                 </div>
               </div>
+              <!-- Float badge 2 — увеличен в 3 раза (только десктоп) -->
               <div class="float-badge fb-2">
                 <span class="fb-icon">⚡</span>
                 <div>
@@ -1126,27 +1231,31 @@
       </div>
     </section>
 
+    <hr class="sec-divider">
+
     <!-- ===================== HERO BANNER + VIDEO ===================== -->
     <section class="hero-banner-section">
       <div class="con">
-        <div id="descImgWrap" style="cursor:pointer;" class="reveal">
-          <img src="img/desc.jpg" alt="Super Jump — описание курса" class="hero-banner-img" id="descImg" onerror="this.style.display='none'">
+        <div id="descImgWrap" style="cursor:zoom-in;">
+          <img src="img/desc.jpg" alt="Super Jump — описание курса" class="hero-banner-img" id="descImg" loading="lazy"
+            onerror="this.style.display='none'">
         </div>
         <div class="video-block reveal">
-          <p class="video-block-title">Посмотрите, <span class="grad-text">как это работает</span></p>
+          <h2 class="video-block-title">Смотрите, как это <span class="grad-text">работает</span></h2>
           <div class="video-wrapper">
             <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="Super Jump — Юлия Савицкая"
+              src="https://www.youtube.com/embed/YOUR_VIDEO_ID?rel=0&modestbranding=1"
+              title="Super Jump — видео о курсе"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
+              allowfullscreen
+              loading="lazy">
             </iframe>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Лайтбокс для desc.jpg -->
+    <!-- Desc lightbox -->
     <div class="desc-lightbox" id="descLightbox">
       <button class="desc-lb-close" id="descLbClose">✕</button>
       <img src="" alt="desc" id="descLbImg">
@@ -1158,22 +1267,22 @@
     <section class="about-sec" id="about">
       <div class="con">
         <div class="about-grid">
-          <!-- Left: text -->
-          <div class="reveal-left">
-            <div class="sec-head">
+          <!-- Left -->
+          <div>
+            <div class="sec-head reveal">
               <span class="sec-label">Обо мне</span>
               <h2 class="sec-title">Твой проводник к <span class="grad-text">ресурсному состоянию</span></h2>
             </div>
-            <blockquote class="about-quote">
+            <div class="about-quote reveal">
               «Я верю, что каждый человек способен на больше — стоит лишь научить мозг работать в правильном режиме. Именно этим я и занимаюсь.»
-            </blockquote>
-            <p class="about-body">
+            </div>
+            <p class="about-body reveal">
               Я интеллект-тренер международной системы Super Jump — запатентованной методики, разработанной Владимиром Довганём. Моя работа — помогать людям находить внутреннюю опору, управлять своим состоянием и двигаться к целям без выгорания и потери себя.
             </p>
-            <p class="about-body">
+            <p class="about-body reveal">
               В своей практике я объединяю 8 проверенных ментальных инструментов: от техник управления эмоциями до дофаминового марафона и ментальной йоги. Каждый инструмент прошёл проверку сотнями участников по всему миру — и продолжает работать.
             </p>
-            <div class="about-stats">
+            <div class="about-stats reveal">
               <div class="a-stat">
                 <div class="a-stat-icon">🌍</div>
                 <span class="a-stat-val">20+</span>
@@ -1191,21 +1300,21 @@
               </div>
             </div>
             <div class="about-highlights">
-              <div class="about-hl">
+              <div class="about-hl reveal reveal-d1">
                 <div class="about-hl-icon">🏅</div>
                 <div class="about-hl-text">
                   <strong>Сертифицированный интеллект-тренер</strong>
                   <span>Международная система Super Jump · ассоциация интеллект-тренеров</span>
                 </div>
               </div>
-              <div class="about-hl">
+              <div class="about-hl reveal reveal-d2">
                 <div class="about-hl-icon">📱</div>
                 <div class="about-hl-text">
                   <strong>Онлайн-формат — без привязки к месту</strong>
                   <span>Zoom · Skype · Telegram — работаю с участниками по всему миру</span>
                 </div>
               </div>
-              <div class="about-hl">
+              <div class="about-hl reveal reveal-d3">
                 <div class="about-hl-icon">💯</div>
                 <div class="about-hl-text">
                   <strong>Гарантия результата</strong>
@@ -1226,7 +1335,6 @@
           </div>
         </div>
       </div>
-      <div class="about-glow"></div>
     </section>
 
     <!-- ===================== GALLERY ===================== -->
@@ -1239,23 +1347,18 @@
         <div class="gallery-grid">
           <div class="gallery-item reveal reveal-d1" data-index="0">
             <img src="img/cert-1.png" alt="Сертификат интеллект-тренера" loading="lazy">
-            <div class="gallery-item-overlay"></div>
           </div>
           <div class="gallery-item reveal reveal-d2" data-index="1">
             <img src="img/3.jpg" alt="Фото" loading="lazy">
-            <div class="gallery-item-overlay"></div>
           </div>
           <div class="gallery-item reveal reveal-d3" data-index="2">
             <img src="img/4.jpg" alt="Фото" loading="lazy">
-            <div class="gallery-item-overlay"></div>
           </div>
           <div class="gallery-item reveal reveal-d4" data-index="3">
             <img src="img/5.jpg" alt="Фото" loading="lazy">
-            <div class="gallery-item-overlay"></div>
           </div>
           <div class="gallery-item reveal reveal-d5" data-index="4">
             <img src="img/6.jpg" alt="Фото" loading="lazy">
-            <div class="gallery-item-overlay"></div>
           </div>
         </div>
       </div>
@@ -1263,16 +1366,18 @@
 
     <!-- Gallery Lightbox -->
     <div class="lightbox" id="lightbox">
-      <button class="lb-close" id="lbClose">✕</button>
-      <button class="lb-nav lb-prev" id="lbPrev">‹</button>
-      <img src="" alt="Фото" id="lbImg">
-      <button class="lb-nav lb-next" id="lbNext">›</button>
+      <div class="lightbox-inner">
+        <button class="lb-close" id="lbClose">✕</button>
+        <button class="lb-prev" id="lbPrev">‹</button>
+        <button class="lb-next" id="lbNext">›</button>
+        <img src="" alt="Фото" id="lbImg">
+      </div>
     </div>
 
     <hr class="sec-divider">
 
     <!-- ===================== SERVICES ===================== -->
-    <section id="services">
+    <section class="services-sec" id="services">
       <div class="con">
         <div class="sec-head sec-head-center reveal">
           <span class="sec-label">Направления</span>
@@ -1394,7 +1499,7 @@
     <hr class="sec-divider">
 
     <!-- ===================== APPROACH ===================== -->
-    <section id="approach">
+    <section class="approach-sec" id="approach">
       <div class="con">
         <div class="approach-grid">
           <div>
@@ -1445,10 +1550,10 @@
                 <li><span>✅</span><span>Гарантия результата при выполнении</span></li>
                 <li><span>👤</span><span>Индивидуальный VIP-формат — 1 на 1</span></li>
               </ul>
-              <p class="approach-note">
+              <p class="approach-desc">
                 10 дней онлайн-занятий в мини-группе или индивидуально. Каждый день — одна практика, одна новая привычка. К финалу — новое состояние, которое остаётся с вами.
               </p>
-              <a href="#contacts" class="btn-primary" style="width:100%; justify-content:center;">Записаться →</a>
+              <a href="#contacts" class="btn-primary">Записаться →</a>
             </div>
           </div>
         </div>
@@ -1460,22 +1565,19 @@
     <!-- ===================== BOOK ===================== -->
     <section class="book-sec" id="book">
       <div class="con">
-        <div class="sec-head sec-head-center reveal">
-          <span class="sec-label">Книга-основа</span>
-          <h2 class="sec-title">Квантовый <span class="grad-text">прыжок к мечте</span></h2>
-        </div>
-        <div class="book-grid reveal">
-          <div class="book-img-wrap">
+        <div class="book-grid">
+          <div class="book-img-wrap reveal-left">
             <img src="img/book.jpg" alt="Книга Квантовый скачок — Владимир Довгань" class="book-img" loading="lazy">
+            <div class="book-badge">📚<br>Бест-<br>селлер</div>
           </div>
-          <div>
-            <div class="book-badge">📚 Бестселлер</div>
+          <div class="reveal-right">
+            <div class="book-label">Книга-основа</div>
             <h3 class="book-title">Квантовый <span class="grad-text">прыжок к мечте</span></h3>
             <p class="book-desc">
               Владимир Довгань — предприниматель, который несколько раз начинал с нуля и каждый раз приходил к успеху. В этой книге он делится не просто историей, а системой: сочетанием аутотренинга и жизненной философии, которая позволяет выйти на новый уровень — и в бизнесе, и в жизни. Методика Super Jump выросла именно отсюда.
             </p>
-            <a href="https://drive.google.com/drive/folders/1gTuinP2y2Shxi0b7ayDg25Cf4n2zavID" target="_blank" rel="noopener" class="btn-primary">
-              Скачать PDF бесплатно →
+            <a href="https://drive.google.com/drive/folders/1gTuinP2y2Shxi0b7ayDg25Cf4n2zavID" target="_blank" rel="noopener" class="book-cta">
+              📥 Скачать PDF бесплатно →
             </a>
           </div>
         </div>
@@ -1485,7 +1587,7 @@
     <hr class="sec-divider">
 
     <!-- ===================== REVIEWS ===================== -->
-    <section id="reviews">
+    <section class="reviews-sec" id="reviews">
       <div class="con">
         <div class="sec-head sec-head-center reveal">
           <span class="sec-label">Отзывы</span>
@@ -1500,7 +1602,7 @@
               <div class="review-avatar">👩</div>
               <div>
                 <div class="review-name">Ольга М.</div>
-                <div class="review-loc">Москва · Менеджер проекта</div>
+                <div class="review-meta">Москва · Менеджер</div>
               </div>
             </div>
           </div>
@@ -1511,7 +1613,7 @@
               <div class="review-avatar">👨</div>
               <div>
                 <div class="review-name">Алексей К.</div>
-                <div class="review-loc">Санкт-Петербург · Предприниматель</div>
+                <div class="review-meta">Санкт-Петербург · Предприниматель</div>
               </div>
             </div>
           </div>
@@ -1522,7 +1624,7 @@
               <div class="review-avatar">👩</div>
               <div>
                 <div class="review-name">Марина Т.</div>
-                <div class="review-loc">Казань · Мама в декрете</div>
+                <div class="review-meta">Казань · Мама в декрете</div>
               </div>
             </div>
           </div>
@@ -1533,7 +1635,7 @@
               <div class="review-avatar">👩</div>
               <div>
                 <div class="review-name">Светлана Р.</div>
-                <div class="review-loc">Онлайн · Психолог</div>
+                <div class="review-meta">Онлайн · Психолог</div>
               </div>
             </div>
           </div>
@@ -1544,7 +1646,7 @@
               <div class="review-avatar">👨</div>
               <div>
                 <div class="review-name">Дмитрий В.</div>
-                <div class="review-loc">Минск · IT-специалист</div>
+                <div class="review-meta">Минск · IT-специалист</div>
               </div>
             </div>
           </div>
@@ -1555,7 +1657,7 @@
               <div class="review-avatar">👩</div>
               <div>
                 <div class="review-name">Наталья Г.</div>
-                <div class="review-loc">Алматы · В поиске себя</div>
+                <div class="review-meta">Алматы · В поиске себя</div>
               </div>
             </div>
           </div>
@@ -1565,17 +1667,19 @@
 
     <hr class="sec-divider">
 
-    <!-- ===================== CTA ===================== -->
+    <!-- ===================== CTA BANNER ===================== -->
     <section class="cta-sec" id="cta">
       <div class="con">
-        <div class="cta-icon reveal">⚡</div>
-        <h2 class="cta-title reveal reveal-d1">Готовы изменить качество <span class="grad-text">своей жизни?</span></h2>
-        <p class="cta-desc reveal reveal-d2">
-          10 дней · 1 час в день · Результат, который остаётся. Запишитесь на курс или попробуйте тест-драйв — и начните жить иначе.
-        </p>
-        <div class="cta-btns reveal reveal-d3">
-          <a href="#contacts" class="btn-primary">Записаться на курс ⚡</a>
-          <a href="https://account.superjump.com/register/38867" target="_blank" rel="noopener" class="btn-secondary">Зарегистрироваться →</a>
+        <div class="cta-inner reveal">
+          <div class="cta-icon">⚡</div>
+          <h2 class="cta-title">Готовы изменить качество <span class="grad-text">своей жизни?</span></h2>
+          <p class="cta-desc">
+            10 дней · 1 час в день · Результат, который остаётся. Запишитесь на курс или попробуйте тест-драйв — и начните жить иначе.
+          </p>
+          <div class="cta-btns">
+            <a href="https://account.superjump.com/register/38867" target="_blank" rel="noopener" class="btn-primary">Записаться на курс ⚡</a>
+            <a href="#contacts" class="btn-secondary">Задать вопрос →</a>
+          </div>
         </div>
       </div>
     </section>
@@ -1583,14 +1687,12 @@
     <!-- ===================== CONTACTS ===================== -->
     <section class="contacts-sec" id="contacts">
       <div class="con">
-        <div class="sec-head sec-head-center reveal">
-          <span class="sec-label">Контакты</span>
-          <h2 class="sec-title">Давайте <span class="grad-text">познакомимся</span></h2>
-          <p class="sec-desc">Напишите в мессенджер, заполните форму или позвоните — выбирайте удобный способ.</p>
-        </div>
         <div class="contacts-grid">
-          <!-- Left: social links -->
+          <!-- Left -->
           <div class="reveal-left">
+            <div class="contacts-label">Контакты</div>
+            <h2 class="contacts-title">Давайте <span class="grad-text">познакомимся</span></h2>
+            <p class="contacts-desc">Напишите в мессенджер, заполните форму или позвоните — выбирайте удобный способ.</p>
             <div class="soc-links">
               <a href="https://t.me/yuliya_savitskaya" target="_blank" rel="noopener" class="soc-link tg">
                 <div class="soc-icon">
@@ -1649,21 +1751,13 @@
             </div>
           </div>
 
-          <!-- Right: Form — отправка через FormSubmit.co (plain POST, guaranteed delivery) -->
+          <!-- Right: Form -->
           <div class="reveal-right">
-            <form class="contact-form" id="cform"
-              action="https://formsubmit.co/savickaaulia6@gmail.com"
-              method="POST">
-              <!-- FormSubmit settings -->
-              <input type="hidden" name="_subject" value="Заявка с сайта Юлии Савицкой">
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_template" value="table">
-              <input type="hidden" name="_next" id="formNextUrl" value="">
-              <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-
+            <form class="contact-form" id="cform" novalidate>
+              <!-- Honeypot anti-spam -->
+              <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off">
               <h3 class="form-title">Задайте вопрос</h3>
               <p class="form-sub">Отвечу в течение дня — расскажу о курсе, формате и ближайших датах старта.</p>
-
               <div class="form-row">
                 <div class="form-group">
                   <label class="form-label" for="fi_name">Ваше имя *</label>
@@ -1674,7 +1768,6 @@
                   <input class="form-input" type="tel" id="fi_phone" name="Телефон" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
                 </div>
               </div>
-
               <div class="form-group">
                 <label class="form-label" for="fi_focus">Что важнее всего прямо сейчас?</label>
                 <select class="form-select" id="fi_focus" name="Фокус">
@@ -1687,12 +1780,10 @@
                   <option value="Освоить профессию тренера">🚀 Освоить профессию тренера</option>
                 </select>
               </div>
-
               <div class="form-group">
                 <label class="form-label" for="fi_msg">Ваш вопрос или пожелание</label>
                 <textarea class="form-textarea" id="fi_msg" name="Сообщение" placeholder="Напишите, что вас интересует — расскажу подробнее..."></textarea>
               </div>
-
               <button type="submit" class="form-submit" id="fsub">Отправить сообщение ⚡</button>
             </form>
           </div>
@@ -1771,13 +1862,15 @@
     // ===== YEAR =====
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // ===== SET _next URL DYNAMICALLY (redirect back to this page after form submit) =====
-    (function() {
-      var base = window.location.href.split('?')[0].split('#')[0];
-      var nextUrl = base + '?sent=1#contacts';
-      var inp = document.getElementById('formNextUrl');
-      if (inp) inp.value = nextUrl;
-    })();
+    // ===== LOGO IMG FALLBACK =====
+    var logoImgs = document.querySelectorAll('.logo-img');
+    logoImgs.forEach(function(img) {
+      img.addEventListener('error', function() {
+        this.style.display = 'none';
+        var fallback = document.getElementById('logoIconFallback');
+        if (fallback) fallback.style.display = 'flex';
+      });
+    });
 
     // ===== HEADER SCROLL =====
     var header = document.getElementById('header');
@@ -1849,7 +1942,6 @@
     var lbClose = document.getElementById('lbClose');
     var lbPrev = document.getElementById('lbPrev');
     var lbNext = document.getElementById('lbNext');
-
     function openLightbox(index) {
       currentLbIndex = index;
       lbImg.src = galleryImages[index];
@@ -1892,7 +1984,6 @@
     var descLbImg = document.getElementById('descLbImg');
     var descLbClose = document.getElementById('descLbClose');
     var descImg = document.getElementById('descImg');
-
     function openDescLightbox() {
       if (!descImg || !descImg.src || descImg.style.display === 'none') return;
       descLbImg.src = descImg.src;
@@ -1955,44 +2046,72 @@
       setTimeout(function() { t.classList.remove('show'); }, 6000);
     }
 
-    // ===== CHECK IF RETURNED AFTER FORM SUBMIT =====
-    // FormSubmit.co redirects back with ?sent=1 after successful delivery
-    (function() {
-      if (window.location.search.indexOf('sent=1') !== -1) {
-        // Show success toast
-        setTimeout(function() {
-          showToast('Сообщение отправлено! Юлия свяжется с вами в ближайшее время. ✅', 'ok');
-        }, 600);
-        // Clean URL without reload
-        try {
-          var cleanUrl = window.location.href.replace(/[?&]sent=1/, '').replace(/\?$/, '');
-          window.history.replaceState({}, '', cleanUrl);
-        } catch(e) {}
-      }
-    })();
-
-    // ===== FORM CLIENT-SIDE VALIDATION BEFORE SUBMIT =====
+    // ===== FORM — AJAX отправка через formsubmit.co =====
     var cform = document.getElementById('cform');
     var fsub = document.getElementById('fsub');
     if (cform) {
       cform.addEventListener('submit', function(e) {
+        e.preventDefault();
         var name = (document.getElementById('fi_name').value || '').trim();
         var phone = (document.getElementById('fi_phone').value || '').trim();
-
         if (!name) {
-          e.preventDefault();
           showToast('Пожалуйста, введите ваше имя', 'err');
           return;
         }
         if (!phone || phone.replace(/\D/g, '').length < 11) {
-          e.preventDefault();
           showToast('Введите корректный номер телефона', 'err');
           return;
         }
-
-        // Valid — allow native form POST to proceed
         fsub.disabled = true;
         fsub.textContent = 'Отправка...';
+        var obj = {};
+        var formData = new FormData(cform);
+        formData.forEach(function(v, k) { if (k !== '_gotcha') obj[k] = v; });
+        var mailBody = 'Имя: ' + (obj['Имя']||'') +
+          '\nТелефон: ' + (obj['Телефон']||'') +
+          '\nФокус: ' + (obj['Фокус']||'') +
+          '\nСообщение: ' + (obj['Сообщение']||'');
+        fetch('https://formsubmit.co/ajax/savickaaulia6@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            'Имя': obj['Имя'] || '',
+            'Телефон': obj['Телефон'] || '',
+            'Фокус': obj['Фокус'] || '',
+            'Сообщение': obj['Сообщение'] || '',
+            '_subject': 'Заявка с сайта Юлии Савицкой',
+            '_captcha': 'false',
+            '_template': 'table'
+          })
+        })
+        .then(function(res) { return res.json(); })
+        .then(function(data) {
+          if (data && (data.success === 'true' || data.success === true)) {
+            showToast('Сообщение отправлено! Юлия свяжется с вами в ближайшее время. ✅', 'ok');
+            cform.reset();
+          } else {
+            openMailto(mailBody);
+          }
+        })
+        .catch(function() {
+          openMailto(mailBody);
+        })
+        .finally(function() {
+          fsub.disabled = false;
+          fsub.textContent = 'Отправить сообщение ⚡';
+        });
+        function openMailto(body) {
+          showToast('Письмо готово — откроется ваш почтовый клиент. ✅', 'ok');
+          setTimeout(function() {
+            window.location.href = 'mailto:savickaaulia6@gmail.com' +
+              '?subject=' + encodeURIComponent('Заявка с сайта Юлии Савицкой') +
+              '&body=' + encodeURIComponent(body);
+          }, 400);
+          cform.reset();
+        }
       });
     }
 
@@ -2012,5 +2131,4 @@
   </script>
 
 </body>
-
 </html>
