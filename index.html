@@ -1,19 +1,34 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta name="description" content="Юлия Савицкая — интеллект-тренер Super Jump. Онлайн-курсы по развитию эмоционального интеллекта, ментальной энергии и навыков успеха. Запись на курс +7-985-001-40-30">
+
   <meta property="og:title" content="Юлия Савицкая — Интеллект-тренер · Super Jump">
+
   <meta property="og:description" content="Развиваю ментальный ресурс, управление эмоциями и внутренний потенциал. 10 дней — и вы живёте иначе. Запись на курс Super Jump.">
+
   <meta property="og:type" content="website">
+
   <title>Юлия Савицкая — Интеллект-тренер · Super Jump</title>
+
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
@@ -51,7 +66,6 @@
       margin: 0 auto;
       padding: 0 clamp(16px, 4vw, 40px);
     }
-
     /* ===================== ДЕКОР ФОНА ===================== */
     .bg-orb {
       position: fixed;
@@ -82,7 +96,6 @@
     @keyframes orbDrift1 { 0% { transform: translate(0,0); } 100% { transform: translate(80px, 60px); } }
     @keyframes orbDrift2 { 0% { transform: translate(0,0); } 100% { transform: translate(-60px, -80px); } }
     @keyframes orbDrift3 { 0% { transform: translate(0,0); } 100% { transform: translate(40px, -50px); } }
-
     /* ===================== HEADER ===================== */
     header {
       position: fixed; top: 0; left: 0; right: 0;
@@ -141,7 +154,6 @@
       white-space: nowrap; flex-shrink: 0;
     }
     .h-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(168,85,247,0.4); }
-
     /* Hamburger */
     .mbtn {
       display: none; width: 32px; height: 22px;
@@ -166,7 +178,6 @@
       margin-top: 10px; padding: 14px 36px; border-radius: 50px;
       background: var(--grad); font-size: 15px; font-weight: 700; color: #fff;
     }
-
     /* ===================== REVEAL ANIMATION ===================== */
     .reveal {
       opacity: 0; transform: translateY(30px);
@@ -182,7 +193,6 @@
     .reveal-d3 { transition-delay: 0.3s; }
     .reveal-d4 { transition-delay: 0.4s; }
     .reveal-d5 { transition-delay: 0.5s; }
-
     /* ===================== HERO ===================== */
     .hero {
       min-height: 100vh;
@@ -271,7 +281,6 @@
       background: transparent; cursor: pointer;
     }
     .btn-secondary:hover { border-color: rgba(168,85,247,0.6); color: #fff; background: rgba(168,85,247,0.08); }
-
     /* HERO VISUAL */
     .hero-visual {
       display: flex; align-items: center; justify-content: center;
@@ -304,7 +313,6 @@
       object-fit: cover;
       object-position: top center;
     }
-
     /* Floating badges */
     .float-badge {
       position: absolute; z-index: 2;
@@ -331,7 +339,6 @@
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
     }
-
     /* Hero stats line */
     .hero-stats {
       display: flex; gap: 24px; margin-top: 34px; flex-wrap: wrap;
@@ -344,14 +351,12 @@
     }
     .hero-stat-lbl { font-size: 11px; color: var(--text-muted); font-weight: 500; letter-spacing: 0.3px; }
     .stat-divider { width: 1px; background: rgba(255,255,255,0.08); align-self: stretch; }
-
     /* Decorative line */
     .hero-line {
       width: 60px; height: 2px;
       background: var(--grad);
       border-radius: 2px; margin-bottom: 22px;
     }
-
     /* ===================== SECTION COMMON ===================== */
     section { padding: clamp(60px, 8vw, 100px) 0; position: relative; }
     .sec-label {
@@ -391,7 +396,6 @@
       background: linear-gradient(90deg, transparent, rgba(168,85,247,0.3), rgba(236,72,153,0.2), transparent);
       margin: 0;
     }
-
     /* ===================== HERO BANNER (desc.jpg + video) ===================== */
     .hero-banner-section {
       padding: clamp(40px, 6vw, 70px) 0;
@@ -405,6 +409,7 @@
       border-radius: 24px;
       margin-bottom: 40px;
       box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+      /* desktop: обычный вид */
     }
     .video-block {
       margin-top: 0;
@@ -434,7 +439,6 @@
       width: 100%; height: 100%;
       border: none;
     }
-
     /* ===================== ABOUT ===================== */
     .about-sec { background: var(--bg2); }
     .about-grid {
@@ -488,7 +492,6 @@
     .about-hl-text { flex: 1; }
     .about-hl-text strong { font-size: 14px; font-weight: 700; display: block; margin-bottom: 3px; }
     .about-hl-text span { font-size: 12px; color: var(--text-muted); }
-
     /* Stats cards */
     .about-stats {
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
@@ -543,7 +546,6 @@
     .about-img-role {
       font-size: 12px; color: var(--text-muted); font-weight: 500; letter-spacing: 0.5px;
     }
-
     /* Decorative glow bg */
     .about-glow {
       position: absolute; top: -60px; right: -60px;
@@ -552,7 +554,6 @@
       border-radius: 50%;
       pointer-events: none;
     }
-
     /* ===================== GALLERY ===================== */
     .gallery-sec {
       padding: clamp(50px, 7vw, 80px) 0;
@@ -573,164 +574,174 @@
       cursor: pointer;
       transition: transform 0.35s, box-shadow 0.35s;
     }
-    .gallery-item:hover {
-      transform: scale(1.03);
-      box-shadow: 0 16px 40px rgba(168,85,247,0.25);
-      border-color: rgba(168,85,247,0.35);
-    }
+    .gallery-item:hover { transform: scale(1.04); box-shadow: 0 12px 40px rgba(168,85,247,0.25); }
     .gallery-item img {
       width: 100%; height: 100%;
       object-fit: cover;
-      transition: transform 0.4s;
+      transition: transform 0.35s;
     }
-    .gallery-item:hover img { transform: scale(1.05); }
-    .gallery-overlay {
+    .gallery-item:hover img { transform: scale(1.08); }
+    .gallery-item::after {
+      content: '🔍';
       position: absolute; inset: 0;
-      background: linear-gradient(180deg, transparent 50%, rgba(8,8,15,0.7) 100%);
-      opacity: 0; transition: opacity 0.3s;
-      display: flex; align-items: flex-end;
-      padding: 16px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 28px;
+      background: rgba(0,0,0,0.5);
+      opacity: 0;
+      transition: opacity 0.3s;
     }
-    .gallery-item:hover .gallery-overlay { opacity: 1; }
-
+    .gallery-item:hover::after { opacity: 1; }
     /* Lightbox */
     .lightbox {
-      display: none; position: fixed; inset: 0; z-index: 200;
+      position: fixed; inset: 0; z-index: 200;
       background: rgba(0,0,0,0.92);
-      align-items: center; justify-content: center;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
     }
-    .lightbox.open { display: flex; }
+    .lightbox.open { opacity: 1; visibility: visible; }
     .lightbox img {
       max-width: 90vw; max-height: 90vh;
       border-radius: 16px;
       object-fit: contain;
-      box-shadow: 0 30px 80px rgba(0,0,0,0.8);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.7);
     }
-    .lightbox-close {
-      position: absolute; top: 24px; right: 30px;
-      font-size: 40px; color: #fff; cursor: pointer;
-      line-height: 1; opacity: 0.7; transition: opacity 0.2s;
+    .lb-close {
+      position: absolute; top: 20px; right: 24px;
+      font-size: 32px; cursor: pointer; color: #fff;
+      width: 44px; height: 44px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      transition: background 0.3s;
+      border: none;
+      line-height: 1;
     }
-    .lightbox-close:hover { opacity: 1; }
-    .lightbox-prev, .lightbox-next {
+    .lb-close:hover { background: rgba(255,255,255,0.2); }
+    .lb-prev, .lb-next {
       position: absolute; top: 50%; transform: translateY(-50%);
-      font-size: 50px; color: #fff; cursor: pointer;
-      opacity: 0.6; transition: opacity 0.2s;
-      background: none; border: none; padding: 10px;
+      font-size: 24px; cursor: pointer; color: #fff;
+      width: 48px; height: 48px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      transition: background 0.3s;
+      border: none;
+      user-select: none;
     }
-    .lightbox-prev { left: 20px; }
-    .lightbox-next { right: 20px; }
-    .lightbox-prev:hover, .lightbox-next:hover { opacity: 1; }
-
+    .lb-prev:hover, .lb-next:hover { background: rgba(255,255,255,0.2); }
+    .lb-prev { left: 20px; }
+    .lb-next { right: 20px; }
     /* ===================== SERVICES ===================== */
-    .services-sec { background: var(--bg); }
+    .services-sec { background: var(--bg3); }
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
     .svc-card {
-      position: relative;
-      padding: 30px;
+      padding: clamp(22px, 2.5vw, 30px);
       background: var(--card);
       border: 1px solid var(--card-border);
-      border-radius: 24px;
-      overflow: hidden;
-      cursor: default;
+      border-radius: 20px;
       transition: transform 0.35s, border-color 0.35s, box-shadow 0.35s;
+      position: relative; overflow: hidden;
     }
     .svc-card::before {
       content: '';
-      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 2px;
       background: var(--grad);
-      opacity: 0;
-      transition: opacity 0.35s;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s;
     }
-    .svc-card:hover { transform: translateY(-8px); border-color: rgba(168,85,247,0.25); box-shadow: 0 20px 60px rgba(168,85,247,0.12); }
-    .svc-card:hover::before { opacity: 1; }
-    .svc-card-glow {
-      position: absolute; top: -50px; right: -50px;
-      width: 160px; height: 160px;
-      background: radial-gradient(circle, rgba(168,85,247,0.12), transparent 70%);
-      border-radius: 50%;
-      pointer-events: none;
-      transition: opacity 0.35s;
-      opacity: 0;
-    }
-    .svc-card:hover .svc-card-glow { opacity: 1; }
-    .svc-icon {
-      width: 54px; height: 54px;
-      background: linear-gradient(135deg, rgba(168,85,247,0.2), rgba(236,72,153,0.15));
-      border-radius: 14px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 26px;
-      margin-bottom: 20px;
-    }
-    .svc-card-title {
-      font-size: 17px; font-weight: 700;
-      margin-bottom: 12px; line-height: 1.3;
-    }
-    .svc-card-desc {
-      font-size: 13px; color: var(--text-light);
-      line-height: 1.75; margin-bottom: 18px;
-    }
+    .svc-card:hover { transform: translateY(-6px); border-color: rgba(168,85,247,0.25); box-shadow: 0 20px 50px rgba(168,85,247,0.12); }
+    .svc-card:hover::before { transform: scaleX(1); }
+    .svc-icon { font-size: 32px; margin-bottom: 14px; }
+    .svc-title { font-size: 16px; font-weight: 700; margin-bottom: 10px; }
+    .svc-desc { font-size: 13px; color: var(--text-light); line-height: 1.75; margin-bottom: 16px; }
     .svc-tag {
-      display: inline-block;
-      padding: 4px 12px;
+      display: inline-block; padding: 4px 12px;
       background: rgba(168,85,247,0.1);
       border: 1px solid rgba(168,85,247,0.2);
-      border-radius: 50px;
-      font-size: 11px; font-weight: 600; color: #c084fc;
+      border-radius: 20px;
+      font-size: 11px; font-weight: 600; color: #a855f7;
     }
-
     /* ===================== PROGRAM ===================== */
-    .program-sec { background: var(--bg3); }
+    .program-sec { background: var(--bg2); }
     .program-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 18px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 40px;
     }
     .prog-card {
-      padding: 26px;
+      padding: 22px 18px;
       background: var(--card);
       border: 1px solid var(--card-border);
-      border-radius: 22px;
-      position: relative;
-      overflow: hidden;
+      border-radius: 18px;
       transition: transform 0.3s, border-color 0.3s;
+      position: relative;
     }
-    .prog-card:hover { transform: translateY(-6px); border-color: rgba(168,85,247,0.3); }
+    .prog-card:hover { transform: translateY(-5px); border-color: rgba(168,85,247,0.3); }
     .prog-num {
-      position: absolute; top: 20px; right: 22px;
-      font-size: 40px; font-weight: 900; opacity: 0.06;
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      color: var(--text-muted); margin-bottom: 10px;
+    }
+    .prog-icon { font-size: 26px; margin-bottom: 10px; }
+    .prog-title { font-size: 14px; font-weight: 700; margin-bottom: 8px; }
+    .prog-desc { font-size: 12px; color: var(--text-light); line-height: 1.7; margin-bottom: 12px; }
+    .prog-effect {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.5px;
       background: var(--grad);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-      line-height: 1;
     }
-    .prog-icon { font-size: 30px; margin-bottom: 14px; }
-    .prog-title { font-size: 15px; font-weight: 700; margin-bottom: 10px; }
-    .prog-desc { font-size: 13px; color: var(--text-light); line-height: 1.7; margin-bottom: 14px; }
-    .prog-tag {
-      display: inline-block; padding: 3px 10px;
-      background: rgba(168,85,247,0.1); border-radius: 50px;
-      font-size: 10px; font-weight: 600; color: #c084fc; letter-spacing: 0.3px;
+    /* Program visual block */
+    .program-visual {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+      padding: clamp(30px, 4vw, 50px);
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 28px;
     }
-
-    /* Program image + video */
-    .program-image-block {
-      margin-top: clamp(40px, 5vw, 60px);
+    .program-visual-text h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(20px, 2.5vw, 28px);
+      font-weight: 700; margin-bottom: 14px;
     }
-    .program-image-block img {
-      width: 100%;
-      height: auto;
-      border-radius: 20px;
-      object-fit: contain;
-      margin-bottom: 40px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    .program-visual-text h3 .grad-text {
+      background: var(--grad);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
-
+    .program-visual-text p { font-size: 14px; color: var(--text-light); line-height: 1.8; margin-bottom: 20px; }
+    .program-checklist { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .program-checklist li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 13px; color: var(--text-light);
+    }
+    .program-checklist li::before {
+      content: '✓';
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 20px; height: 20px; flex-shrink: 0;
+      background: rgba(168,85,247,0.15);
+      border-radius: 50%;
+      font-size: 11px; color: #a855f7; font-weight: 700;
+      margin-top: 1px;
+    }
+    .program-visual-media {
+      position: relative;
+      border-radius: 20px; overflow: hidden;
+      background: #000;
+    }
+    .program-visual-media .video-wrapper {
+      padding-bottom: 60%;
+    }
     /* ===================== APPROACH ===================== */
-    .approach-sec { background: var(--bg); }
+    .approach-sec { background: var(--bg3); }
     .approach-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -748,333 +759,415 @@
     }
     .approach-item:hover { border-color: rgba(168,85,247,0.3); transform: translateX(4px); }
     .approach-icon {
-      width: 50px; height: 50px; flex-shrink: 0;
-      background: linear-gradient(135deg, rgba(168,85,247,0.2), rgba(236,72,153,0.15));
-      border-radius: 14px;
+      font-size: 28px; flex-shrink: 0;
+      width: 52px; height: 52px;
       display: flex; align-items: center; justify-content: center;
-      font-size: 24px;
+      background: linear-gradient(135deg, rgba(168,85,247,0.15), rgba(236,72,153,0.1));
+      border-radius: 14px;
     }
     .approach-text h4 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
-    .approach-text p { font-size: 13px; color: var(--text-light); line-height: 1.7; }
+    .approach-text p { font-size: 13px; color: var(--text-light); line-height: 1.75; }
     .approach-card {
-      background: var(--card);
-      border: 1px solid var(--card-border);
-      border-radius: 24px;
-      padding: 32px;
+      background: linear-gradient(160deg, rgba(168,85,247,0.1), rgba(236,72,153,0.07), rgba(249,115,22,0.05));
+      border: 1px solid rgba(168,85,247,0.2);
+      border-radius: 28px;
+      padding: clamp(28px, 3.5vw, 44px);
       position: sticky; top: 100px;
     }
-    .approach-card-header {
-      display: flex; gap: 14px; align-items: center; margin-bottom: 24px;
+    .approach-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(18px, 2vw, 24px);
+      font-weight: 700; margin-bottom: 20px;
     }
-    .approach-card-icon {
-      width: 56px; height: 56px;
-      background: var(--grad);
-      border-radius: 16px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 28px;
-      box-shadow: 0 8px 24px rgba(168,85,247,0.4);
-    }
-    .approach-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 6px; }
-    .approach-card-desc { font-size: 13px; color: var(--text-light); line-height: 1.75; margin-bottom: 24px; }
-    .approach-list { display: flex; flex-direction: column; gap: 12px; }
-    .approach-li {
+    .approach-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+    .approach-list li {
       display: flex; align-items: center; gap: 12px;
+      font-size: 14px; color: var(--text-light);
       padding: 12px 16px;
       background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.06);
       border-radius: 12px;
-      font-size: 13px; color: var(--text-light);
+      border: 1px solid rgba(255,255,255,0.05);
     }
-    .approach-li::before {
-      content: '';
-      width: 8px; height: 8px; flex-shrink: 0;
-      background: var(--grad); border-radius: 50%;
+    .approach-list li span:first-child { font-size: 18px; }
+    .approach-note {
+      padding: 16px 20px;
+      background: rgba(168,85,247,0.06);
+      border-radius: 14px;
+      border: 1px solid rgba(168,85,247,0.15);
+      font-size: 13px; color: var(--text-light); line-height: 1.75;
+      margin-bottom: 20px;
     }
-
     /* ===================== BOOK ===================== */
-    .book-sec { background: var(--bg2); }
+    .book-sec { background: var(--bg); }
     .book-inner {
       display: grid;
       grid-template-columns: auto 1fr;
       gap: clamp(30px, 5vw, 60px);
       align-items: center;
+      padding: clamp(36px, 5vw, 60px);
+      background: linear-gradient(135deg, rgba(168,85,247,0.08), rgba(236,72,153,0.06), rgba(249,115,22,0.04));
+      border: 1px solid rgba(168,85,247,0.18);
+      border-radius: 32px;
     }
     .book-cover {
-      width: clamp(140px, 20vw, 240px);
+      width: clamp(140px, 18vw, 220px);
+      border-radius: 14px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5), -6px 6px 0 rgba(168,85,247,0.3);
       flex-shrink: 0;
-      position: relative;
-    }
-    .book-cover img {
-      width: 100%;
-      border-radius: 16px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.5), 4px 0 20px rgba(168,85,247,0.2);
-    }
-    .book-placeholder {
-      width: clamp(140px, 20vw, 240px);
-      aspect-ratio: 2/3;
-      background: linear-gradient(160deg, #1a1030, #0f0f20);
-      border-radius: 16px;
-      border: 1px solid rgba(168,85,247,0.2);
-      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
-      font-size: 50px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
     }
     .book-badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 5px 12px;
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 5px 14px;
       background: rgba(251,191,36,0.1);
       border: 1px solid rgba(251,191,36,0.3);
-      border-radius: 50px;
+      border-radius: 20px;
       font-size: 11px; font-weight: 600; color: var(--gold);
       margin-bottom: 14px;
     }
     .book-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(22px, 3vw, 36px);
-      font-weight: 800; margin-bottom: 16px;
+      font-size: clamp(20px, 2.5vw, 30px);
+      font-weight: 800; margin-bottom: 14px;
     }
-    .book-desc {
-      font-size: clamp(13px, 1.4vw, 15px);
-      color: var(--text-light); line-height: 1.8; margin-bottom: 24px;
+    .book-title .grad-text {
+      background: var(--grad);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
-    .book-links { display: flex; gap: 12px; flex-wrap: wrap; }
-
+    .book-desc { font-size: clamp(13px, 1.3vw, 15px); color: var(--text-light); line-height: 1.85; margin-bottom: 24px; }
+    .book-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 28px; border-radius: 50px;
+      background: var(--grad);
+      font-size: 14px; font-weight: 700; color: #fff;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .book-cta:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(168,85,247,0.4); }
     /* ===================== REVIEWS ===================== */
-    .reviews-sec { background: var(--bg); }
+    .reviews-sec { background: var(--bg2); }
     .reviews-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
     .review-card {
-      padding: 28px;
+      padding: clamp(20px, 2.5vw, 28px);
       background: var(--card);
       border: 1px solid var(--card-border);
-      border-radius: 24px;
+      border-radius: 20px;
       transition: transform 0.3s, border-color 0.3s;
+      display: flex; flex-direction: column; gap: 14px;
     }
-    .review-card:hover { transform: translateY(-6px); border-color: rgba(168,85,247,0.3); }
-    .review-stars { color: var(--gold); font-size: 14px; margin-bottom: 16px; letter-spacing: 2px; }
+    .review-card:hover { transform: translateY(-5px); border-color: rgba(168,85,247,0.2); }
+    .review-stars { font-size: 13px; color: var(--gold); letter-spacing: 2px; }
     .review-text {
-      font-size: 14px; color: var(--text-light);
-      line-height: 1.8; margin-bottom: 20px;
-      font-style: italic;
+      font-size: clamp(13px, 1.3vw, 14px);
+      color: var(--text-light); line-height: 1.8;
+      flex: 1;
     }
-    .review-author { display: flex; align-items: center; gap: 12px; }
-    .review-avatar {
-      width: 42px; height: 42px; border-radius: 50%;
-      background: linear-gradient(135deg, rgba(168,85,247,0.3), rgba(236,72,153,0.2));
+    .review-author {
+      display: flex; align-items: center; gap: 12px;
+      padding-top: 14px;
+      border-top: 1px solid var(--card-border);
+    }
+    .review-ava {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: linear-gradient(135deg, rgba(168,85,247,0.3), rgba(236,72,153,0.3));
       display: flex; align-items: center; justify-content: center;
-      font-size: 22px; flex-shrink: 0;
+      font-size: 20px; flex-shrink: 0;
     }
     .review-name { font-size: 13px; font-weight: 700; }
-    .review-city { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
-
-    /* ===================== CTA ===================== */
+    .review-loc { font-size: 11px; color: var(--text-muted); }
+    /* ===================== CTA SECTION ===================== */
     .cta-sec {
-      background: var(--bg2);
+      background: linear-gradient(135deg, rgba(168,85,247,0.1), rgba(236,72,153,0.08), rgba(249,115,22,0.05));
+      border-top: 1px solid rgba(168,85,247,0.15);
+      border-bottom: 1px solid rgba(168,85,247,0.15);
       text-align: center;
+      padding: clamp(60px, 9vw, 110px) 0;
     }
-    .cta-inner {
-      max-width: 680px; margin: 0 auto;
-    }
-    .cta-icon { font-size: 60px; margin-bottom: 20px; }
+    .cta-icon { font-size: 48px; margin-bottom: 20px; }
     .cta-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(28px, 4vw, 48px);
-      font-weight: 800; margin-bottom: 16px;
+      font-size: clamp(26px, 4vw, 48px);
+      font-weight: 800; line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .cta-title .grad-text {
+      background: var(--grad);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
     .cta-desc {
       font-size: clamp(14px, 1.5vw, 17px);
       color: var(--text-light); line-height: 1.8;
-      margin-bottom: 36px;
+      max-width: 600px; margin: 0 auto 34px;
     }
     .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-
     /* ===================== CONTACTS ===================== */
-    .contacts-sec { background: var(--bg); }
-    .contacts-layout {
+    .contacts-sec { background: var(--bg3); }
+    .contacts-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: clamp(30px, 5vw, 60px);
+      gap: clamp(30px, 5vw, 70px);
     }
-    .contacts-social { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+    .soc-links { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
     .soc-link {
       display: flex; align-items: center; gap: 14px;
-      padding: 16px 20px;
+      padding: 14px 18px;
       background: var(--card);
       border: 1px solid var(--card-border);
       border-radius: 16px;
-      transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+      transition: transform 0.3s, border-color 0.3s;
     }
-    .soc-link:hover { transform: translateX(4px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+    .soc-link:hover { transform: translateX(6px); }
     .soc-icon {
-      width: 40px; height: 40px; border-radius: 10px;
+      width: 44px; height: 44px; border-radius: 12px;
       display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
     }
-    .soc-icon svg { width: 20px; height: 20px; fill: #fff; }
+    .soc-icon svg { width: 22px; height: 22px; fill: #fff; }
     .soc-link.tg .soc-icon { background: var(--tg); }
     .soc-link.wa .soc-icon { background: var(--wa); }
     .soc-link.vk .soc-icon { background: var(--vk); }
     .soc-link.yt .soc-icon { background: var(--yt); }
     .soc-text { flex: 1; }
     .soc-name { font-size: 14px; font-weight: 700; }
-    .soc-handle { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
-    .soc-arrow { color: var(--text-muted); font-size: 16px; }
+    .soc-handle { font-size: 12px; color: var(--text-muted); }
+    .soc-arrow { font-size: 16px; color: var(--text-muted); transition: transform 0.3s; }
+    .soc-link:hover .soc-arrow { transform: translateX(4px); }
     .contacts-phone {
       display: flex; align-items: center; gap: 12px;
-      padding: 18px 22px;
-      background: linear-gradient(135deg, rgba(168,85,247,0.1), rgba(236,72,153,0.08));
+      padding: 16px 20px;
+      background: var(--card);
       border: 1px solid rgba(168,85,247,0.2);
       border-radius: 16px;
-      font-size: clamp(16px,2vw,20px); font-weight: 800;
+      font-size: 17px; font-weight: 700;
       transition: border-color 0.3s, transform 0.3s;
     }
-    .contacts-phone:hover { border-color: rgba(168,85,247,0.5); transform: translateY(-2px); }
+    .contacts-phone:hover { border-color: rgba(168,85,247,0.4); transform: translateX(4px); }
     .ph-icon { font-size: 22px; }
+    /* Contact form */
     .contact-form {
       background: var(--card);
       border: 1px solid var(--card-border);
-      border-radius: 24px;
-      padding: clamp(24px, 3vw, 36px);
+      border-radius: 28px;
+      padding: clamp(26px, 3.5vw, 44px);
     }
     .form-title {
       font-family: 'Playfair Display', serif;
-      font-size: 22px; font-weight: 700; margin-bottom: 8px;
+      font-size: clamp(18px, 2vw, 24px);
+      font-weight: 700; margin-bottom: 6px;
     }
-    .form-sub {
-      font-size: 13px; color: var(--text-muted); line-height: 1.7; margin-bottom: 24px;
-    }
+    .form-sub { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; line-height: 1.7; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .form-group { margin-bottom: 16px; }
-    .form-label { display: block; font-size: 12px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 7px; }
+    .form-group { display: flex; flex-direction: column; gap: 7px; margin-bottom: 16px; }
+    .form-label { font-size: 12px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.3px; }
     .form-input, .form-select, .form-textarea {
-      width: 100%; padding: 13px 16px;
+      padding: 12px 16px;
       background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.1);
+      border: 1.5px solid rgba(255,255,255,0.1);
       border-radius: 12px;
+      color: var(--text);
       font-family: 'Inter', sans-serif;
-      font-size: 14px; color: var(--text);
-      outline: none; transition: border-color 0.3s, box-shadow 0.3s;
-      appearance: none;
+      font-size: 14px;
+      transition: border-color 0.3s, background 0.3s;
+      outline: none;
+      width: 100%;
     }
     .form-input:focus, .form-select:focus, .form-textarea:focus {
       border-color: rgba(168,85,247,0.5);
-      box-shadow: 0 0 0 3px rgba(168,85,247,0.08);
+      background: rgba(168,85,247,0.04);
     }
-    .form-select { cursor: pointer; }
-    .form-select option { background: #1a1030; }
+    .form-select option { background: #111122; }
     .form-textarea { min-height: 110px; resize: vertical; }
     .form-submit {
-      width: 100%; padding: 15px;
-      background: var(--grad); border: none;
-      border-radius: 12px; font-family: 'Inter', sans-serif;
-      font-size: 15px; font-weight: 700; color: #fff;
-      cursor: pointer; transition: transform 0.3s, box-shadow 0.3s;
-      margin-top: 4px;
+      width: 100%;
+      padding: 14px;
+      background: var(--grad);
+      border: none; border-radius: 50px;
+      color: #fff; font-family: 'Inter', sans-serif;
+      font-size: 15px; font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
     }
-    .form-submit:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(168,85,247,0.4); }
+    .form-submit:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(168,85,247,0.4); }
     .form-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
-
     /* ===================== FOOTER ===================== */
     footer {
-      background: var(--bg2);
+      background: var(--bg);
       border-top: 1px solid rgba(255,255,255,0.06);
-      padding: clamp(40px, 6vw, 70px) 0 clamp(24px, 3vw, 36px);
+      padding: clamp(50px, 7vw, 80px) 0 clamp(24px, 4vw, 36px);
     }
     .footer-grid {
       display: grid;
       grid-template-columns: 2fr 1fr 1fr;
-      gap: clamp(30px, 4vw, 60px);
-      margin-bottom: clamp(30px, 4vw, 50px);
+      gap: clamp(30px, 5vw, 60px);
+      margin-bottom: 40px;
     }
     .footer-logo {
       display: flex; align-items: center; gap: 10px;
       margin-bottom: 16px; cursor: pointer;
     }
-    .footer-desc {
-      font-size: 13px; color: var(--text-muted); line-height: 1.8;
-      max-width: 280px; margin-bottom: 20px;
-    }
+    .footer-desc { font-size: 13px; color: var(--text-muted); line-height: 1.75; margin-bottom: 20px; }
     .footer-socials { display: flex; gap: 10px; }
     .footer-soc {
-      width: 38px; height: 38px; border-radius: 10px;
+      width: 38px; height: 38px;
+      border-radius: 10px;
       display: flex; align-items: center; justify-content: center;
-      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
-      transition: transform 0.3s, background 0.3s;
+      transition: transform 0.3s, opacity 0.3s;
+      opacity: 0.7;
     }
-    .footer-soc:hover { transform: translateY(-3px); }
-    .footer-soc.tg:hover { background: var(--tg); }
-    .footer-soc.wa:hover { background: var(--wa); }
-    .footer-soc.vk:hover { background: var(--vk); }
-    .footer-soc.yt:hover { background: var(--yt); }
+    .footer-soc:hover { transform: translateY(-3px); opacity: 1; }
     .footer-soc svg { width: 18px; height: 18px; fill: #fff; }
-    .footer-col h4 { font-size: 13px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 16px; }
+    .footer-soc.tg { background: var(--tg); }
+    .footer-soc.wa { background: var(--wa); }
+    .footer-soc.vk { background: var(--vk); }
+    .footer-soc.yt { background: var(--yt); }
+    .footer-col h4 { font-size: 13px; font-weight: 700; margin-bottom: 16px; letter-spacing: 0.3px; }
     .footer-links { display: flex; flex-direction: column; gap: 10px; }
-    .footer-links a {
-      font-size: 13px; color: var(--text-muted);
-      transition: color 0.3s;
-    }
+    .footer-links a { font-size: 13px; color: var(--text-muted); transition: color 0.3s; }
     .footer-links a:hover { color: var(--text); }
     .footer-bot {
-      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
-      gap: 14px; padding-top: 24px;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+      padding-top: 24px;
       border-top: 1px solid rgba(255,255,255,0.06);
     }
     .footer-copy { font-size: 12px; color: var(--text-muted); }
     .footer-reg-link {
-      font-size: 12px; font-weight: 700;
-      background: var(--grad); -webkit-background-clip: text; background-clip: text;
-      -webkit-text-fill-color: transparent;
-      transition: opacity 0.3s;
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 8px 18px; border-radius: 50px;
+      background: rgba(168,85,247,0.1);
+      border: 1px solid rgba(168,85,247,0.2);
+      font-size: 12px; font-weight: 600; color: #c084fc;
+      transition: background 0.3s, border-color 0.3s;
     }
-    .footer-reg-link:hover { opacity: 0.8; }
-
+    .footer-reg-link:hover { background: rgba(168,85,247,0.15); border-color: rgba(168,85,247,0.35); }
     /* ===================== TOAST ===================== */
     .toast {
-      position: fixed; bottom: 30px; right: 30px; z-index: 999;
-      padding: 14px 22px;
-      border-radius: 14px;
+      position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(20px);
+      padding: 13px 24px;
+      border-radius: 50px;
       font-size: 14px; font-weight: 600;
-      max-width: 340px; line-height: 1.5;
-      transform: translateY(20px); opacity: 0;
-      transition: transform 0.4s, opacity 0.4s;
-      pointer-events: none;
+      opacity: 0; visibility: hidden;
+      transition: opacity 0.4s, transform 0.4s, visibility 0.4s;
+      z-index: 300;
+      white-space: nowrap;
     }
-    .toast.ok { background: rgba(37,211,102,0.15); border: 1px solid rgba(37,211,102,0.3); color: #25D366; }
-    .toast.err { background: rgba(239,68,68,0.15); border: 1px solid rgba(239,68,68,0.3); color: #f87171; }
-    .toast.show { transform: translateY(0); opacity: 1; }
+    .toast.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+    .toast.ok { background: rgba(37,211,102,0.15); border: 1px solid rgba(37,211,102,0.35); color: #4ade80; }
+    .toast.err { background: rgba(239,68,68,0.15); border: 1px solid rgba(239,68,68,0.35); color: #f87171; }
+
+    /* ===================== desc.jpg MOBILE — ЕДИНСТВЕННОЕ ИЗМЕНЕНИЕ ===================== */
+    /* Обёртка для кликабельной картинки */
+    .desc-img-wrap {
+      position: relative;
+      display: block;
+      cursor: zoom-in;
+    }
+    /* Подсказка «нажмите для увеличения» — только на мобильных */
+    .desc-img-wrap::after {
+      display: none;
+    }
+    /* Лайтбокс для desc.jpg */
+    .desc-lightbox {
+      position: fixed; inset: 0; z-index: 210;
+      background: rgba(0,0,0,0.95);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+      padding: 16px;
+    }
+    .desc-lightbox.open { opacity: 1; visibility: visible; }
+    .desc-lightbox img {
+      max-width: 100%;
+      max-height: 90vh;
+      width: auto;
+      height: auto;
+      border-radius: 16px;
+      object-fit: contain;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+      /* Pinch-to-zoom support */
+      touch-action: pinch-zoom;
+    }
+    .desc-lb-close {
+      position: absolute; top: 16px; right: 16px;
+      font-size: 28px; cursor: pointer; color: #fff;
+      width: 44px; height: 44px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      border: none;
+      z-index: 1;
+      transition: background 0.2s;
+    }
+    .desc-lb-close:hover { background: rgba(255,255,255,0.25); }
+    @media (max-width: 767px) {
+      /* Увеличиваем картинку на мобильных — занимает всю ширину с небольшими отступами */
+      .hero-banner-img {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 16px;
+        margin-bottom: 28px;
+      }
+      /* Показываем подсказку на мобильных */
+      .desc-img-wrap::after {
+        content: '🔍 Нажмите для увеличения';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        margin-top: 10px;
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--text-muted);
+        letter-spacing: 0.3px;
+      }
+    }
 
     /* ===================== RESPONSIVE ===================== */
     @media (max-width: 1024px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .hero-visual { display: none; }
-      .about-grid { grid-template-columns: 1fr; }
-      .about-img-wrap { position: static; }
-      .approach-grid { grid-template-columns: 1fr; }
-      .contacts-layout { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .hero-grid { gap: 30px; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .program-grid { grid-template-columns: repeat(2, 1fr); }
+      .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+      .program-visual { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: repeat(4, 1fr); }
     }
-    @media (max-width: 768px) {
-      nav { display: none; }
-      .h-cta { display: none; }
+    @media (max-width: 767px) {
+      nav, .h-cta { display: none; }
       .mbtn { display: flex; }
-      .book-inner { grid-template-columns: 1fr; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-visual { order: -1; }
+      .hero-avatar-wrap { width: clamp(220px, 70vw, 320px); }
+      .fb-1 { right: 0; }
+      .fb-2 { left: 0; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-img-wrap { position: relative; top: 0; }
+      .about-stats { grid-template-columns: repeat(3, 1fr); }
+      .services-grid { grid-template-columns: 1fr; }
+      .program-grid { grid-template-columns: repeat(2, 1fr); }
+      .approach-grid { grid-template-columns: 1fr; }
+      .approach-card { position: relative; top: 0; }
+      .book-inner { grid-template-columns: 1fr; text-align: center; }
       .book-cover { margin: 0 auto; }
-      .form-row { grid-template-columns: 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .contacts-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
-      .about-stats { grid-template-columns: 1fr 1fr; }
       .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-bot { flex-direction: column; align-items: flex-start; }
+      .float-badge { display: none; }
     }
     @media (max-width: 480px) {
-      .hero-stats { gap: 16px; }
-      .stat-divider { display: none; }
       .about-stats { grid-template-columns: 1fr; }
+      .program-grid { grid-template-columns: 1fr; }
       .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-stats { gap: 14px; }
+      .hero-stat-val { font-size: 18px; }
     }
   </style>
+
 </head>
+
 <body>
 
   <!-- Фоновые орбы -->
@@ -1087,7 +1180,7 @@
     <div class="con">
       <div class="header-inner">
         <div class="logo" id="logoTop">
-          <img src="img/logo.png" alt="Логотип Super Jump" class="logo-img">
+          <img src="img/logo.png" alt="Логотип" class="logo-img" onerror="this.style.display='none'">
           <div class="logo-text">
             <span class="logo-name">Юлия Савицкая</span>
             <span class="logo-sub">Super Jump</span>
@@ -1109,7 +1202,7 @@
     </div>
   </header>
 
-  <!-- Мобильное меню -->
+  <!-- Mobile Menu -->
   <div class="mmenu" id="mmenu">
     <a href="#about">Обо мне</a>
     <a href="#services">Направления</a>
@@ -1121,29 +1214,31 @@
   </div>
 
   <main>
+
     <!-- ===================== HERO ===================== -->
     <section class="hero" id="home">
       <div class="con">
         <div class="hero-grid">
-          <div class="hero-content">
-            <div class="hero-line reveal"></div>
-            <div class="hero-tag reveal reveal-d1">Интеллект-тренер · Super Jump</div>
-            <h1 class="hero-h1 reveal reveal-d2">
+          <!-- Left: text -->
+          <div>
+            <div class="hero-tag reveal">Интеллект-тренер · Super Jump</div>
+            <div class="hero-line reveal reveal-d1"></div>
+            <h1 class="hero-h1 reveal reveal-d1">
               Юлия<br>
               <span class="grad-text">Савицкая</span>
             </h1>
-            <p class="hero-role reveal reveal-d3">
+            <p class="hero-role reveal reveal-d2">
               <span>Онлайн-формат</span>
               Ментальный рост · Энергия · Результат
             </p>
-            <p class="hero-desc reveal reveal-d4">
+            <p class="hero-desc reveal reveal-d3">
               Помогаю людям открыть внутренние ресурсы, восстановить энергию и выстроить жизнь, где есть место и успеху, и радости. Без магии — только рабочие инструменты для ума.
             </p>
-            <div class="hero-btns reveal reveal-d5">
+            <div class="hero-btns reveal reveal-d4">
               <a href="#contacts" class="btn-primary">Записаться на курс ⚡</a>
-              <a href="https://account.superjump.com/register/38867" target="_blank" rel="noopener" class="btn-secondary">Тест-драйв Super Jump →</a>
+              <a href="#program" class="btn-secondary">Узнать программу →</a>
             </div>
-            <div class="hero-stats reveal">
+            <div class="hero-stats reveal reveal-d5">
               <div class="hero-stat">
                 <span class="hero-stat-val">10</span>
                 <span class="hero-stat-lbl">дней интенсива</span>
@@ -1165,12 +1260,12 @@
               </div>
             </div>
           </div>
-
+          <!-- Right: avatar -->
           <div class="hero-visual reveal-right">
             <div class="hero-avatar-wrap">
               <div class="hero-avatar-bg"></div>
               <div class="hero-avatar">
-                <img src="img/1.jpg" alt="Юлия Савицкая — интеллект-тренер Super Jump">
+                <img src="img/1.jpg" alt="Юлия Савицкая — интеллект-тренер Super Jump" loading="eager">
               </div>
               <div class="float-badge fb-1">
                 <span class="fb-icon">🌍</span>
@@ -1193,50 +1288,60 @@
     </section>
 
     <!-- ===================== HERO BANNER + VIDEO ===================== -->
-    <section class="hero-banner-section">
+    <section class="hero-banner-section reveal">
       <div class="con">
-        <div class="reveal">
-          <img src="img/desc.jpg" alt="Super Jump — описание метода" class="hero-banner-img">
-        </div>
-        <div class="video-block reveal">
-          <h2 class="video-block-title">Что такое <span class="grad-text">Super Jump</span></h2>
+        <!-- ЕДИНСТВЕННОЕ ИЗМЕНЕНИЕ: desc.jpg обёрнута в кликабельный контейнер -->
+        <a class="desc-img-wrap" id="descImgWrap" href="#" onclick="return false;" aria-label="Открыть изображение для чтения">
+          <img
+            src="img/desc.jpg"
+            alt="Описание курса Super Jump"
+            class="hero-banner-img"
+            id="descImg"
+            loading="lazy"
+          >
+        </a>
+        <div class="video-block reveal reveal-d1">
+          <p class="video-block-title">Смотрите <span class="grad-text">презентацию курса</span></p>
           <div class="video-wrapper">
             <iframe
-              src="https://rutube.ru/play/embed/aaf98aadcbf7cdce5c8b0894ff52e4d5/?autoplay=0"
-              allow="clipboard-write"
+              src="https://www.youtube.com/embed/aXnhPo4OUFE?rel=0&modestbranding=1"
+              title="Презентация курса Super Jump"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
               loading="lazy"
-              title="Что такое Super Jump">
-            </iframe>
+            ></iframe>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Лайтбокс для desc.jpg -->
+    <div class="desc-lightbox" id="descLightbox" role="dialog" aria-modal="true" aria-label="Просмотр изображения">
+      <button class="desc-lb-close" id="descLbClose" aria-label="Закрыть">✕</button>
+      <img src="" alt="Описание курса Super Jump" id="descLbImg">
+    </div>
 
     <hr class="sec-divider">
 
     <!-- ===================== ABOUT ===================== -->
     <section class="about-sec" id="about">
       <div class="con">
-        <div class="about-glow"></div>
         <div class="about-grid">
+          <!-- Left: text -->
           <div class="reveal-left">
             <div class="sec-head">
-              <div class="sec-label">Обо мне</div>
+              <span class="sec-label">Обо мне</span>
               <h2 class="sec-title">Твой проводник к <span class="grad-text">ресурсному состоянию</span></h2>
             </div>
-
             <div class="about-quote">
               «Я верю, что каждый человек способен на больше — стоит лишь научить мозг работать в правильном режиме. Именно этим я и занимаюсь.»
             </div>
-
             <p class="about-body">
               Я интеллект-тренер международной системы Super Jump — запатентованной методики, разработанной Владимиром Довганём. Моя работа — помогать людям находить внутреннюю опору, управлять своим состоянием и двигаться к целям без выгорания и потери себя.
             </p>
             <p class="about-body">
               В своей практике я объединяю 8 проверенных ментальных инструментов: от техник управления эмоциями до дофаминового марафона и ментальной йоги. Каждый инструмент прошёл проверку сотнями участников по всему миру — и продолжает работать.
             </p>
-
             <div class="about-stats">
               <div class="a-stat">
                 <div class="a-stat-icon">🌍</div>
@@ -1254,7 +1359,6 @@
                 <span class="a-stat-lbl">ментальных практик</span>
               </div>
             </div>
-
             <div class="about-highlights">
               <div class="about-hl">
                 <div class="about-hl-icon">🏅</div>
@@ -1279,13 +1383,16 @@
               </div>
             </div>
           </div>
-
-          <div class="about-img-wrap reveal-right">
-            <div class="about-img-card">
-              <img src="img/2.jpg" alt="Юлия Савицкая — фото">
-              <div class="about-img-caption">
-                <div class="about-img-name">Юлия Савицкая</div>
-                <div class="about-img-role">Интеллект-тренер · Super Jump</div>
+          <!-- Right: photo -->
+          <div class="reveal-right">
+            <div class="about-img-wrap">
+              <div class="about-glow"></div>
+              <div class="about-img-card">
+                <img src="img/2.jpg" alt="Юлия Савицкая — фото">
+                <div class="about-img-caption">
+                  <div class="about-img-name">Юлия Савицкая</div>
+                  <div class="about-img-role">Интеллект-тренер · Super Jump</div>
+                </div>
               </div>
             </div>
           </div>
@@ -1297,40 +1404,35 @@
     <section class="gallery-sec" id="gallery">
       <div class="con">
         <div class="sec-head sec-head-center reveal">
-          <div class="sec-label">Фотогалерея</div>
+          <span class="sec-label">Фотогалерея</span>
           <h2 class="sec-title">Моменты и <span class="grad-text">достижения</span></h2>
         </div>
-        <div class="gallery-grid reveal">
-          <div class="gallery-item" data-index="0">
-            <img src="img/cert-1.png" alt="Сертификат интеллект-тренера">
-            <div class="gallery-overlay"></div>
+        <div class="gallery-grid">
+          <div class="gallery-item reveal reveal-d1" data-index="0">
+            <img src="img/cert-1.png" alt="Сертификат интеллект-тренера" loading="lazy">
           </div>
-          <div class="gallery-item" data-index="1">
-            <img src="img/3.jpg" alt="Фото">
-            <div class="gallery-overlay"></div>
+          <div class="gallery-item reveal reveal-d2" data-index="1">
+            <img src="img/3.jpg" alt="Фото" loading="lazy">
           </div>
-          <div class="gallery-item" data-index="2">
-            <img src="img/4.jpg" alt="Фото">
-            <div class="gallery-overlay"></div>
+          <div class="gallery-item reveal reveal-d3" data-index="2">
+            <img src="img/4.jpg" alt="Фото" loading="lazy">
           </div>
-          <div class="gallery-item" data-index="3">
-            <img src="img/5.jpg" alt="Фото">
-            <div class="gallery-overlay"></div>
+          <div class="gallery-item reveal reveal-d4" data-index="3">
+            <img src="img/5.jpg" alt="Фото" loading="lazy">
           </div>
-          <div class="gallery-item" data-index="4">
-            <img src="img/6.jpg" alt="Фото">
-            <div class="gallery-overlay"></div>
+          <div class="gallery-item reveal reveal-d5" data-index="4">
+            <img src="img/6.jpg" alt="Фото" loading="lazy">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-      <span class="lightbox-close" id="lbClose">×</span>
-      <button class="lightbox-prev" id="lbPrev">‹</button>
+    <!-- Gallery Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+      <button class="lb-close" id="lbClose" aria-label="Закрыть">✕</button>
+      <button class="lb-prev" id="lbPrev" aria-label="Предыдущее">‹</button>
       <img id="lbImg" src="" alt="Просмотр фото">
-      <button class="lightbox-next" id="lbNext">›</button>
+      <button class="lb-next" id="lbNext" aria-label="Следующее">›</button>
     </div>
 
     <hr class="sec-divider">
@@ -1339,51 +1441,45 @@
     <section class="services-sec" id="services">
       <div class="con">
         <div class="sec-head sec-head-center reveal">
-          <div class="sec-label">Направления</div>
+          <span class="sec-label">Направления</span>
           <h2 class="sec-title">Чем я могу <span class="grad-text">быть полезна</span></h2>
           <p class="sec-desc">Каждое направление — это практический инструмент, а не теория. Работаем с реальными задачами вашей жизни.</p>
         </div>
         <div class="services-grid">
           <div class="svc-card reveal reveal-d1">
-            <div class="svc-card-glow"></div>
             <div class="svc-icon">🧠</div>
-            <div class="svc-card-title">Эмоциональный интеллект</div>
-            <p class="svc-card-desc">Учим мозг управлять реакциями, а не быть их заложником. Стресс, тревога и срывы превращаются в управляемые состояния.</p>
+            <div class="svc-title">Эмоциональный интеллект</div>
+            <div class="svc-desc">Учим мозг управлять реакциями, а не быть их заложником. Стресс, тревога и срывы превращаются в управляемые состояния.</div>
             <span class="svc-tag">EQ 2.0</span>
           </div>
           <div class="svc-card reveal reveal-d2">
-            <div class="svc-card-glow"></div>
             <div class="svc-icon">⚡</div>
-            <div class="svc-card-title">Ментальная энергия</div>
-            <p class="svc-card-desc">Дофаминовый марафон и техники восстановления сил — для тех, кто устал уставать. Бодрость и мотивация без кофе и насилия над собой.</p>
+            <div class="svc-title">Ментальная энергия</div>
+            <div class="svc-desc">Дофаминовый марафон и техники восстановления сил — для тех, кто устал уставать. Бодрость и мотивация без кофе и насилия над собой.</div>
             <span class="svc-tag">Энергопрактики</span>
           </div>
           <div class="svc-card reveal reveal-d3">
-            <div class="svc-card-glow"></div>
             <div class="svc-icon">🎯</div>
-            <div class="svc-card-title">Ясность и фокус</div>
-            <p class="svc-card-desc">Когда голова забита всем подряд, трудно двигаться к целям. Помогаю расчистить пространство и найти своё направление.</p>
+            <div class="svc-title">Ясность и фокус</div>
+            <div class="svc-desc">Когда голова забита всем подряд, трудно двигаться к целям. Помогаю расчистить пространство и найти своё направление.</div>
             <span class="svc-tag">Целеполагание</span>
           </div>
           <div class="svc-card reveal reveal-d4">
-            <div class="svc-card-glow"></div>
             <div class="svc-icon">👑</div>
-            <div class="svc-card-title">Уверенность и лидерство</div>
-            <p class="svc-card-desc">Ораторство, самопрезентация, осанка победителя — навыки, которые меняют то, как вас воспринимают окружающие и как вы воспринимаете себя.</p>
+            <div class="svc-title">Уверенность и лидерство</div>
+            <div class="svc-desc">Ораторство, самопрезентация, осанка победителя — навыки, которые меняют то, как вас воспринимают окружающие и как вы воспринимаете себя.</div>
             <span class="svc-tag">Soft Skills</span>
           </div>
           <div class="svc-card reveal reveal-d5">
-            <div class="svc-card-glow"></div>
             <div class="svc-icon">🌱</div>
-            <div class="svc-card-title">Привычки успешных людей</div>
-            <p class="svc-card-desc">Не разовые всплески мотивации, а устойчивые ежедневные ритуалы. Формируем то, что остаётся с вами навсегда.</p>
+            <div class="svc-title">Привычки успешных людей</div>
+            <div class="svc-desc">Не разовые всплески мотивации, а устойчивые ежедневные ритуалы. Формируем то, что остаётся с вами навсегда.</div>
             <span class="svc-tag">Трансформация</span>
           </div>
-          <div class="svc-card reveal">
-            <div class="svc-card-glow"></div>
+          <div class="svc-card reveal reveal-d5">
             <div class="svc-icon">🚀</div>
-            <div class="svc-card-title">Профессия интеллект-тренера</div>
-            <p class="svc-card-desc">Хотите обучать других и строить доход на помощи людям? Расскажу, как стать интеллект-тренером в системе Super Jump.</p>
+            <div class="svc-title">Профессия интеллект-тренера</div>
+            <div class="svc-desc">Хотите обучать других и строить доход на помощи людям? Расскажу, как стать интеллект-тренером в системе Super Jump.</div>
             <span class="svc-tag">Бизнес</span>
           </div>
         </div>
@@ -1396,82 +1492,66 @@
     <section class="program-sec" id="program">
       <div class="con">
         <div class="sec-head sec-head-center reveal">
-          <div class="sec-label">Программа</div>
-          <h2 class="sec-title">8 инструментов <span class="grad-text">Super Jump</span></h2>
+          <span class="sec-label">Программа</span>
+          <h2 class="sec-title">10 дней, которые <span class="grad-text">меняют всё</span></h2>
           <p class="sec-desc">Каждое упражнение — проверенная практика. Вместе они создают новые нейронные связи и меняют качество жизни уже за 10 дней.</p>
         </div>
-
         <div class="program-grid">
           <div class="prog-card reveal reveal-d1">
             <div class="prog-num">01</div>
             <div class="prog-icon">😊</div>
             <div class="prog-title">«200 улыбок»</div>
-            <p class="prog-desc">Запускает выработку гормонов счастья, снимает усталость и повышает продуктивность — без кофе и стимуляторов.</p>
-            <span class="prog-tag">Бодрость с утра</span>
+            <div class="prog-desc">Запускает выработку гормонов счастья, снимает усталость и повышает продуктивность — без кофе и стимуляторов.</div>
+            <div class="prog-effect">Бодрость с утра</div>
           </div>
           <div class="prog-card reveal reveal-d2">
             <div class="prog-num">02</div>
             <div class="prog-icon">🧠</div>
             <div class="prog-title">«Я — хозяин мыслей»</div>
-            <p class="prog-desc">Снижает поток негативных мыслей. Учит переключать внимание и управлять ментальным фоном.</p>
-            <span class="prog-tag">Минус 90% стресса</span>
+            <div class="prog-desc">Снижает поток негативных мыслей. Учит переключать внимание и управлять ментальным фоном.</div>
+            <div class="prog-effect">Минус 90% стресса</div>
           </div>
           <div class="prog-card reveal reveal-d3">
             <div class="prog-num">03</div>
             <div class="prog-icon">👑</div>
             <div class="prog-title">«Осанка короля»</div>
-            <p class="prog-desc">Телесная практика, которая меняет внутреннее ощущение и внешнее впечатление. Уверенность, которую видно.</p>
-            <span class="prog-tag">Уверенность в себе</span>
+            <div class="prog-desc">Телесная практика, которая меняет внутреннее ощущение и внешнее впечатление. Уверенность, которую видно.</div>
+            <div class="prog-effect">Уверенность в себе</div>
           </div>
           <div class="prog-card reveal reveal-d4">
             <div class="prog-num">04</div>
             <div class="prog-icon">💧</div>
             <div class="prog-title">«Будьте здоровы»</div>
-            <p class="prog-desc">Стимулирует нестандартное мышление и открывает поток новых идей. Мощный ментальный детокс.</p>
-            <span class="prog-tag">Свежий взгляд</span>
+            <div class="prog-desc">Стимулирует нестандартное мышление и открывает поток новых идей. Мощный ментальный детокс.</div>
+            <div class="prog-effect">Свежий взгляд</div>
           </div>
-          <div class="prog-card reveal reveal-d5">
+          <div class="prog-card reveal reveal-d1">
             <div class="prog-num">05</div>
             <div class="prog-icon">❤️</div>
             <div class="prog-title">«Я — хозяин чувств»</div>
-            <p class="prog-desc">Управление эмоциональными реакциями. Стрессоустойчивость в отношениях, работе, любой неожиданной ситуации.</p>
-            <span class="prog-tag">Спокойствие</span>
+            <div class="prog-desc">Управление эмоциональными реакциями. Стрессоустойчивость в отношениях, работе, любой неожиданной ситуации.</div>
+            <div class="prog-effect">Спокойствие</div>
           </div>
-          <div class="prog-card reveal">
+          <div class="prog-card reveal reveal-d2">
             <div class="prog-num">06</div>
             <div class="prog-icon">🎧</div>
             <div class="prog-title">Аудиотренинг</div>
-            <p class="prog-desc">Работа с подсознанием: перепрограммирование установок на успех, изобилие и уверенность в своих силах.</p>
-            <span class="prog-tag">Новые установки</span>
+            <div class="prog-desc">Работа с подсознанием: перепрограммирование установок на успех, изобилие и уверенность в своих силах.</div>
+            <div class="prog-effect">Новые установки</div>
           </div>
-          <div class="prog-card reveal">
+          <div class="prog-card reveal reveal-d3">
             <div class="prog-num">07</div>
             <div class="prog-icon">🛡️</div>
             <div class="prog-title">Защита от инфошума</div>
-            <p class="prog-desc">Освобождает мозг от лишнего, улучшает концентрацию и память. Ментальное здоровье в эпоху перегрузок.</p>
-            <span class="prog-tag">Ясный ум</span>
+            <div class="prog-desc">Освобождает мозг от лишнего, улучшает концентрацию и память. Ментальное здоровье в эпоху перегрузок.</div>
+            <div class="prog-effect">Ясный ум</div>
           </div>
-          <div class="prog-card reveal">
+          <div class="prog-card reveal reveal-d4">
             <div class="prog-num">08</div>
             <div class="prog-icon">🌟</div>
             <div class="prog-title">Сверхцель</div>
-            <p class="prog-desc">Помогает обрести смысл, найти призвание и выйти на новый уровень осознанности. Жизнь с вектором.</p>
-            <span class="prog-tag">Предназначение</span>
-          </div>
-        </div>
-
-        <!-- Image + Video after program grid -->
-        <div class="program-image-block reveal">
-          <img src="img/8zhemch.jpg" alt="8 жемчужин Super Jump">
-          <h2 class="video-block-title">Упражнения <span class="grad-text">8 жемчужин</span></h2>
-          <div class="video-wrapper">
-            <iframe
-              src="https://rutube.ru/play/embed/c6e4660768cc75a4820cf6d666aff7ca/?autoplay=0"
-              allow="clipboard-write"
-              allowfullscreen
-              loading="lazy"
-              title="Упражнения 8 жемчужин">
-            </iframe>
+            <div class="prog-desc">Помогает обрести смысл, найти призвание и выйти на новый уровень осознанности. Жизнь с вектором.</div>
+            <div class="prog-effect">Предназначение</div>
           </div>
         </div>
       </div>
@@ -1483,35 +1563,35 @@
     <section class="approach-sec" id="approach">
       <div class="con">
         <div class="approach-grid">
-          <div>
-            <div class="sec-head reveal">
-              <div class="sec-label">Подход</div>
+          <div class="reveal-left">
+            <div class="sec-head">
+              <span class="sec-label">Подход</span>
               <h2 class="sec-title">Почему это <span class="grad-text">работает</span></h2>
               <p class="sec-desc">Super Jump — не мотивационные речи и не абстрактная психология. Это конкретные практики с конкретным эффектом.</p>
             </div>
             <div class="approach-items">
-              <div class="approach-item reveal reveal-d1">
+              <div class="approach-item">
                 <div class="approach-icon">⏱️</div>
                 <div class="approach-text">
                   <h4>Всего 1 час в день</h4>
                   <p>Без многодневных ретритов и походов на курсы. Занятия встраиваются в любой расписание — даже самое плотное.</p>
                 </div>
               </div>
-              <div class="approach-item reveal reveal-d2">
+              <div class="approach-item">
                 <div class="approach-icon">⚡</div>
                 <div class="approach-text">
                   <h4>Эффект уже на 2-й день</h4>
                   <p>Многие участники замечают прилив сил, снижение тревоги и улучшение сна после первых двух занятий.</p>
                 </div>
               </div>
-              <div class="approach-item reveal reveal-d3">
+              <div class="approach-item">
                 <div class="approach-icon">🧬</div>
                 <div class="approach-text">
                   <h4>Нейробиология, а не эзотерика</h4>
                   <p>Методика основана на формировании новых нейронных связей. За 10 дней практики мозг буквально учится работать иначе.</p>
                 </div>
               </div>
-              <div class="approach-item reveal reveal-d4">
+              <div class="approach-item">
                 <div class="approach-icon">🤝</div>
                 <div class="approach-text">
                   <h4>Живое сообщество</h4>
@@ -1520,26 +1600,21 @@
               </div>
             </div>
           </div>
-
           <div class="reveal-right">
             <div class="approach-card">
-              <div class="approach-card-header">
-                <div class="approach-card-icon">🧠</div>
-                <div>
-                  <h3>Как проходит курс</h3>
-                </div>
-              </div>
-              <p class="approach-card-desc">
+              <h3>Что входит в курс</h3>
+              <ul class="approach-list">
+                <li><span>💻</span><span>Онлайн — Zoom / Skype / Telegram</span></li>
+                <li><span>👥</span><span>Мини-группа до 10 человек</span></li>
+                <li><span>♾️</span><span>Доступ к материалам навсегда</span></li>
+                <li><span>💬</span><span>Поддержка между занятиями</span></li>
+                <li><span>✅</span><span>Гарантия результата при выполнении</span></li>
+                <li><span>👤</span><span>Индивидуальный VIP-формат — 1 на 1</span></li>
+              </ul>
+              <div class="approach-note">
                 10 дней онлайн-занятий в мини-группе или индивидуально. Каждый день — одна практика, одна новая привычка. К финалу — новое состояние, которое остаётся с вами.
-              </p>
-              <div class="approach-list">
-                <div class="approach-li">Онлайн — Zoom / Skype / Telegram</div>
-                <div class="approach-li">Мини-группа до 10 человек</div>
-                <div class="approach-li">Доступ к материалам навсегда</div>
-                <div class="approach-li">Поддержка между занятиями</div>
-                <div class="approach-li">Гарантия результата при выполнении</div>
-                <div class="approach-li">Индивидуальный VIP-формат — 1 на 1</div>
               </div>
+              <a href="#contacts" class="btn-primary" style="display:inline-flex;">Записаться →</a>
             </div>
           </div>
         </div>
@@ -1552,23 +1627,20 @@
     <section class="book-sec" id="book">
       <div class="con">
         <div class="sec-head sec-head-center reveal">
-          <div class="sec-label">Книга-основа</div>
+          <span class="sec-label">Книга-основа</span>
           <h2 class="sec-title">Квантовый <span class="grad-text">прыжок к мечте</span></h2>
         </div>
-        <div class="book-inner">
-          <div class="book-cover reveal-left">
-            <img src="img/book.jpg" alt="Книга Квантовый скачок — Владимир Довгань">
-          </div>
-          <div class="reveal-right">
+        <div class="book-inner reveal">
+          <img src="img/book.jpg" alt="Книга Квантовый скачок — Владимир Довгань" class="book-cover" loading="lazy">
+          <div>
             <div class="book-badge">📚 Бестселлер</div>
-            <h3 class="book-title">Квантовый прыжок к мечте</h3>
+            <h3 class="book-title">Квантовый <span class="grad-text">прыжок к мечте</span></h3>
             <p class="book-desc">
               Владимир Довгань — предприниматель, который несколько раз начинал с нуля и каждый раз приходил к успеху. В этой книге он делится не просто историей, а системой: сочетанием аутотренинга и жизненной философии, которая позволяет выйти на новый уровень — и в бизнесе, и в жизни. Методика Super Jump выросла именно отсюда.
             </p>
-            <div class="book-links">
-              <a href="https://drive.google.com/drive/folders/1gTuinP2y2Shxi0b7ayDg25Cf4n2zavID" target="_blank" rel="noopener" class="btn-primary">Скачать PDF бесплатно 📕</a>
-              <a href="https://account.superjump.com/register/38867" target="_blank" rel="noopener" class="btn-secondary">Попробовать курс →</a>
-            </div>
+            <a href="https://drive.google.com/drive/folders/1gTuinP2y2Shxi0b7ayDg25Cf4n2zavID" target="_blank" rel="noopener" class="book-cta">
+              Скачать PDF бесплатно →
+            </a>
           </div>
         </div>
       </div>
@@ -1580,74 +1652,74 @@
     <section class="reviews-sec" id="reviews">
       <div class="con">
         <div class="sec-head sec-head-center reveal">
-          <div class="sec-label">Отзывы</div>
+          <span class="sec-label">Отзывы</span>
           <h2 class="sec-title">Что говорят <span class="grad-text">участники</span></h2>
           <p class="sec-desc">Слова тех, кто уже прошёл курс и продолжает практиковать.</p>
         </div>
         <div class="reviews-grid">
           <div class="review-card reveal reveal-d1">
             <div class="review-stars">★★★★★</div>
-            <p class="review-text">«Ещё на третий день я поняла, что что-то изменилось. Стала спокойнее реагировать на рабочие конфликты, лучше сплю. Казалось бы — час в день, а результат заметили даже коллеги.»</p>
+            <div class="review-text">«Ещё на третий день я поняла, что что-то изменилось. Стала спокойнее реагировать на рабочие конфликты, лучше сплю. Казалось бы — час в день, а результат заметили даже коллеги.»</div>
             <div class="review-author">
-              <div class="review-avatar">👩</div>
+              <div class="review-ava">👩</div>
               <div>
-                <div class="review-name">Елена М.</div>
-                <div class="review-city">Москва · Участница курса</div>
+                <div class="review-name">Ольга М.</div>
+                <div class="review-loc">Москва · HR-менеджер</div>
               </div>
             </div>
           </div>
           <div class="review-card reveal reveal-d2">
             <div class="review-stars">★★★★★</div>
-            <p class="review-text">«Скептически относился к подобным программам, но жена убедила попробовать. Через 10 дней — больше энергии, меньше раздражения. Не ожидал такого эффекта от простых упражнений.»</p>
+            <div class="review-text">«Скептически относился к подобным программам, но жена убедила попробовать. Через 10 дней — больше энергии, меньше раздражения. Не ожидал такого эффекта от простых упражнений.»</div>
             <div class="review-author">
-              <div class="review-avatar">👨</div>
+              <div class="review-ava">👨</div>
               <div>
                 <div class="review-name">Алексей К.</div>
-                <div class="review-city">Санкт-Петербург · Предприниматель</div>
+                <div class="review-loc">Санкт-Петербург · Предприниматель</div>
               </div>
             </div>
           </div>
           <div class="review-card reveal reveal-d3">
             <div class="review-stars">★★★★★</div>
-            <p class="review-text">«Юлия — очень тёплый и внимательный тренер. Никакого давления, зато много поддержки. Техника «200 улыбок» теперь мой утренний ритуал — работает как перезагрузка системы.»</p>
+            <div class="review-text">«Юлия — очень тёплый и внимательный тренер. Никакого давления, зато много поддержки. Техника «200 улыбок» теперь мой утренний ритуал — работает как перезагрузка системы.»</div>
             <div class="review-author">
-              <div class="review-avatar">👩</div>
+              <div class="review-ava">👩</div>
               <div>
                 <div class="review-name">Марина Т.</div>
-                <div class="review-city">Казань · Мама в декрете</div>
+                <div class="review-loc">Казань · Мама в декрете</div>
               </div>
             </div>
           </div>
           <div class="review-card reveal reveal-d4">
             <div class="review-stars">★★★★★</div>
-            <p class="review-text">«Пришла с ощущением полного выгорания. Ушла с пониманием, что у меня есть ресурс — я просто не умела к нему обращаться. Сейчас проходит уже третий поток — рекомендую всем вокруг.»</p>
+            <div class="review-text">«Пришла с ощущением полного выгорания. Ушла с пониманием, что у меня есть ресурс — я просто не умела к нему обращаться. Сейчас проходит уже третий поток — рекомендую всем вокруг.»</div>
             <div class="review-author">
-              <div class="review-avatar">👩</div>
+              <div class="review-ava">👩</div>
               <div>
                 <div class="review-name">Светлана Р.</div>
-                <div class="review-city">Онлайн · Психолог</div>
+                <div class="review-loc">Онлайн · Психолог</div>
               </div>
             </div>
           </div>
           <div class="review-card reveal reveal-d5">
             <div class="review-stars">★★★★★</div>
-            <p class="review-text">«Мне понравилось, что здесь нет лозунгов "измени жизнь за 5 минут". Всё честно: есть практика — есть результат. Тренировки были структурированы, Юлия всегда на связи.»</p>
+            <div class="review-text">«Мне понравилось, что здесь нет лозунгов "измени жизнь за 5 минут". Всё честно: есть практика — есть результат. Тренировки были структурированы, Юлия всегда на связи.»</div>
             <div class="review-author">
-              <div class="review-avatar">👨</div>
+              <div class="review-ava">👨</div>
               <div>
                 <div class="review-name">Дмитрий В.</div>
-                <div class="review-city">Минск · IT-специалист</div>
+                <div class="review-loc">Минск · IT-специалист</div>
               </div>
             </div>
           </div>
-          <div class="review-card reveal">
+          <div class="review-card reveal reveal-d5">
             <div class="review-stars">★★★★★</div>
-            <p class="review-text">«Начала курс, чтобы справиться с тревогой. В итоге нашла новую профессию — стала изучать направление интеллект-тренера. Это оказалось гораздо глубже, чем я ожидала.»</p>
+            <div class="review-text">«Начала курс, чтобы справиться с тревогой. В итоге нашла новую профессию — стала изучать направление интеллект-тренера. Это оказалось гораздо глубже, чем я ожидала.»</div>
             <div class="review-author">
-              <div class="review-avatar">👩</div>
+              <div class="review-ava">👩</div>
               <div>
                 <div class="review-name">Наталья Г.</div>
-                <div class="review-city">Алматы · В поиске себя</div>
+                <div class="review-loc">Алматы · В поиске себя</div>
               </div>
             </div>
           </div>
@@ -1660,16 +1732,14 @@
     <!-- ===================== CTA ===================== -->
     <section class="cta-sec" id="cta">
       <div class="con">
-        <div class="cta-inner reveal">
-          <div class="cta-icon">⚡</div>
-          <h2 class="cta-title">Готовы изменить качество своей жизни?</h2>
-          <p class="cta-desc">
-            10 дней · 1 час в день · Результат, который остаётся. Запишитесь на курс или попробуйте тест-драйв — и начните жить иначе.
-          </p>
-          <div class="cta-btns">
-            <a href="#contacts" class="btn-primary">Записаться на курс ⚡</a>
-            <a href="https://account.superjump.com/register/38867" target="_blank" rel="noopener" class="btn-secondary">Тест-драйв Super Jump →</a>
-          </div>
+        <div class="cta-icon reveal">⚡</div>
+        <h2 class="cta-title reveal reveal-d1">Готовы изменить качество <span class="grad-text">своей жизни?</span></h2>
+        <p class="cta-desc reveal reveal-d2">
+          10 дней · 1 час в день · Результат, который остаётся. Запишитесь на курс или попробуйте тест-драйв — и начните жить иначе.
+        </p>
+        <div class="cta-btns reveal reveal-d3">
+          <a href="#contacts" class="btn-primary">Записаться на курс ⚡</a>
+          <a href="https://account.superjump.com/register/38867" target="_blank" rel="noopener" class="btn-secondary">Зарегистрироваться онлайн →</a>
         </div>
       </div>
     </section>
@@ -1678,21 +1748,21 @@
     <section class="contacts-sec" id="contacts">
       <div class="con">
         <div class="sec-head sec-head-center reveal">
-          <div class="sec-label">Контакты</div>
+          <span class="sec-label">Контакты</span>
           <h2 class="sec-title">Давайте <span class="grad-text">познакомимся</span></h2>
           <p class="sec-desc">Напишите в мессенджер, заполните форму или позвоните — выбирайте удобный способ.</p>
         </div>
-        <div class="contacts-layout">
-          <!-- Соцсети и телефон -->
-          <div class="contacts-info reveal-left">
-            <div class="contacts-social">
+        <div class="contacts-grid">
+          <!-- Left: links -->
+          <div class="reveal-left">
+            <div class="soc-links">
               <a href="https://t.me/yuliya_savitskaya" target="_blank" rel="noopener" class="soc-link tg">
                 <div class="soc-icon">
                   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.944 0A12 12 0 1 0 24 12.056 12.013 12.013 0 0 0 11.944 0Zm5.655 7.22c-.18 1.897-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.064-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635.099-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472Z"/></svg>
                 </div>
                 <div class="soc-text">
                   <div class="soc-name">Telegram</div>
-                  <div class="soc-handle">Написать в личку</div>
+                  <div class="soc-handle">@yuliya_savitskaya</div>
                 </div>
                 <span class="soc-arrow">→</span>
               </a>
@@ -1727,12 +1797,10 @@
                 <span class="soc-arrow">→</span>
               </a>
             </div>
-
             <a href="tel:+79850014030" class="contacts-phone">
               <span class="ph-icon">📱</span>
               <span>+7 985 001-40-30</span>
             </a>
-
             <div style="margin-top:24px; padding: 20px; background: var(--card); border: 1px solid rgba(168,85,247,0.2); border-radius: 16px;">
               <div style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px; font-weight: 600; letter-spacing: 0.5px;">БЫСТРАЯ ЗАПИСЬ</div>
               <p style="font-size: 13px; color: var(--text-light); line-height: 1.7; margin-bottom: 14px;">
@@ -1745,36 +1813,44 @@
             </div>
           </div>
 
-          <!-- Форма -->
+          <!-- Right: Form — отправка на savickaaulia6@gmail.com через FormSubmit.co -->
           <div class="reveal-right">
-            <form class="contact-form" id="cform" novalidate>
+            <form class="contact-form" id="cform"
+              action="https://formsubmit.co/savickaaulia6@gmail.com"
+              method="POST"
+              novalidate>
+              <!-- FormSubmit hidden settings -->
+              <input type="hidden" name="_subject" value="Заявка с сайта Юлии Савицкой">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="text" name="_honey" style="display:none">
               <h3 class="form-title">Задайте вопрос</h3>
               <p class="form-sub">Отвечу в течение дня — расскажу о курсе, формате и ближайших датах старта.</p>
               <div class="form-row">
                 <div class="form-group">
                   <label class="form-label" for="fi_name">Ваше имя *</label>
-                  <input class="form-input" type="text" id="fi_name" placeholder="Как вас зовут?" autocomplete="given-name">
+                  <input class="form-input" type="text" id="fi_name" name="Имя" placeholder="Как вас зовут?" autocomplete="given-name" required>
                 </div>
                 <div class="form-group">
                   <label class="form-label" for="fi_phone">Телефон *</label>
-                  <input class="form-input" type="tel" id="fi_phone" placeholder="+7 (___) ___-__-__" autocomplete="tel">
+                  <input class="form-input" type="tel" id="fi_phone" name="Телефон" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
                 </div>
               </div>
               <div class="form-group">
                 <label class="form-label" for="fi_focus">Что важнее всего прямо сейчас?</label>
-                <select class="form-select" id="fi_focus">
+                <select class="form-select" id="fi_focus" name="Фокус">
                   <option value="">Выберите фокус...</option>
-                  <option value="energy">⚡ Больше энергии и меньше усталости</option>
-                  <option value="stress">🛡️ Справиться со стрессом и тревогой</option>
-                  <option value="goals">🎯 Найти цель и двигаться к ней</option>
-                  <option value="income">📈 Рост доходов и уверенность</option>
-                  <option value="relations">❤️ Улучшить отношения</option>
-                  <option value="profession">🚀 Освоить профессию тренера</option>
+                  <option value="Больше энергии и меньше усталости">⚡ Больше энергии и меньше усталости</option>
+                  <option value="Справиться со стрессом и тревогой">🛡️ Справиться со стрессом и тревогой</option>
+                  <option value="Найти цель и двигаться к ней">🎯 Найти цель и двигаться к ней</option>
+                  <option value="Рост доходов и уверенность">📈 Рост доходов и уверенность</option>
+                  <option value="Улучшить отношения">❤️ Улучшить отношения</option>
+                  <option value="Освоить профессию тренера">🚀 Освоить профессию тренера</option>
                 </select>
               </div>
               <div class="form-group">
                 <label class="form-label" for="fi_msg">Ваш вопрос или пожелание</label>
-                <textarea class="form-textarea" id="fi_msg" placeholder="Напишите, что вас интересует — расскажу подробнее..."></textarea>
+                <textarea class="form-textarea" id="fi_msg" name="Сообщение" placeholder="Напишите, что вас интересует — расскажу подробнее..."></textarea>
               </div>
               <button type="submit" class="form-submit" id="fsub">Отправить сообщение ⚡</button>
             </form>
@@ -1782,6 +1858,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- ===================== FOOTER ===================== -->
@@ -1790,7 +1867,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo" id="logoBot">
-            <img src="img/logo.png" alt="Логотип" class="logo-img">
+            <img src="img/logo.png" alt="Логотип" class="logo-img" onerror="this.style.display='none'">
             <div class="logo-text">
               <span class="logo-name">Юлия Савицкая</span>
               <span class="logo-sub">Super Jump</span>
@@ -1814,7 +1891,6 @@
             </a>
           </div>
         </div>
-
         <div class="footer-col">
           <h4>Навигация</h4>
           <div class="footer-links">
@@ -1826,7 +1902,6 @@
             <a href="#contacts">Контакты</a>
           </div>
         </div>
-
         <div class="footer-col">
           <h4>Ресурсы</h4>
           <div class="footer-links">
@@ -1837,7 +1912,6 @@
           </div>
         </div>
       </div>
-
       <div class="footer-bot">
         <p class="footer-copy">
           © <span id="year"></span> <span>Юлия Савицкая · Super Jump</span>. Онлайн по всему миру.
@@ -1964,6 +2038,35 @@
       if (e.key === 'ArrowRight') nextImage();
     });
 
+    // ===== DESC.JPG LIGHTBOX (ЕДИНСТВЕННОЕ ИЗМЕНЕНИЕ) =====
+    var descImgWrap = document.getElementById('descImgWrap');
+    var descLightbox = document.getElementById('descLightbox');
+    var descLbImg = document.getElementById('descLbImg');
+    var descLbClose = document.getElementById('descLbClose');
+    var descImg = document.getElementById('descImg');
+
+    function openDescLightbox() {
+      descLbImg.src = descImg.src;
+      descLightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDescLightbox() {
+      descLightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    descImgWrap.addEventListener('click', function(e) {
+      e.preventDefault();
+      openDescLightbox();
+    });
+    descLbClose.addEventListener('click', closeDescLightbox);
+    descLightbox.addEventListener('click', function(e) {
+      if (e.target === descLightbox) closeDescLightbox();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (descLightbox.classList.contains('open') && e.key === 'Escape') closeDescLightbox();
+    });
+
     // ===== PHONE MASK =====
     var ph = document.getElementById('fi_phone');
     if (ph) {
@@ -2002,48 +2105,49 @@
       setTimeout(function() { t.classList.remove('show'); }, 5000);
     }
 
-    // ===== FORM SUBMIT =====
+    // ===== FORM SUBMIT (FormSubmit.co → savickaaulia6@gmail.com) =====
     var cform = document.getElementById('cform');
     var fsub = document.getElementById('fsub');
-    var sending = false;
+
     if (cform) {
       cform.addEventListener('submit', function(e) {
         e.preventDefault();
-        if (sending) return;
+
         var name = (document.getElementById('fi_name').value || '').trim();
         var phone = (document.getElementById('fi_phone').value || '').trim();
-        var focus = (document.getElementById('fi_focus').value || '').trim();
-        var msg = (document.getElementById('fi_msg').value || '').trim();
+
         if (!name) { showToast('Пожалуйста, введите ваше имя', 'err'); return; }
         if (!phone || phone.replace(/\D/g, '').length < 11) {
           showToast('Введите корректный номер телефона', 'err'); return;
         }
-        sending = true;
+
         fsub.disabled = true;
         fsub.textContent = 'Отправка...';
-        var subject = encodeURIComponent('Заявка с сайта — ' + name);
-        var body = encodeURIComponent(
-          'Имя: ' + name + '\n' +
-          'Телефон: ' + phone + '\n' +
-          'Фокус: ' + (focus || 'Не выбрано') + '\n' +
-          'Сообщение: ' + (msg || 'Нет') + '\n\n' +
-          'Отправлено с сайта Юлии Савицкой'
-        );
-        try {
-          var link = document.createElement('a');
-          link.href = 'mailto:savitskaya@superjump.com?subject=' + subject + '&body=' + body;
-          link.style.display = 'none';
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-        } catch(err) {}
-        setTimeout(function() {
-          sending = false;
+
+        // Отправляем через FormSubmit.co
+        var formData = new FormData(cform);
+
+        fetch('https://formsubmit.co/ajax/savickaaulia6@gmail.com', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: formData
+        })
+        .then(function(response) { return response.json(); })
+        .then(function(data) {
           fsub.disabled = false;
           fsub.textContent = 'Отправить сообщение ⚡';
-          showToast('Сообщение отправлено! Юлия свяжется с вами в ближайшее время.', 'ok');
-          cform.reset();
-        }, 800);
+          if (data.success === 'true' || data.success === true) {
+            showToast('Сообщение отправлено! Юлия свяжется с вами в ближайшее время.', 'ok');
+            cform.reset();
+          } else {
+            showToast('Ошибка отправки. Напишите напрямую: savickaaulia6@gmail.com', 'err');
+          }
+        })
+        .catch(function() {
+          fsub.disabled = false;
+          fsub.textContent = 'Отправить сообщение ⚡';
+          showToast('Ошибка сети. Напишите напрямую: savickaaulia6@gmail.com', 'err');
+        });
       });
     }
 
@@ -2061,5 +2165,7 @@
       });
     });
   </script>
+
 </body>
+
 </html>
