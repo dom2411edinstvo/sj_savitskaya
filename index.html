@@ -20,13 +20,19 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
 
   <style>
+
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
     :root {
       --bg: #08080f;
       --bg2: #0d0d18;
@@ -47,7 +53,9 @@
       --vk: #0077FF;
       --yt: #FF0000;
     }
+
     html { scroll-behavior: smooth; }
+
     body {
       font-family: 'Inter', sans-serif;
       background: var(--bg);
@@ -55,8 +63,10 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
+
     a { text-decoration: none; color: inherit; }
     img { display: block; max-width: 100%; }
+
     .con {
       max-width: 1180px;
       margin: 0 auto;
@@ -582,336 +592,253 @@
       cursor: pointer;
       transition: transform 0.3s, border-color 0.3s;
     }
-    .gallery-item:hover { transform: scale(1.04); border-color: rgba(168,85,247,0.4); }
-    .gallery-item img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s;
-    }
+    .gallery-item:hover { transform: scale(1.03); border-color: rgba(168,85,247,0.4); }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
     .gallery-item:hover img { transform: scale(1.08); }
     .gallery-item-overlay {
       position: absolute; inset: 0;
-      background: linear-gradient(180deg, transparent 40%, rgba(8,8,15,0.7) 100%);
-      opacity: 0; transition: opacity 0.3s;
+      background: rgba(0,0,0,0);
       display: flex; align-items: center; justify-content: center;
+      transition: background 0.3s;
     }
-    .gallery-item:hover .gallery-item-overlay { opacity: 1; }
-    .gallery-zoom { font-size: 28px; }
+    .gallery-item:hover .gallery-item-overlay { background: rgba(168,85,247,0.2); }
+    .gallery-item-overlay span {
+      font-size: 24px; opacity: 0; transform: scale(0.7);
+      transition: opacity 0.3s, transform 0.3s;
+    }
+    .gallery-item:hover .gallery-item-overlay span { opacity: 1; transform: scale(1); }
 
     /* Lightbox */
     .lightbox {
       position: fixed; inset: 0; z-index: 200;
       background: rgba(0,0,0,0.95);
       display: flex; align-items: center; justify-content: center;
-      opacity: 0; visibility: hidden;
-      transition: 0.3s;
-    }
-    .lightbox.open { opacity: 1; visibility: visible; }
-    .lightbox img {
-      max-width: 90vw; max-height: 90vh;
-      border-radius: 16px;
-      object-fit: contain;
-    }
-    .lb-close {
-      position: absolute; top: 20px; right: 24px;
-      font-size: 32px; cursor: pointer; color: #fff;
-      background: rgba(255,255,255,0.1); border: none;
-      width: 44px; height: 44px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      transition: background 0.2s;
-    }
-    .lb-close:hover { background: rgba(255,255,255,0.2); }
-    .lb-prev, .lb-next {
-      position: absolute; top: 50%; transform: translateY(-50%);
-      font-size: 24px; cursor: pointer; color: #fff;
-      background: rgba(255,255,255,0.1); border: none;
-      width: 50px; height: 50px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      transition: background 0.2s;
-    }
-    .lb-prev:hover, .lb-next:hover { background: rgba(255,255,255,0.2); }
-    .lb-prev { left: 20px; }
-    .lb-next { right: 20px; }
-
-    /* Desc lightbox */
-    .desc-lightbox {
-      position: fixed; inset: 0; z-index: 200;
-      background: rgba(0,0,0,0.95);
-      display: flex; align-items: center; justify-content: center;
       opacity: 0; visibility: hidden; transition: 0.3s;
     }
-    .desc-lightbox.open { opacity: 1; visibility: visible; }
-    .desc-lightbox img {
-      max-width: 94vw; max-height: 94vh;
-      border-radius: 12px; object-fit: contain;
-    }
-    .desc-lb-close {
+    .lightbox.open { opacity: 1; visibility: visible; }
+    .lightbox img { max-width: 90vw; max-height: 90vh; border-radius: 12px; object-fit: contain; }
+    .lb-close {
       position: absolute; top: 20px; right: 24px;
-      font-size: 32px; cursor: pointer; color: #fff;
-      background: rgba(255,255,255,0.1); border: none;
-      width: 44px; height: 44px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      transition: background 0.2s;
+      font-size: 32px; cursor: pointer; color: #fff; line-height: 1;
+      transition: color 0.3s;
     }
-    .desc-lb-close:hover { background: rgba(255,255,255,0.2); }
+    .lb-close:hover { color: #a855f7; }
+    .lb-nav {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      font-size: 40px; cursor: pointer; color: rgba(255,255,255,0.7);
+      transition: color 0.3s; user-select: none;
+    }
+    .lb-nav:hover { color: #a855f7; }
+    #lbPrev { left: 20px; }
+    #lbNext { right: 20px; }
 
     /* ===================== SERVICES ===================== */
+    .services-sec { background: var(--bg); }
     .services-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
     .svc-card {
-      padding: 28px 24px;
+      padding: 28px;
       background: var(--card);
       border: 1px solid var(--card-border);
       border-radius: 20px;
       transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
-      position: relative; overflow: hidden;
     }
-    .svc-card::before {
-      content: '';
-      position: absolute; top: 0; left: 0; right: 0;
-      height: 2px;
-      background: var(--grad);
-      transform: scaleX(0); transform-origin: left;
-      transition: transform 0.4s;
-    }
-    .svc-card:hover::before { transform: scaleX(1); }
-    .svc-card:hover { border-color: rgba(168,85,247,0.25); transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+    .svc-card:hover { border-color: rgba(168,85,247,0.3); transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
     .svc-icon {
-      width: 52px; height: 52px;
-      background: linear-gradient(135deg, rgba(168,85,247,0.2), rgba(236,72,153,0.15));
-      border-radius: 14px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 26px; margin-bottom: 18px;
+      font-size: 36px; margin-bottom: 16px;
+      display: block;
     }
-    .svc-title { font-size: 16px; font-weight: 700; margin-bottom: 10px; }
-    .svc-desc { font-size: 13px; color: var(--text-muted); line-height: 1.7; margin-bottom: 16px; }
+    .svc-title { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+    .svc-desc { font-size: 13px; color: var(--text-light); line-height: 1.7; margin-bottom: 16px; }
     .svc-tag {
-      display: inline-block; padding: 4px 12px;
+      display: inline-block; padding: 4px 10px;
       background: rgba(168,85,247,0.1);
       border: 1px solid rgba(168,85,247,0.2);
-      border-radius: 50px;
-      font-size: 10px; font-weight: 600; color: #c084fc;
-      text-transform: uppercase; letter-spacing: 0.5px;
+      border-radius: 6px;
+      font-size: 10px; font-weight: 600; color: #c084fc; letter-spacing: 0.5px;
     }
 
     /* ===================== PROGRAM ===================== */
+    .program-sec { background: var(--bg2); }
     .program-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 16px;
     }
     .prog-card {
-      padding: 24px 20px;
+      padding: 22px 18px;
       background: var(--card);
       border: 1px solid var(--card-border);
       border-radius: 18px;
+      position: relative;
       transition: border-color 0.3s, transform 0.3s;
     }
     .prog-card:hover { border-color: rgba(168,85,247,0.3); transform: translateY(-4px); }
     .prog-num {
-      font-size: 11px; font-weight: 700; letter-spacing: 1px;
-      color: var(--text-muted); margin-bottom: 14px;
-      font-family: 'Inter', monospace;
+      font-size: 11px; font-weight: 700; letter-spacing: 2px;
+      color: var(--text-muted); margin-bottom: 12px;
     }
     .prog-icon { font-size: 28px; margin-bottom: 12px; }
-    .prog-title { font-size: 14px; font-weight: 700; margin-bottom: 8px; line-height: 1.3; }
-    .prog-desc { font-size: 12px; color: var(--text-muted); line-height: 1.6; margin-bottom: 12px; }
+    .prog-title { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+    .prog-desc { font-size: 12px; color: var(--text-light); line-height: 1.65; margin-bottom: 12px; }
     .prog-tag {
       display: inline-block; padding: 3px 10px;
-      background: rgba(249,115,22,0.1);
-      border: 1px solid rgba(249,115,22,0.2);
-      border-radius: 50px;
-      font-size: 9px; font-weight: 600; color: #fb923c;
-      text-transform: uppercase; letter-spacing: 0.5px;
+      background: rgba(168,85,247,0.08);
+      border: 1px solid rgba(168,85,247,0.18);
+      border-radius: 6px;
+      font-size: 10px; font-weight: 600; color: #c084fc;
     }
 
     /* ===================== APPROACH ===================== */
-    .approach-sec { background: var(--bg2); }
+    .approach-sec { background: var(--bg); }
     .approach-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: clamp(30px, 5vw, 70px);
       align-items: start;
     }
-    .approach-list { display: flex; flex-direction: column; gap: 20px; }
-    .approach-item {
+    .approach-points { display: flex; flex-direction: column; gap: 20px; }
+    .approach-point {
       display: flex; gap: 18px; align-items: flex-start;
-      padding: 20px 22px;
+      padding: 20px;
       background: var(--card);
       border: 1px solid var(--card-border);
       border-radius: 16px;
-      transition: border-color 0.3s, transform 0.3s;
+      transition: border-color 0.3s;
     }
-    .approach-item:hover { border-color: rgba(168,85,247,0.3); transform: translateX(6px); }
-    .approach-icon {
-      width: 46px; height: 46px; flex-shrink: 0;
-      background: linear-gradient(135deg, rgba(168,85,247,0.2), rgba(236,72,153,0.15));
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 22px;
+    .approach-point:hover { border-color: rgba(168,85,247,0.3); }
+    .approach-point-icon {
+      font-size: 28px; flex-shrink: 0;
     }
-    .approach-text h4 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
-    .approach-text p { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
-    .approach-box {
+    .approach-point h4 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+    .approach-point p { font-size: 13px; color: var(--text-light); line-height: 1.65; }
+    .approach-card {
       background: var(--card);
-      border: 1px solid var(--card-border);
+      border: 1px solid rgba(168,85,247,0.2);
       border-radius: 24px;
-      padding: 32px;
+      padding: 30px;
       position: sticky; top: 100px;
     }
-    .approach-box-title {
-      font-size: 16px; font-weight: 700; margin-bottom: 20px;
+    .approach-card-label {
+      font-size: 10px; font-weight: 600; letter-spacing: 2px;
+      text-transform: uppercase; color: #a855f7; margin-bottom: 20px;
     }
-    .approach-checklist { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
-    .approach-check {
-      display: flex; gap: 12px; align-items: center;
+    .approach-items { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+    .approach-item {
+      display: flex; align-items: center; gap: 12px;
+      padding: 14px 16px;
+      background: rgba(255,255,255,0.03);
+      border-radius: 12px;
       font-size: 13px; color: var(--text-light);
     }
-    .approach-check::before {
-      content: '';
-      width: 18px; height: 18px; flex-shrink: 0;
-      background: linear-gradient(135deg, rgba(168,85,247,0.3), rgba(236,72,153,0.2));
-      border-radius: 50%;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23a855f7'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3E%3C/svg%3E");
-      background-size: cover;
-    }
-    .approach-box-desc {
+    .approach-item span:first-child { font-size: 18px; flex-shrink: 0; }
+    .approach-note {
       font-size: 13px; color: var(--text-muted); line-height: 1.7; margin-bottom: 22px;
     }
 
     /* ===================== BOOK ===================== */
-    .book-sec { background: var(--bg3); }
+    .book-sec {
+      background: var(--bg3);
+      text-align: center;
+    }
     .book-inner {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: clamp(30px, 5vw, 60px);
-      align-items: center;
+      max-width: 700px; margin: 0 auto;
     }
-    .book-cover-wrap { position: relative; }
-    .book-cover {
-      width: clamp(160px, 20vw, 260px);
-      aspect-ratio: 3/4;
-      background: linear-gradient(160deg, #1a1030, #100e20);
-      border-radius: 16px;
-      border: 1px solid rgba(168,85,247,0.3);
-      box-shadow: 0 20px 60px rgba(168,85,247,0.2), 0 30px 80px rgba(0,0,0,0.5);
-      display: flex; align-items: center; justify-content: center;
-      overflow: hidden;
+    .book-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 7px 16px;
+      background: rgba(251,191,36,0.1);
+      border: 1px solid rgba(251,191,36,0.3);
+      border-radius: 50px;
+      font-size: 11px; font-weight: 600; letter-spacing: 1px;
+      color: var(--gold); margin-bottom: 20px;
     }
-    .book-cover img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-    }
-    .book-cover-placeholder {
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      gap: 14px; padding: 24px; text-align: center;
-    }
-    .book-cover-placeholder .book-emoji { font-size: 48px; }
-    .book-cover-placeholder .book-ttl {
+    .book-title {
       font-family: 'Playfair Display', serif;
-      font-size: 14px; font-weight: 700; line-height: 1.3;
+      font-size: clamp(24px, 3.5vw, 40px);
+      font-weight: 800; margin-bottom: 14px;
+    }
+    .book-title .grad-text {
       background: var(--grad);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
-    .book-badge {
-      position: absolute; top: -12px; right: -12px;
-      background: var(--gold); color: #000;
-      font-size: 10px; font-weight: 800;
-      padding: 5px 10px; border-radius: 50px;
-      text-transform: uppercase; letter-spacing: 0.5px;
-    }
-    .book-tag {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 5px 14px;
-      background: rgba(251,191,36,0.1);
-      border: 1px solid rgba(251,191,36,0.25);
-      border-radius: 50px;
-      font-size: 11px; font-weight: 600; color: #fbbf24;
-      letter-spacing: 1px; text-transform: uppercase;
-      margin-bottom: 16px;
-    }
-    .book-author {
-      font-size: 13px; color: var(--text-muted); margin-bottom: 18px;
-    }
-    .book-author span { color: var(--text-light); font-weight: 600; }
     .book-desc {
       font-size: clamp(13px, 1.4vw, 15px);
-      color: var(--text-light); line-height: 1.8;
-      margin-bottom: 28px; max-width: 520px;
+      color: var(--text-light); line-height: 1.8; margin-bottom: 28px;
     }
 
     /* ===================== REVIEWS ===================== */
+    .reviews-sec { background: var(--bg2); }
     .reviews-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
     .review-card {
-      padding: 26px 24px;
+      padding: 24px;
       background: var(--card);
       border: 1px solid var(--card-border);
       border-radius: 20px;
       transition: border-color 0.3s, transform 0.3s;
     }
     .review-card:hover { border-color: rgba(168,85,247,0.25); transform: translateY(-4px); }
-    .review-stars { font-size: 14px; color: var(--gold); margin-bottom: 14px; letter-spacing: 2px; }
+    .review-stars { color: var(--gold); font-size: 14px; margin-bottom: 14px; letter-spacing: 2px; }
     .review-text {
       font-size: 13px; color: var(--text-light); line-height: 1.75;
       margin-bottom: 18px; font-style: italic;
     }
-    .review-author { display: flex; align-items: center; gap: 10px; }
-    .review-ava {
-      width: 38px; height: 38px; border-radius: 50%;
+    .review-author { display: flex; align-items: center; gap: 12px; }
+    .review-avatar {
+      width: 40px; height: 40px;
       background: linear-gradient(135deg, rgba(168,85,247,0.3), rgba(236,72,153,0.2));
+      border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
-      font-size: 18px; flex-shrink: 0;
+      font-size: 20px; flex-shrink: 0;
     }
-    .review-name { font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+    .review-name { font-size: 13px; font-weight: 700; }
     .review-loc { font-size: 11px; color: var(--text-muted); }
 
     /* ===================== CTA BANNER ===================== */
     .cta-sec {
-      background: var(--bg2);
+      background: var(--bg);
       text-align: center;
+      padding: clamp(60px, 8vw, 100px) 0;
     }
-    .cta-inner {
-      padding: clamp(50px, 7vw, 80px) clamp(20px, 5vw, 60px);
-      background: var(--grad-soft);
-      border: 1px solid rgba(168,85,247,0.15);
-      border-radius: 32px;
-      position: relative; overflow: hidden;
-    }
-    .cta-inner::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse at 50% 0%, rgba(168,85,247,0.12), transparent 60%);
-    }
-    .cta-icon { font-size: 48px; margin-bottom: 20px; position: relative; }
+    .cta-inner { max-width: 640px; margin: 0 auto; }
+    .cta-icon { font-size: 40px; margin-bottom: 16px; }
     .cta-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(26px, 4vw, 42px);
-      font-weight: 800; line-height: 1.15;
-      margin-bottom: 16px; position: relative;
+      font-size: clamp(24px, 3.5vw, 42px);
+      font-weight: 800; line-height: 1.2; margin-bottom: 16px;
     }
     .cta-desc {
-      font-size: clamp(14px, 1.5vw, 16px);
-      color: var(--text-light); max-width: 520px;
-      margin: 0 auto 30px; line-height: 1.8; position: relative;
+      font-size: clamp(13px, 1.4vw, 16px);
+      color: var(--text-light); line-height: 1.8; margin-bottom: 28px;
     }
-    .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; position: relative; }
+    .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
     /* ===================== CONTACTS ===================== */
-    .contacts-sec { background: var(--bg3); }
+    .contacts-sec { background: var(--bg2); }
     .contacts-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: clamp(30px, 5vw, 70px);
     }
-    .contacts-title { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
-    .contacts-desc { font-size: 14px; color: var(--text-muted); line-height: 1.7; margin-bottom: 28px; }
+    .contacts-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(22px, 3vw, 36px);
+      font-weight: 800; margin-bottom: 10px;
+    }
+    .contacts-title .grad-text {
+      background: var(--grad);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .contacts-desc {
+      font-size: 14px; color: var(--text-light); line-height: 1.8; margin-bottom: 28px;
+    }
     .soc-links { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
     .soc-link {
       display: flex; align-items: center; gap: 14px;
@@ -919,103 +846,86 @@
       background: var(--card);
       border: 1px solid var(--card-border);
       border-radius: 14px;
-      transition: border-color 0.3s, transform 0.3s, background 0.3s;
+      transition: border-color 0.3s, transform 0.3s;
     }
-    .soc-link:hover { transform: translateX(6px); }
-    .soc-link.tg:hover { border-color: rgba(38,165,228,0.4); background: rgba(38,165,228,0.06); }
-    .soc-link.wa:hover { border-color: rgba(37,211,102,0.4); background: rgba(37,211,102,0.06); }
-    .soc-link.vk:hover { border-color: rgba(0,119,255,0.4); background: rgba(0,119,255,0.06); }
-    .soc-link.yt:hover { border-color: rgba(255,0,0,0.4); background: rgba(255,0,0,0.06); }
+    .soc-link:hover { transform: translateX(4px); }
+    .soc-link.tg:hover { border-color: rgba(38,165,228,0.4); }
+    .soc-link.wa:hover { border-color: rgba(37,211,102,0.4); }
+    .soc-link.vk:hover { border-color: rgba(0,119,255,0.4); }
+    .soc-link.yt:hover { border-color: rgba(255,0,0,0.4); }
     .soc-icon {
-      width: 38px; height: 38px; flex-shrink: 0;
-      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      width: 40px; height: 40px; flex-shrink: 0;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
     }
-    .soc-link.tg .soc-icon { background: rgba(38,165,228,0.15); }
-    .soc-link.wa .soc-icon { background: rgba(37,211,102,0.15); }
-    .soc-link.vk .soc-icon { background: rgba(0,119,255,0.15); }
-    .soc-link.yt .soc-icon { background: rgba(255,0,0,0.15); }
-    .soc-icon svg { width: 20px; height: 20px; fill: currentColor; }
-    .soc-link.tg .soc-icon svg { color: var(--tg); }
-    .soc-link.wa .soc-icon svg { color: var(--wa); }
-    .soc-link.vk .soc-icon svg { color: var(--vk); }
-    .soc-link.yt .soc-icon svg { color: var(--yt); }
+    .soc-icon svg { width: 22px; height: 22px; fill: currentColor; }
+    .soc-link.tg .soc-icon { background: rgba(38,165,228,0.15); color: var(--tg); }
+    .soc-link.wa .soc-icon { background: rgba(37,211,102,0.15); color: var(--wa); }
+    .soc-link.vk .soc-icon { background: rgba(0,119,255,0.15); color: var(--vk); }
+    .soc-link.yt .soc-icon { background: rgba(255,0,0,0.15); color: var(--yt); }
     .soc-text { flex: 1; }
-    .soc-name { font-size: 13px; font-weight: 700; }
+    .soc-name { font-size: 14px; font-weight: 600; }
     .soc-handle { font-size: 11px; color: var(--text-muted); }
-    .soc-arrow { font-size: 16px; color: var(--text-muted); transition: transform 0.3s; }
-    .soc-link:hover .soc-arrow { transform: translateX(4px); color: var(--text); }
+    .soc-arrow { color: var(--text-muted); font-size: 14px; transition: transform 0.3s; }
+    .soc-link:hover .soc-arrow { transform: translateX(4px); }
     .contacts-phone {
-      display: inline-flex; align-items: center; gap: 10px;
-      font-size: clamp(18px, 2vw, 22px); font-weight: 800;
-      background: var(--grad);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-      transition: opacity 0.3s;
+      display: flex; align-items: center; gap: 12px;
+      padding: 16px 20px;
+      background: var(--grad-soft);
+      border: 1px solid rgba(168,85,247,0.2);
+      border-radius: 14px;
+      font-size: 18px; font-weight: 700;
+      transition: border-color 0.3s;
     }
-    .contacts-phone:hover { opacity: 0.8; }
-    .ph-icon { font-size: 22px; -webkit-text-fill-color: initial; }
+    .contacts-phone:hover { border-color: rgba(168,85,247,0.5); }
+    .ph-icon { font-size: 22px; }
 
-    /* ===================== CONTACT FORM ===================== */
+    /* Form */
     .contact-form {
       background: var(--card);
       border: 1px solid var(--card-border);
       border-radius: 24px;
-      padding: clamp(24px, 4vw, 40px);
+      padding: clamp(24px, 3vw, 36px);
     }
-    .form-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(20px, 2.5vw, 26px);
-      font-weight: 700; margin-bottom: 8px;
-    }
-    .form-sub {
-      font-size: 13px; color: var(--text-muted); margin-bottom: 24px; line-height: 1.6;
-    }
-    .form-row {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
-      margin-bottom: 14px;
-    }
-    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
-    .form-row .form-group { margin-bottom: 0; }
-    .form-label { font-size: 11px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.5px; text-transform: uppercase; }
+    .form-title { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+    .form-sub { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; line-height: 1.6; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-group { margin-bottom: 14px; }
+    .form-label { font-size: 12px; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 6px; letter-spacing: 0.5px; }
     .form-input, .form-select, .form-textarea {
+      width: 100%; padding: 12px 14px;
       background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
+      border: 1px solid var(--card-border);
       border-radius: 10px;
-      padding: 12px 14px;
-      font-size: 14px; color: var(--text);
-      font-family: 'Inter', sans-serif;
-      transition: border-color 0.3s, background 0.3s;
-      width: 100%;
-      -webkit-appearance: none;
+      color: var(--text); font-family: inherit; font-size: 13px;
+      transition: border-color 0.3s;
+      outline: none;
     }
     .form-input:focus, .form-select:focus, .form-textarea:focus {
-      outline: none;
       border-color: rgba(168,85,247,0.5);
-      background: rgba(168,85,247,0.05);
     }
-    .form-input::placeholder, .form-textarea::placeholder { color: var(--text-muted); }
-    .form-select option { background: #111; color: #fff; }
-    .form-textarea { resize: vertical; min-height: 100px; }
+    .form-select option { background: #1a1030; }
+    .form-textarea { min-height: 100px; resize: vertical; }
     .form-submit {
-      width: 100%; padding: 15px 24px;
-      background: var(--grad); border-radius: 12px;
+      width: 100%; padding: 14px;
+      background: var(--grad); border-radius: 50px;
       font-size: 15px; font-weight: 700; color: #fff;
       border: none; cursor: pointer;
-      transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
-      margin-top: 6px;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
-    .form-submit:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(168,85,247,0.4); }
-    .form-submit:disabled { opacity: 0.7; cursor: not-allowed; }
+    .form-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(168,85,247,0.4); }
+    .form-submit:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
 
     /* ===================== FOOTER ===================== */
     footer {
-      background: var(--bg2);
-      border-top: 1px solid rgba(255,255,255,0.05);
-      padding: clamp(40px, 6vw, 70px) 0 30px;
+      background: var(--bg);
+      border-top: 1px solid var(--card-border);
+      padding: clamp(40px, 6vw, 60px) 0 24px;
     }
     .footer-grid {
       display: grid;
       grid-template-columns: 2fr 1fr 1fr;
-      gap: clamp(30px, 4vw, 60px);
+      gap: clamp(30px, 5vw, 60px);
       margin-bottom: 40px;
     }
     .footer-logo {
@@ -1023,104 +933,139 @@
       margin-bottom: 16px; cursor: pointer;
     }
     .footer-desc {
-      font-size: 13px; color: var(--text-muted);
-      line-height: 1.7; max-width: 300px; margin-bottom: 20px;
+      font-size: 13px; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;
     }
     .footer-socials { display: flex; gap: 10px; }
     .footer-soc {
       width: 36px; height: 36px;
       border-radius: 10px;
       display: flex; align-items: center; justify-content: center;
-      transition: transform 0.3s, opacity 0.3s;
+      background: var(--card); border: 1px solid var(--card-border);
+      transition: background 0.3s, border-color 0.3s, transform 0.3s;
     }
-    .footer-soc:hover { transform: translateY(-3px); opacity: 0.8; }
-    .footer-soc.tg { background: rgba(38,165,228,0.15); color: var(--tg); }
-    .footer-soc.wa { background: rgba(37,211,102,0.15); color: var(--wa); }
-    .footer-soc.vk { background: rgba(0,119,255,0.15); color: var(--vk); }
-    .footer-soc.yt { background: rgba(255,0,0,0.15); color: var(--yt); }
     .footer-soc svg { width: 18px; height: 18px; fill: currentColor; }
-    .footer-col h4 {
-      font-size: 12px; font-weight: 700; letter-spacing: 1.5px;
-      text-transform: uppercase; color: var(--text-muted);
-      margin-bottom: 16px;
-    }
-    .footer-links { display: flex; flex-direction: column; gap: 10px; }
-    .footer-links a {
-      font-size: 13px; color: var(--text-light);
-      transition: color 0.3s;
-    }
-    .footer-links a:hover { color: #a855f7; }
+    .footer-soc:hover { transform: translateY(-3px); }
+    .footer-soc.tg { color: var(--tg); }
+    .footer-soc.tg:hover { background: rgba(38,165,228,0.15); border-color: rgba(38,165,228,0.3); }
+    .footer-soc.wa { color: var(--wa); }
+    .footer-soc.wa:hover { background: rgba(37,211,102,0.15); border-color: rgba(37,211,102,0.3); }
+    .footer-soc.vk { color: var(--vk); }
+    .footer-soc.vk:hover { background: rgba(0,119,255,0.15); border-color: rgba(0,119,255,0.3); }
+    .footer-soc.yt { color: var(--yt); }
+    .footer-soc.yt:hover { background: rgba(255,0,0,0.15); border-color: rgba(255,0,0,0.3); }
+    .footer-col h4 { font-size: 13px; font-weight: 700; margin-bottom: 14px; }
+    .footer-links { display: flex; flex-direction: column; gap: 8px; }
+    .footer-links a { font-size: 12px; color: var(--text-muted); transition: color 0.3s; }
+    .footer-links a:hover { color: var(--text); }
     .footer-bot {
-      border-top: 1px solid rgba(255,255,255,0.05);
-      padding-top: 24px;
-      display: flex; align-items: center; justify-content: space-between;
-      flex-wrap: wrap; gap: 12px;
+      border-top: 1px solid var(--card-border);
+      padding-top: 20px;
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+      flex-wrap: wrap;
     }
     .footer-copy { font-size: 12px; color: var(--text-muted); }
     .footer-reg-link {
-      font-size: 12px; font-weight: 700;
-      background: var(--grad);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-      transition: opacity 0.3s;
+      font-size: 12px; font-weight: 600; color: #c084fc;
+      transition: color 0.3s;
     }
-    .footer-reg-link:hover { opacity: 0.75; }
+    .footer-reg-link:hover { color: #a855f7; }
 
     /* ===================== TOAST ===================== */
     .toast {
-      position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%) translateY(20px);
-      z-index: 300;
-      padding: 14px 24px;
-      border-radius: 12px;
+      position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(20px);
+      padding: 14px 24px; border-radius: 50px;
       font-size: 14px; font-weight: 600;
-      max-width: 90vw; text-align: center;
-      opacity: 0; transition: opacity 0.4s, transform 0.4s;
-      pointer-events: none;
-      white-space: pre-line;
+      opacity: 0; visibility: hidden;
+      transition: opacity 0.4s, transform 0.4s, visibility 0.4s;
+      z-index: 300; white-space: nowrap; max-width: 90vw; text-align: center;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.4);
     }
-    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
-    .toast.ok { background: #064e3b; border: 1px solid #059669; color: #6ee7b7; }
-    .toast.err { background: #4c0519; border: 1px solid #be123c; color: #fda4af; }
+    .toast.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+    .toast.ok { background: linear-gradient(135deg, #a855f7, #ec4899); color: #fff; }
+    .toast.err { background: linear-gradient(135deg, #ef4444, #f97316); color: #fff; }
+
+    /* ===================== DESC LIGHTBOX ===================== */
+    .desc-lightbox {
+      position: fixed; inset: 0; z-index: 200;
+      background: rgba(0,0,0,0.95);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; visibility: hidden; transition: 0.3s;
+      cursor: zoom-out;
+    }
+    .desc-lightbox.open { opacity: 1; visibility: visible; }
+    .desc-lightbox img { max-width: 90vw; max-height: 90vh; border-radius: 12px; object-fit: contain; cursor: default; }
+    .desc-lb-close {
+      position: absolute; top: 20px; right: 24px;
+      font-size: 32px; cursor: pointer; color: #fff;
+      transition: color 0.3s;
+    }
+    .desc-lb-close:hover { color: #a855f7; }
 
     /* ===================== RESPONSIVE ===================== */
     @media (max-width: 1024px) {
-      .services-grid { grid-template-columns: repeat(2, 1fr); }
       .program-grid { grid-template-columns: repeat(2, 1fr); }
-      .gallery-grid { grid-template-columns: repeat(4, 1fr); }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
     }
-    @media (max-width: 860px) {
-      nav, .h-cta { display: none !important; }
+
+    @media (max-width: 768px) {
+      nav, .h-cta { display: none; }
       .mbtn { display: flex; }
-      .hero-grid { grid-template-columns: 1fr; }
-      .hero-visual { display: none; }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      /* ИСПРАВЛЕНИЕ: показываем фото на мобильных */
+      .hero-visual {
+        display: flex;
+        order: -1;
+        justify-content: center;
+      }
+      .hero-avatar-wrap {
+        width: clamp(200px, 70vw, 320px);
+      }
+      .fb-1 { right: -10px; }
+      .fb-2 { left: -10px; }
+      .hero-btns { justify-content: center; }
+      .hero-stats { justify-content: center; }
+      .hero-desc { margin-left: auto; margin-right: auto; }
+
       .about-grid { grid-template-columns: 1fr; }
-      .about-img-wrap { display: none; }
-      .approach-grid { grid-template-columns: 1fr; }
-      .contacts-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-      .footer-brand { grid-column: 1 / -1; }
-      .reviews-grid { grid-template-columns: 1fr 1fr; }
-      .gallery-grid { grid-template-columns: repeat(3, 1fr); }
-      .book-inner { grid-template-columns: 1fr; }
-      .book-cover-wrap { display: flex; justify-content: center; }
-    }
-    @media (max-width: 600px) {
-      .services-grid { grid-template-columns: 1fr; }
-      .program-grid { grid-template-columns: 1fr 1fr; }
-      .reviews-grid { grid-template-columns: 1fr; }
+      .about-img-wrap { position: static; }
+
       .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-      .footer-grid { grid-template-columns: 1fr; }
+
+      .services-grid { grid-template-columns: 1fr; }
+
+      .program-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .approach-grid { grid-template-columns: 1fr; }
+
+      .contacts-grid { grid-template-columns: 1fr; }
+
+      .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+
+      .reviews-grid { grid-template-columns: 1fr; }
+
       .form-row { grid-template-columns: 1fr; }
+
       .about-stats { grid-template-columns: repeat(3, 1fr); }
-      .float-badge { display: none; }
-      .lb-prev { left: 8px; }
-      .lb-next { right: 8px; }
     }
+
+    @media (max-width: 480px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .program-grid { grid-template-columns: 1fr; }
+      .about-stats { grid-template-columns: 1fr 1fr; }
+      .hero-avatar-wrap { width: clamp(180px, 80vw, 280px); }
+    }
+
   </style>
+
 </head>
 
 <body>
 
-  <!-- BG ORBS -->
+  <!-- ===================== BG ORBS ===================== -->
   <div class="bg-orb bg-orb-1"></div>
   <div class="bg-orb bg-orb-2"></div>
   <div class="bg-orb bg-orb-3"></div>
@@ -1130,13 +1075,14 @@
     <div class="con">
       <div class="header-inner">
         <div class="logo" id="logoTop">
-          <img src="img/logo.png" alt="Логотип" class="logo-img" onerror="this.style.display='none'; document.getElementById('logoIconFallback').style.display='flex';">
-          <div class="logo-icon" id="logoIconFallback" style="display:none;">⚡</div>
+          <img src="img/logo.png" alt="Логотип" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="logo-icon" style="display:none">⚡</div>
           <div class="logo-text">
             <span class="logo-name">Юлия Савицкая</span>
             <span class="logo-sub">Super Jump</span>
           </div>
         </div>
+
         <nav>
           <a href="#about">Обо мне</a>
           <a href="#services">Направления</a>
@@ -1145,7 +1091,9 @@
           <a href="#reviews">Отзывы</a>
           <a href="#contacts">Контакты</a>
         </nav>
+
         <a href="#contacts" class="h-cta">Записаться ⚡</a>
+
         <button class="mbtn" id="mbtn" aria-label="Меню">
           <span></span><span></span><span></span>
         </button>
@@ -1153,7 +1101,7 @@
     </div>
   </header>
 
-  <!-- MOBILE MENU -->
+  <!-- Mobile Menu -->
   <div class="mmenu" id="mmenu">
     <a href="#about">Обо мне</a>
     <a href="#services">Направления</a>
@@ -1170,6 +1118,8 @@
     <section class="hero">
       <div class="con">
         <div class="hero-grid">
+
+          <!-- Left: text -->
           <div class="reveal">
             <div class="hero-line"></div>
             <div class="hero-tag">Интеллект-тренер · Super Jump</div>
@@ -1177,16 +1127,15 @@
               Юлия<br>
               <span class="grad-text">Савицкая</span>
             </h1>
-            <div class="hero-role">
-              <span>Онлайн-формат</span>
+            <p class="hero-role"><span>Онлайн-формат</span>
               Ментальный рост · Энергия · Результат
-            </div>
+            </p>
             <p class="hero-desc">
               Помогаю людям открыть внутренние ресурсы, восстановить энергию и выстроить жизнь, где есть место и успеху, и радости. Без магии — только рабочие инструменты для ума.
             </p>
             <div class="hero-btns">
               <a href="#contacts" class="btn-primary">Записаться на курс ⚡</a>
-              <a href="#program" class="btn-secondary">Программа →</a>
+              <a href="#about" class="btn-secondary">Узнать больше →</a>
             </div>
             <div class="hero-stats">
               <div class="hero-stat">
@@ -1210,6 +1159,8 @@
               </div>
             </div>
           </div>
+
+          <!-- Right: photo -->
           <div class="hero-visual reveal-right">
             <div class="hero-avatar-wrap">
               <div class="hero-avatar-bg"></div>
@@ -1232,6 +1183,7 @@
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -1241,17 +1193,19 @@
     <!-- ===================== HERO BANNER ===================== -->
     <section class="hero-banner-section">
       <div class="con">
-        <div id="descImgWrap" style="cursor:zoom-in;" title="Нажмите для увеличения">
-          <img id="descImg" src="img/desc.jpg" alt="О курсе Super Jump" class="hero-banner-img reveal"
-               onerror="this.style.display='none'; document.getElementById('descImgWrap').style.display='none';">
+        <div id="descImgWrap" style="cursor:zoom-in;" class="reveal">
+          <img id="descImg" src="img/desc.jpg" alt="Описание курса Super Jump" class="hero-banner-img" onerror="this.style.display='none'">
         </div>
+
         <div class="video-block reveal">
-          <div class="video-block-title">Посмотрите, <span class="grad-text">как это работает</span></div>
+          <h3 class="video-block-title">Посмотрите — как это <span class="grad-text">работает</span></h3>
           <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="Super Jump — как это работает"
+            <iframe
+              src="https://www.youtube.com/embed/EpMFBMkB5ZI"
+              title="Super Jump — Как это работает"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen loading="lazy"></iframe>
+              allowfullscreen>
+            </iframe>
           </div>
         </div>
       </div>
@@ -1259,7 +1213,7 @@
 
     <!-- DESC LIGHTBOX -->
     <div class="desc-lightbox" id="descLightbox">
-      <button class="desc-lb-close" id="descLbClose">✕</button>
+      <span class="desc-lb-close" id="descLbClose">✕</span>
       <img id="descLbImg" src="" alt="Описание курса">
     </div>
 
@@ -1267,24 +1221,29 @@
 
     <!-- ===================== ABOUT ===================== -->
     <section class="about-sec" id="about">
-      <div class="con" style="position:relative;">
-        <div class="about-glow"></div>
+      <div class="con">
         <div class="about-grid">
+
+          <!-- Left: text -->
           <div class="reveal-left">
             <div class="sec-head">
               <div class="sec-label">Обо мне</div>
               <h2 class="sec-title">Твой проводник<br>к <span class="grad-text">ресурсному состоянию</span></h2>
             </div>
+
             <div class="about-quote">
               «Я верю, что каждый человек способен на больше — стоит лишь научить мозг работать в правильном режиме. Именно этим я и занимаюсь.»
             </div>
+
             <p class="about-body">
               Я интеллект-тренер международной системы Super Jump — запатентованной методики, разработанной Владимиром Довганём. Моя работа — помогать людям находить внутреннюю опору, управлять своим состоянием и двигаться к целям без выгорания и потери себя.
             </p>
+
             <p class="about-body">
               В своей практике я объединяю 8 проверенных ментальных инструментов: от техник управления эмоциями до дофаминового марафона и ментальной йоги. Каждый инструмент прошёл проверку сотнями участников по всему миру — и продолжает работать.
             </p>
-            <div class="about-stats">
+
+            <div class="about-stats reveal">
               <div class="a-stat">
                 <div class="a-stat-icon">🌍</div>
                 <span class="a-stat-val">20+</span>
@@ -1301,6 +1260,7 @@
                 <div class="a-stat-lbl">ментальных практик</div>
               </div>
             </div>
+
             <div class="about-highlights">
               <div class="about-hl">
                 <div class="about-hl-icon">🏅</div>
@@ -1325,6 +1285,8 @@
               </div>
             </div>
           </div>
+
+          <!-- Right: photo -->
           <div class="about-img-wrap reveal-right">
             <div class="about-img-card">
               <img src="img/2.jpg" alt="Юлия Савицкая" onerror="this.style.display='none'">
@@ -1334,6 +1296,7 @@
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -1350,43 +1313,43 @@
         <div class="gallery-grid">
           <div class="gallery-item reveal reveal-d1" data-index="0">
             <img src="img/g1.jpg" alt="Фото 1" onerror="this.closest('.gallery-item').style.display='none'">
-            <div class="gallery-item-overlay"><span class="gallery-zoom">🔍</span></div>
+            <div class="gallery-item-overlay"><span>🔍</span></div>
           </div>
           <div class="gallery-item reveal reveal-d2" data-index="1">
             <img src="img/g2.jpg" alt="Фото 2" onerror="this.closest('.gallery-item').style.display='none'">
-            <div class="gallery-item-overlay"><span class="gallery-zoom">🔍</span></div>
+            <div class="gallery-item-overlay"><span>🔍</span></div>
           </div>
           <div class="gallery-item reveal reveal-d3" data-index="2">
             <img src="img/g3.jpg" alt="Фото 3" onerror="this.closest('.gallery-item').style.display='none'">
-            <div class="gallery-item-overlay"><span class="gallery-zoom">🔍</span></div>
+            <div class="gallery-item-overlay"><span>🔍</span></div>
           </div>
           <div class="gallery-item reveal reveal-d4" data-index="3">
             <img src="img/g4.jpg" alt="Фото 4" onerror="this.closest('.gallery-item').style.display='none'">
-            <div class="gallery-item-overlay"><span class="gallery-zoom">🔍</span></div>
+            <div class="gallery-item-overlay"><span>🔍</span></div>
           </div>
           <div class="gallery-item reveal reveal-d5" data-index="4">
             <img src="img/g5.jpg" alt="Фото 5" onerror="this.closest('.gallery-item').style.display='none'">
-            <div class="gallery-item-overlay"><span class="gallery-zoom">🔍</span></div>
+            <div class="gallery-item-overlay"><span>🔍</span></div>
           </div>
           <div class="gallery-item reveal reveal-d1" data-index="5">
             <img src="img/g6.jpg" alt="Фото 6" onerror="this.closest('.gallery-item').style.display='none'">
-            <div class="gallery-item-overlay"><span class="gallery-zoom">🔍</span></div>
+            <div class="gallery-item-overlay"><span>🔍</span></div>
           </div>
           <div class="gallery-item reveal reveal-d2" data-index="6">
             <img src="img/g7.jpg" alt="Фото 7" onerror="this.closest('.gallery-item').style.display='none'">
-            <div class="gallery-item-overlay"><span class="gallery-zoom">🔍</span></div>
+            <div class="gallery-item-overlay"><span>🔍</span></div>
           </div>
           <div class="gallery-item reveal reveal-d3" data-index="7">
             <img src="img/g8.jpg" alt="Фото 8" onerror="this.closest('.gallery-item').style.display='none'">
-            <div class="gallery-item-overlay"><span class="gallery-zoom">🔍</span></div>
+            <div class="gallery-item-overlay"><span>🔍</span></div>
           </div>
           <div class="gallery-item reveal reveal-d4" data-index="8">
             <img src="img/g9.jpg" alt="Фото 9" onerror="this.closest('.gallery-item').style.display='none'">
-            <div class="gallery-item-overlay"><span class="gallery-zoom">🔍</span></div>
+            <div class="gallery-item-overlay"><span>🔍</span></div>
           </div>
           <div class="gallery-item reveal reveal-d5" data-index="9">
             <img src="img/g10.jpg" alt="Фото 10" onerror="this.closest('.gallery-item').style.display='none'">
-            <div class="gallery-item-overlay"><span class="gallery-zoom">🔍</span></div>
+            <div class="gallery-item-overlay"><span>🔍</span></div>
           </div>
         </div>
       </div>
@@ -1394,16 +1357,16 @@
 
     <!-- GALLERY LIGHTBOX -->
     <div class="lightbox" id="lightbox">
-      <button class="lb-close" id="lbClose">✕</button>
-      <button class="lb-prev" id="lbPrev">‹</button>
+      <span class="lb-close" id="lbClose">✕</span>
+      <span class="lb-nav" id="lbPrev">‹</span>
       <img id="lbImg" src="" alt="Фото">
-      <button class="lb-next" id="lbNext">›</button>
+      <span class="lb-nav" id="lbNext">›</span>
     </div>
 
     <hr class="sec-divider">
 
     <!-- ===================== SERVICES ===================== -->
-    <section id="services">
+    <section class="services-sec" id="services">
       <div class="con">
         <div class="sec-head sec-head-center reveal">
           <div class="sec-label">Направления</div>
@@ -1412,39 +1375,39 @@
         </div>
         <div class="services-grid">
           <div class="svc-card reveal reveal-d1">
-            <div class="svc-icon">🧠</div>
+            <span class="svc-icon">🧠</span>
             <div class="svc-title">Эмоциональный интеллект</div>
-            <div class="svc-desc">Учим мозг управлять реакциями, а не быть их заложником. Стресс, тревога и срывы превращаются в управляемые состояния.</div>
+            <p class="svc-desc">Учим мозг управлять реакциями, а не быть их заложником. Стресс, тревога и срывы превращаются в управляемые состояния.</p>
             <span class="svc-tag">EQ 2.0</span>
           </div>
           <div class="svc-card reveal reveal-d2">
-            <div class="svc-icon">⚡</div>
+            <span class="svc-icon">⚡</span>
             <div class="svc-title">Ментальная энергия</div>
-            <div class="svc-desc">Дофаминовый марафон и техники восстановления сил — для тех, кто устал уставать. Бодрость и мотивация без кофе и насилия над собой.</div>
+            <p class="svc-desc">Дофаминовый марафон и техники восстановления сил — для тех, кто устал уставать. Бодрость и мотивация без кофе и насилия над собой.</p>
             <span class="svc-tag">Энергопрактики</span>
           </div>
           <div class="svc-card reveal reveal-d3">
-            <div class="svc-icon">🎯</div>
+            <span class="svc-icon">🎯</span>
             <div class="svc-title">Ясность и фокус</div>
-            <div class="svc-desc">Когда голова забита всем подряд, трудно двигаться к целям. Помогаю расчистить пространство и найти своё направление.</div>
+            <p class="svc-desc">Когда голова забита всем подряд, трудно двигаться к целям. Помогаю расчистить пространство и найти своё направление.</p>
             <span class="svc-tag">Целеполагание</span>
           </div>
-          <div class="svc-card reveal reveal-d4">
-            <div class="svc-icon">👑</div>
+          <div class="svc-card reveal reveal-d1">
+            <span class="svc-icon">👑</span>
             <div class="svc-title">Уверенность и лидерство</div>
-            <div class="svc-desc">Ораторство, самопрезентация, осанка победителя — навыки, которые меняют то, как вас воспринимают окружающие и как вы воспринимаете себя.</div>
+            <p class="svc-desc">Ораторство, самопрезентация, осанка победителя — навыки, которые меняют то, как вас воспринимают окружающие и как вы воспринимаете себя.</p>
             <span class="svc-tag">Soft Skills</span>
           </div>
-          <div class="svc-card reveal reveal-d5">
-            <div class="svc-icon">🌱</div>
+          <div class="svc-card reveal reveal-d2">
+            <span class="svc-icon">🌱</span>
             <div class="svc-title">Привычки успешных людей</div>
-            <div class="svc-desc">Не разовые всплески мотивации, а устойчивые ежедневные ритуалы. Формируем то, что остаётся с вами навсегда.</div>
+            <p class="svc-desc">Не разовые всплески мотивации, а устойчивые ежедневные ритуалы. Формируем то, что остаётся с вами навсегда.</p>
             <span class="svc-tag">Трансформация</span>
           </div>
-          <div class="svc-card reveal reveal-d1">
-            <div class="svc-icon">🚀</div>
+          <div class="svc-card reveal reveal-d3">
+            <span class="svc-icon">🚀</span>
             <div class="svc-title">Профессия интеллект-тренера</div>
-            <div class="svc-desc">Хотите обучать других и строить доход на помощи людям? Расскажу, как стать интеллект-тренером в системе Super Jump.</div>
+            <p class="svc-desc">Хотите обучать других и строить доход на помощи людям? Расскажу, как стать интеллект-тренером в системе Super Jump.</p>
             <span class="svc-tag">Бизнес</span>
           </div>
         </div>
@@ -1454,7 +1417,7 @@
     <hr class="sec-divider">
 
     <!-- ===================== PROGRAM ===================== -->
-    <section id="program" style="background: var(--bg2);">
+    <section class="program-sec" id="program">
       <div class="con">
         <div class="sec-head sec-head-center reveal">
           <div class="sec-label">Программа</div>
@@ -1466,56 +1429,56 @@
             <div class="prog-num">01</div>
             <div class="prog-icon">😊</div>
             <div class="prog-title">«200 улыбок»</div>
-            <div class="prog-desc">Запускает выработку гормонов счастья, снимает усталость и повышает продуктивность — без кофе и стимуляторов.</div>
+            <p class="prog-desc">Запускает выработку гормонов счастья, снимает усталость и повышает продуктивность — без кофе и стимуляторов.</p>
             <span class="prog-tag">Бодрость с утра</span>
           </div>
           <div class="prog-card reveal reveal-d2">
             <div class="prog-num">02</div>
             <div class="prog-icon">🧠</div>
             <div class="prog-title">«Я — хозяин мыслей»</div>
-            <div class="prog-desc">Снижает поток негативных мыслей. Учит переключать внимание и управлять ментальным фоном.</div>
+            <p class="prog-desc">Снижает поток негативных мыслей. Учит переключать внимание и управлять ментальным фоном.</p>
             <span class="prog-tag">Минус 90% стресса</span>
           </div>
           <div class="prog-card reveal reveal-d3">
             <div class="prog-num">03</div>
             <div class="prog-icon">👑</div>
             <div class="prog-title">«Осанка короля»</div>
-            <div class="prog-desc">Телесная практика, которая меняет внутреннее ощущение и внешнее впечатление. Уверенность, которую видно.</div>
+            <p class="prog-desc">Телесная практика, которая меняет внутреннее ощущение и внешнее впечатление. Уверенность, которую видно.</p>
             <span class="prog-tag">Уверенность в себе</span>
           </div>
           <div class="prog-card reveal reveal-d4">
             <div class="prog-num">04</div>
             <div class="prog-icon">💧</div>
             <div class="prog-title">«Будьте здоровы»</div>
-            <div class="prog-desc">Стимулирует нестандартное мышление и открывает поток новых идей. Мощный ментальный детокс.</div>
+            <p class="prog-desc">Стимулирует нестандартное мышление и открывает поток новых идей. Мощный ментальный детокс.</p>
             <span class="prog-tag">Свежий взгляд</span>
           </div>
           <div class="prog-card reveal reveal-d1">
             <div class="prog-num">05</div>
             <div class="prog-icon">❤️</div>
             <div class="prog-title">«Я — хозяин чувств»</div>
-            <div class="prog-desc">Управление эмоциональными реакциями. Стрессоустойчивость в отношениях, работе, любой неожиданной ситуации.</div>
+            <p class="prog-desc">Управление эмоциональными реакциями. Стрессоустойчивость в отношениях, работе, любой неожиданной ситуации.</p>
             <span class="prog-tag">Спокойствие</span>
           </div>
           <div class="prog-card reveal reveal-d2">
             <div class="prog-num">06</div>
             <div class="prog-icon">🎧</div>
             <div class="prog-title">Аудиотренинг</div>
-            <div class="prog-desc">Работа с подсознанием: перепрограммирование установок на успех, изобилие и уверенность в своих силах.</div>
+            <p class="prog-desc">Работа с подсознанием: перепрограммирование установок на успех, изобилие и уверенность в своих силах.</p>
             <span class="prog-tag">Новые установки</span>
           </div>
           <div class="prog-card reveal reveal-d3">
             <div class="prog-num">07</div>
             <div class="prog-icon">🛡️</div>
             <div class="prog-title">Защита от инфошума</div>
-            <div class="prog-desc">Освобождает мозг от лишнего, улучшает концентрацию и память. Ментальное здоровье в эпоху перегрузок.</div>
+            <p class="prog-desc">Освобождает мозг от лишнего, улучшает концентрацию и память. Ментальное здоровье в эпоху перегрузок.</p>
             <span class="prog-tag">Ясный ум</span>
           </div>
           <div class="prog-card reveal reveal-d4">
             <div class="prog-num">08</div>
             <div class="prog-icon">🌟</div>
             <div class="prog-title">Сверхцель</div>
-            <div class="prog-desc">Помогает обрести смысл, найти призвание и выйти на новый уровень осознанности. Жизнь с вектором.</div>
+            <p class="prog-desc">Помогает обрести смысл, найти призвание и выйти на новый уровень осознанности. Жизнь с вектором.</p>
             <span class="prog-tag">Предназначение</span>
           </div>
         </div>
@@ -1534,52 +1497,53 @@
               <h2 class="sec-title">Почему это <span class="grad-text">работает</span></h2>
               <p class="sec-desc">Super Jump — не мотивационные речи и не абстрактная психология. Это конкретные практики с конкретным эффектом.</p>
             </div>
-            <div class="approach-list">
-              <div class="approach-item">
-                <div class="approach-icon">⏱️</div>
-                <div class="approach-text">
+            <div class="approach-points">
+              <div class="approach-point">
+                <div class="approach-point-icon">⏱️</div>
+                <div>
                   <h4>Всего 1 час в день</h4>
                   <p>Без многодневных ретритов и походов на курсы. Занятия встраиваются в любой расписание — даже самое плотное.</p>
                 </div>
               </div>
-              <div class="approach-item">
-                <div class="approach-icon">⚡</div>
-                <div class="approach-text">
+              <div class="approach-point">
+                <div class="approach-point-icon">⚡</div>
+                <div>
                   <h4>Эффект уже на 2-й день</h4>
                   <p>Многие участники замечают прилив сил, снижение тревоги и улучшение сна после первых двух занятий.</p>
                 </div>
               </div>
-              <div class="approach-item">
-                <div class="approach-icon">🧬</div>
-                <div class="approach-text">
+              <div class="approach-point">
+                <div class="approach-point-icon">🧬</div>
+                <div>
                   <h4>Нейробиология, а не эзотерика</h4>
                   <p>Методика основана на формировании новых нейронных связей. За 10 дней практики мозг буквально учится работать иначе.</p>
                 </div>
               </div>
-              <div class="approach-item">
-                <div class="approach-icon">🤝</div>
-                <div class="approach-text">
+              <div class="approach-point">
+                <div class="approach-point-icon">🤝</div>
+                <div>
                   <h4>Живое сообщество</h4>
                   <p>После курса вы не остаётесь одни — доступ в закрытый чат и интеллект-клуб для продолжения роста.</p>
                 </div>
               </div>
             </div>
           </div>
+
           <div class="reveal-right">
-            <div class="approach-box">
-              <div class="approach-box-title">Что входит в курс</div>
-              <div class="approach-checklist">
-                <div class="approach-check">💻&nbsp; Онлайн — Zoom / Skype / Telegram</div>
-                <div class="approach-check">👥&nbsp; Мини-группа до 10 человек</div>
-                <div class="approach-check">♾️&nbsp; Доступ к материалам навсегда</div>
-                <div class="approach-check">💬&nbsp; Поддержка между занятиями</div>
-                <div class="approach-check">✅&nbsp; Гарантия результата при выполнении</div>
-                <div class="approach-check">👤&nbsp; Индивидуальный VIP-формат — 1 на 1</div>
+            <div class="approach-card">
+              <div class="approach-card-label">Что входит в курс</div>
+              <div class="approach-items">
+                <div class="approach-item"><span>💻</span><span>Онлайн — Zoom / Skype / Telegram</span></div>
+                <div class="approach-item"><span>👥</span><span>Мини-группа до 10 человек</span></div>
+                <div class="approach-item"><span>♾️</span><span>Доступ к материалам навсегда</span></div>
+                <div class="approach-item"><span>💬</span><span>Поддержка между занятиями</span></div>
+                <div class="approach-item"><span>✅</span><span>Гарантия результата при выполнении</span></div>
+                <div class="approach-item"><span>👤</span><span>Индивидуальный VIP-формат — 1 на 1</span></div>
               </div>
-              <p class="approach-box-desc">
+              <p class="approach-note">
                 10 дней онлайн-занятий в мини-группе или индивидуально. Каждый день — одна практика, одна новая привычка. К финалу — новое состояние, которое остаётся с вами.
               </p>
-              <a href="#contacts" class="btn-primary" style="width:100%; justify-content:center;">Записаться →</a>
+              <a href="#contacts" class="btn-primary" style="width:100%;justify-content:center;">Записаться →</a>
             </div>
           </div>
         </div>
@@ -1592,24 +1556,14 @@
     <section class="book-sec">
       <div class="con">
         <div class="book-inner reveal">
-          <div class="book-cover-wrap">
-            <div class="book-cover">
-              <img src="img/book.jpg" alt="Квантовый прыжок к мечте"
-                   onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'book-cover-placeholder\'><div class=\'book-emoji\'>📚</div><div class=\'book-ttl\'>Квантовый прыжок к мечте</div></div>';">
-            </div>
-            <div class="book-badge">PDF бесплатно</div>
-          </div>
-          <div>
-            <div class="book-tag">📚 Бест-селлер</div>
-            <h2 class="sec-title">Книга-основа<br><span class="grad-text">Квантовый прыжок к мечте</span></h2>
-            <p class="book-author">Автор: <span>Владимир Довгань</span></p>
-            <p class="book-desc">
-              Владимир Довгань — предприниматель, который несколько раз начинал с нуля и каждый раз приходил к успеху. В этой книге он делится не просто историей, а системой: сочетанием аутотренинга и жизненной философии, которая позволяет выйти на новый уровень — и в бизнесе, и в жизни. Методика Super Jump выросла именно отсюда.
-            </p>
-            <a href="https://drive.google.com/drive/folders/1gTuinP2y2Shxi0b7ayDg25Cf4n2zavID" target="_blank" rel="noopener" class="btn-primary">
-              📥 Скачать PDF бесплатно →
-            </a>
-          </div>
+          <div class="book-badge">📚 Бест-селлер</div>
+          <h2 class="book-title">Книга-основа<br><span class="grad-text">Квантовый прыжок к мечте</span></h2>
+          <p class="book-desc">
+            Владимир Довгань — предприниматель, который несколько раз начинал с нуля и каждый раз приходил к успеху. В этой книге он делится не просто историей, а системой: сочетанием аутотренинга и жизненной философии, которая позволяет выйти на новый уровень — и в бизнесе, и в жизни. Методика Super Jump выросла именно отсюда.
+          </p>
+          <a href="https://drive.google.com/drive/folders/1gTuinP2y2Shxi0b7ayDg25Cf4n2zavID" target="_blank" rel="noopener" class="btn-primary">
+            📥 Скачать PDF бесплатно →
+          </a>
         </div>
       </div>
     </section>
@@ -1617,7 +1571,7 @@
     <hr class="sec-divider">
 
     <!-- ===================== REVIEWS ===================== -->
-    <section id="reviews">
+    <section class="reviews-sec" id="reviews">
       <div class="con">
         <div class="sec-head sec-head-center reveal">
           <div class="sec-label">Отзывы</div>
@@ -1629,7 +1583,7 @@
             <div class="review-stars">★★★★★</div>
             <p class="review-text">«Ещё на третий день я поняла, что что-то изменилось. Стала спокойнее реагировать на рабочие конфликты, лучше сплю. Казалось бы — час в день, а результат заметили даже коллеги.»</p>
             <div class="review-author">
-              <div class="review-ava">👩</div>
+              <div class="review-avatar">👩</div>
               <div>
                 <div class="review-name">Анастасия М.</div>
                 <div class="review-loc">Москва · HR-менеджер</div>
@@ -1640,7 +1594,7 @@
             <div class="review-stars">★★★★★</div>
             <p class="review-text">«Скептически относился к подобным программам, но жена убедила попробовать. Через 10 дней — больше энергии, меньше раздражения. Не ожидал такого эффекта от простых упражнений.»</p>
             <div class="review-author">
-              <div class="review-ava">👨</div>
+              <div class="review-avatar">👨</div>
               <div>
                 <div class="review-name">Алексей К.</div>
                 <div class="review-loc">Санкт-Петербург · Предприниматель</div>
@@ -1651,40 +1605,40 @@
             <div class="review-stars">★★★★★</div>
             <p class="review-text">«Юлия — очень тёплый и внимательный тренер. Никакого давления, зато много поддержки. Техника «200 улыбок» теперь мой утренний ритуал — работает как перезагрузка системы.»</p>
             <div class="review-author">
-              <div class="review-ava">👩</div>
+              <div class="review-avatar">👩</div>
               <div>
                 <div class="review-name">Марина Т.</div>
                 <div class="review-loc">Казань · Мама в декрете</div>
               </div>
             </div>
           </div>
-          <div class="review-card reveal reveal-d4">
+          <div class="review-card reveal reveal-d1">
             <div class="review-stars">★★★★★</div>
             <p class="review-text">«Пришла с ощущением полного выгорания. Ушла с пониманием, что у меня есть ресурс — я просто не умела к нему обращаться. Сейчас проходит уже третий поток — рекомендую всем вокруг.»</p>
             <div class="review-author">
-              <div class="review-ava">👩</div>
+              <div class="review-avatar">👩</div>
               <div>
                 <div class="review-name">Светлана Р.</div>
                 <div class="review-loc">Онлайн · Психолог</div>
               </div>
             </div>
           </div>
-          <div class="review-card reveal reveal-d5">
+          <div class="review-card reveal reveal-d2">
             <div class="review-stars">★★★★★</div>
             <p class="review-text">«Мне понравилось, что здесь нет лозунгов "измени жизнь за 5 минут". Всё честно: есть практика — есть результат. Тренировки были структурированы, Юлия всегда на связи.»</p>
             <div class="review-author">
-              <div class="review-ava">👨</div>
+              <div class="review-avatar">👨</div>
               <div>
                 <div class="review-name">Дмитрий В.</div>
                 <div class="review-loc">Минск · IT-специалист</div>
               </div>
             </div>
           </div>
-          <div class="review-card reveal reveal-d1">
+          <div class="review-card reveal reveal-d3">
             <div class="review-stars">★★★★★</div>
             <p class="review-text">«Начала курс, чтобы справиться с тревогой. В итоге нашла новую профессию — стала изучать направление интеллект-тренера. Это оказалось гораздо глубже, чем я ожидала.»</p>
             <div class="review-author">
-              <div class="review-ava">👩</div>
+              <div class="review-avatar">👩</div>
               <div>
                 <div class="review-name">Наталья Г.</div>
                 <div class="review-loc">Алматы · В поиске себя</div>
@@ -1706,7 +1660,7 @@
           <p class="cta-desc">10 дней · 1 час в день · Результат, который остаётся. Запишитесь на курс или попробуйте тест-драйв — и начните жить иначе.</p>
           <div class="cta-btns">
             <a href="#contacts" class="btn-primary">Записаться на курс ⚡</a>
-            <a href="https://account.superjump.com/register/38867" target="_blank" rel="noopener" class="btn-secondary">Зарегистрироваться →</a>
+            <a href="https://account.superjump.com/register/38867" target="_blank" rel="noopener" class="btn-secondary">Регистрация →</a>
           </div>
         </div>
       </div>
@@ -1722,10 +1676,12 @@
           <h2 class="sec-title">Давайте <span class="grad-text">свяжемся</span></h2>
         </div>
         <div class="contacts-grid">
-          <!-- Left: socials -->
+
+          <!-- Left: social links -->
           <div class="reveal-left">
-            <div class="contacts-title">Напишите мне</div>
-            <p class="contacts-desc">Выберите удобный способ связи — отвечу быстро и расскажу всё о курсе, ближайших датах и форматах участия.</p>
+            <h3 class="contacts-title">Напишите мне — <span class="grad-text">отвечу быстро</span></h3>
+            <p class="contacts-desc">Выберите удобный мессенджер или соцсеть. Расскажу о курсе, форматах, ценах и ближайших датах старта.</p>
+
             <div class="soc-links">
               <a href="https://t.me/yuliya_savitskaya" target="_blank" rel="noopener" class="soc-link tg">
                 <div class="soc-icon">
@@ -1737,6 +1693,7 @@
                 </div>
                 <span class="soc-arrow">→</span>
               </a>
+
               <a href="https://wa.me/79850014030" target="_blank" rel="noopener" class="soc-link wa">
                 <div class="soc-icon">
                   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -1747,6 +1704,7 @@
                 </div>
                 <span class="soc-arrow">→</span>
               </a>
+
               <a href="https://vk.com/yull_procopeva" target="_blank" rel="noopener" class="soc-link vk">
                 <div class="soc-icon">
                   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.391 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.864-.525-2.05-1.727-1.033-1-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.118-5.335-3.202C4.624 10.857 4 8.893 4 8.455c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.677.863 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.204.17-.407.44-.407h2.744c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.254-1.406 2.151-3.574 2.151-3.574.119-.254.322-.491.763-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.203 1.253.745.847 1.32 1.558 1.473 2.05.17.49-.085.744-.576.744z"/></svg>
@@ -1757,6 +1715,7 @@
                 </div>
                 <span class="soc-arrow">→</span>
               </a>
+
               <a href="https://youtube.com/@superjump" target="_blank" rel="noopener" class="soc-link yt">
                 <div class="soc-icon">
                   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
@@ -1768,17 +1727,19 @@
                 <span class="soc-arrow">→</span>
               </a>
             </div>
+
             <a href="tel:+79850014030" class="contacts-phone">
               <span class="ph-icon">📱</span>
               <span>+7 985 001-40-30</span>
             </a>
+
             <div style="margin-top:24px; padding: 20px; background: var(--card); border: 1px solid rgba(168,85,247,0.2); border-radius: 16px;">
               <div style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px; font-weight: 600; letter-spacing: 0.5px;">БЫСТРАЯ ЗАПИСЬ</div>
               <p style="font-size: 13px; color: var(--text-light); line-height: 1.7; margin-bottom: 14px;">
                 Хотите попробовать Super Jump прямо сейчас? Зарегистрируйтесь по ссылке и выберите комфортный статус участия.
               </p>
               <a href="https://account.superjump.com/register/38867" target="_blank" rel="noopener"
-                 style="display:inline-flex; align-items:center; gap:8px; padding:11px 22px; border-radius:50px; background:var(--grad); font-size:13px; font-weight:700; color:#fff; transition:transform 0.3s, box-shadow 0.3s;">
+                style="display:inline-flex; align-items:center; gap:8px; padding:11px 22px; border-radius:50px; background:var(--grad); font-size:13px; font-weight:700; color:#fff; transition:transform 0.3s, box-shadow 0.3s;">
                 Зарегистрироваться →
               </a>
             </div>
@@ -1820,6 +1781,7 @@
               <button type="submit" class="form-submit" id="fsub">Отправить сообщение ⚡</button>
             </form>
           </div>
+
         </div>
       </div>
     </section>
@@ -1856,6 +1818,7 @@
             </a>
           </div>
         </div>
+
         <div class="footer-col">
           <h4>Навигация</h4>
           <div class="footer-links">
@@ -1867,6 +1830,7 @@
             <a href="#contacts">Контакты</a>
           </div>
         </div>
+
         <div class="footer-col">
           <h4>Ресурсы</h4>
           <div class="footer-links">
@@ -1877,6 +1841,7 @@
           </div>
         </div>
       </div>
+
       <div class="footer-bot">
         <p class="footer-copy">
           © <span id="year"></span> <span>Юлия Савицкая · Super Jump</span>. Онлайн по всему миру.
@@ -1892,6 +1857,7 @@
   <div class="toast" id="toast"></div>
 
   <script>
+
     // ===== YEAR =====
     document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -2157,7 +2123,9 @@
         });
       });
     }
+
   </script>
 
 </body>
+
 </html>
