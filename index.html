@@ -20,13 +20,9 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
-
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
 
   <style>
@@ -204,13 +200,16 @@
     .reveal-d4 { transition-delay: 0.4s; }
     .reveal-d5 { transition-delay: 0.5s; }
 
-    /* ===================== HERO — адаптивный под десктоп ===================== */
+    /* ===================== HERO — адаптивный под все экраны ===================== */
     .hero {
-      min-height: 100vh;
-      display: flex; align-items: center;
-      position: relative; overflow: hidden;
-      /* Уменьшенный padding для десктопа */
-      padding: clamp(80px, 10vh, 110px) 0 clamp(40px, 5vh, 70px);
+      min-height: 100svh;
+      height: 100svh;
+      max-height: 100svh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 0;
     }
     .hero::before {
       content: '';
@@ -221,22 +220,27 @@
         radial-gradient(ellipse at 50% 90%, rgba(249,115,22,0.06) 0%, transparent 45%);
       pointer-events: none;
     }
+    .hero > .con {
+      width: 100%;
+      padding-top: 70px;
+      padding-bottom: 16px;
+    }
     .hero-grid {
       position: relative; z-index: 1;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: clamp(20px, 4vw, 60px);
+      gap: clamp(16px, 3vw, 48px);
       align-items: center;
     }
     .hero-tag {
       display: inline-flex; align-items: center; gap: 8px;
-      padding: 6px 14px;
+      padding: 5px 12px;
       background: rgba(168,85,247,0.1);
       border: 1px solid rgba(168,85,247,0.3);
       border-radius: 50px;
-      font-size: 11px; font-weight: 600; letter-spacing: 1.5px;
+      font-size: 10px; font-weight: 600; letter-spacing: 1.5px;
       color: #c084fc; text-transform: uppercase;
-      margin-bottom: 16px;
+      margin-bottom: 10px;
     }
     .hero-tag::before {
       content: '';
@@ -250,19 +254,18 @@
     }
     .hero-h1 {
       font-family: 'Playfair Display', serif;
-      /* Уменьшен максимальный размер для десктопа */
-      font-size: clamp(30px, 4vw, 54px);
-      font-weight: 800; line-height: 1.1;
-      margin-bottom: 12px;
+      font-size: clamp(24px, 3.5vw, 52px);
+      font-weight: 800; line-height: 1.08;
+      margin-bottom: 8px;
     }
     .hero-h1 .grad-text {
       background: var(--grad);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
     .hero-role {
-      font-size: clamp(13px, 1.2vw, 15px);
+      font-size: clamp(12px, 1.1vw, 14px);
       font-weight: 500; color: var(--text-light);
-      margin-bottom: 16px;
+      margin-bottom: 10px;
     }
     .hero-role strong {
       background: var(--grad);
@@ -270,17 +273,17 @@
       font-weight: 700;
     }
     .hero-desc {
-      font-size: clamp(13px, 1.1vw, 15px);
+      font-size: clamp(12px, 1vw, 14px);
       color: var(--text-light);
-      margin-bottom: 22px;
-      line-height: 1.7;
+      margin-bottom: 16px;
+      line-height: 1.6;
     }
     .hero-cta {
       display: inline-flex; align-items: center; gap: 10px;
-      padding: 13px 28px;
+      padding: 11px 24px;
       background: var(--grad);
       border-radius: 50px;
-      font-size: 13px; font-weight: 700; color: #fff;
+      font-size: 12px; font-weight: 700; color: #fff;
       box-shadow: 0 10px 40px rgba(168,85,247,0.35);
       transition: transform 0.3s, box-shadow 0.3s;
     }
@@ -288,28 +291,28 @@
     .hero-stats {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-      margin-top: 28px;
+      gap: 8px;
+      margin-top: 16px;
     }
     .hero-stat {
       background: var(--card);
       border: 1px solid var(--card-border);
-      border-radius: 12px;
-      padding: 12px 10px;
+      border-radius: 10px;
+      padding: 9px 6px;
       text-align: center;
     }
     .hero-stat-num {
       display: block;
-      font-size: clamp(18px, 2vw, 24px);
+      font-size: clamp(16px, 1.8vw, 22px);
       font-weight: 800;
       background: var(--grad);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
       line-height: 1;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
     .hero-stat-label {
       display: block;
-      font-size: 10px;
+      font-size: 9px;
       font-weight: 600;
       color: var(--text-muted);
       line-height: 1.3;
@@ -323,13 +326,13 @@
     .hero-pic-wrap {
       position: relative;
       width: 100%;
-      /* Ограничен максимальный размер фото на десктопе */
-      max-width: 400px;
+      max-width: min(380px, 40vw);
     }
     .hero-pic-wrap img {
       width: 100%;
       height: auto;
-      border-radius: 20px;
+      max-height: calc(100svh - 120px);
+      border-radius: 18px;
       box-shadow: 0 20px 60px rgba(0,0,0,0.4);
       object-fit: cover;
     }
@@ -338,8 +341,8 @@
       background: rgba(8,8,15,0.9);
       backdrop-filter: blur(20px);
       border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 16px;
-      padding: 12px 16px;
+      border-radius: 14px;
+      padding: 10px 14px;
       box-shadow: 0 10px 40px rgba(0,0,0,0.3);
       display: flex;
       align-items: center;
@@ -347,35 +350,35 @@
       z-index: 2;
     }
     .hero-badge-icon {
-      width: 42px;
-      height: 42px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       background: var(--grad);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 20px;
+      font-size: 17px;
       flex-shrink: 0;
     }
     .hero-badge-text strong {
       display: block;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
       color: #fff;
       margin-bottom: 2px;
     }
     .hero-badge-text span {
       display: block;
-      font-size: 10px;
+      font-size: 9px;
       font-weight: 500;
       color: var(--text-muted);
     }
     .hero-badge-1 {
-      top: 12%;
+      top: 10%;
       right: -8%;
     }
     .hero-badge-2 {
-      bottom: 8%;
+      bottom: 6%;
       left: -6%;
     }
 
@@ -528,6 +531,7 @@
       border-radius: 24px;
       box-shadow: 0 20px 60px rgba(0,0,0,0.4);
       object-fit: cover;
+      cursor: pointer;
     }
     .about-pic-label {
       position: absolute;
@@ -728,27 +732,32 @@
       line-height: 1.6;
       margin-bottom: 12px;
     }
-    .program-result {
+    .program-tag {
       display: inline-block;
-      padding: 6px 12px;
-      background: var(--grad-soft);
-      border-radius: 16px;
+      padding: 4px 12px;
+      background: rgba(168,85,247,0.1);
+      border: 1px solid rgba(168,85,247,0.2);
+      border-radius: 20px;
       font-size: 10px;
       font-weight: 700;
-      letter-spacing: 0.5px;
+      letter-spacing: 1px;
       color: #c084fc;
       text-transform: uppercase;
     }
+
+    /* Program Image */
     .program-img-wrap {
-      text-align: center;
-      margin-bottom: 40px;
+      margin: 0 0 40px 0;
+      border-radius: 20px;
+      overflow: hidden;
+      max-height: 420px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
     }
     .program-img-wrap img {
-      max-width: 700px;
       width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-      margin: 0 auto;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     /* ===================== APPROACH ===================== */
@@ -797,8 +806,9 @@
       align-items: flex-start;
     }
     .approach-item-icon {
-      font-size: 28px;
+      font-size: 30px;
       flex-shrink: 0;
+      margin-top: 2px;
     }
     .approach-item h4 {
       font-size: 15px;
@@ -817,11 +827,9 @@
       padding: 30px;
     }
     .approach-card h3 {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 700;
       margin-bottom: 20px;
-      background: var(--grad);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
     .approach-list {
       list-style: none;
@@ -835,57 +843,78 @@
       align-items: center;
       gap: 12px;
       font-size: 14px;
+      color: var(--text-light);
     }
-    .approach-list li span:first-child { font-size: 20px; flex-shrink: 0; }
+    .approach-list li span:first-child {
+      font-size: 20px;
+      flex-shrink: 0;
+    }
     .approach-card-desc {
       font-size: 13px;
-      color: var(--text-light);
+      color: var(--text-muted);
       line-height: 1.7;
       margin-bottom: 20px;
     }
-    .approach-cta {
-      display: inline-flex; align-items: center;
-      padding: 12px 28px; border-radius: 50px;
+    .approach-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
       background: var(--grad);
-      font-size: 13px; font-weight: 700; color: #fff;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
       transition: transform 0.3s, box-shadow 0.3s;
     }
-    .approach-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(168,85,247,0.4); }
+    .approach-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(168,85,247,0.4); }
 
     /* ===================== BOOK ===================== */
     .book { background: var(--bg); }
     .book-grid {
       display: grid;
       grid-template-columns: auto 1fr;
-      gap: clamp(30px, 5vw, 70px);
+      gap: clamp(40px, 6vw, 80px);
       align-items: center;
     }
-    .book-pic-wrap {
+    .book-cover-wrap {
       position: relative;
       flex-shrink: 0;
     }
-    .book-pic-wrap img {
-      width: clamp(180px, 22vw, 280px);
+    .book-cover-wrap img {
+      width: clamp(160px, 20vw, 260px);
       height: auto;
-      border-radius: 16px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-      cursor: zoom-in;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.05);
+      cursor: pointer;
       transition: transform 0.3s;
     }
-    .book-pic-wrap img:hover { transform: scale(1.03); }
-    .book-bestseller {
+    .book-cover-wrap img:hover { transform: scale(1.03) rotate(-1deg); }
+    .book-badge {
       position: absolute;
-      top: -14px; right: -14px;
+      top: -12px;
+      right: -12px;
       background: var(--gold);
       color: #000;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      padding: 8px 10px;
       border-radius: 50%;
-      width: 64px; height: 64px;
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      font-size: 10px; font-weight: 900; text-align: center;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
       line-height: 1.2;
       box-shadow: 0 4px 20px rgba(251,191,36,0.4);
     }
-    .book-bestseller span:first-child { font-size: 20px; }
+    .book-head {
+      text-align: left;
+      margin-bottom: 20px;
+    }
     .book-tag {
       display: inline-block;
       font-size: 11px; font-weight: 700; letter-spacing: 2px;
@@ -895,10 +924,9 @@
     }
     .book-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(24px, 3.5vw, 40px);
+      font-size: clamp(26px, 4vw, 42px);
       font-weight: 800;
       line-height: 1.2;
-      margin-bottom: 16px;
     }
     .book-title .grad-text {
       background: var(--grad);
@@ -911,42 +939,50 @@
       margin-bottom: 24px;
     }
     .book-cta {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 12px 28px; border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 28px;
       background: var(--grad);
-      font-size: 13px; font-weight: 700; color: #fff;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      box-shadow: 0 10px 40px rgba(168,85,247,0.3);
       transition: transform 0.3s, box-shadow 0.3s;
     }
-    .book-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(168,85,247,0.4); }
+    .book-cta:hover { transform: translateY(-2px); box-shadow: 0 15px 50px rgba(168,85,247,0.5); }
 
     /* ===================== REVIEWS ===================== */
     .reviews { background: var(--bg2); }
     .reviews-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
     }
     .review-card {
       background: var(--card);
       border: 1px solid var(--card-border);
-      border-radius: 16px;
-      padding: 24px;
-      transition: transform 0.3s, border-color 0.3s;
+      border-radius: 20px;
+      padding: 28px;
+      transition: transform 0.3s, background 0.3s, border-color 0.3s;
     }
     .review-card:hover {
       transform: translateY(-4px);
-      border-color: rgba(168,85,247,0.3);
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(168,85,247,0.2);
     }
     .review-stars {
       font-size: 16px;
       color: var(--gold);
-      margin-bottom: 12px;
+      margin-bottom: 14px;
+      letter-spacing: 2px;
     }
     .review-text {
-      font-size: 13px;
+      font-size: 14px;
       color: var(--text-light);
       line-height: 1.7;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
       font-style: italic;
     }
     .review-author {
@@ -955,17 +991,20 @@
       gap: 12px;
     }
     .review-avatar {
-      font-size: 32px;
-      width: 48px; height: 48px;
-      background: var(--card);
-      border: 1px solid var(--card-border);
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
+      background: var(--grad-soft);
+      border: 1px solid rgba(168,85,247,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
       flex-shrink: 0;
     }
     .review-author strong {
       display: block;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
     }
     .review-author span {
@@ -976,49 +1015,67 @@
 
     /* ===================== CTA BANNER ===================== */
     .cta-banner {
-      background: var(--bg);
+      background: var(--grad);
+      position: relative;
+      overflow: hidden;
+      padding: 80px 0;
       text-align: center;
-      padding: clamp(50px, 8vh, 80px) 0;
     }
+    .cta-banner::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at center, rgba(255,255,255,0.1), transparent 70%);
+      pointer-events: none;
+    }
+    .cta-banner > .con { position: relative; z-index: 1; }
     .cta-banner-icon {
-      font-size: 48px;
-      margin-bottom: 16px;
+      font-size: 56px;
+      margin-bottom: 20px;
     }
     .cta-banner h2 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(26px, 4vw, 44px);
+      font-size: clamp(28px, 5vw, 52px);
       font-weight: 800;
       line-height: 1.2;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
+      color: #fff;
     }
     .cta-banner h2 .grad-text {
-      background: var(--grad);
+      background: linear-gradient(135deg, #fff, rgba(255,255,255,0.7));
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
     .cta-banner p {
-      font-size: 15px;
-      color: var(--text-light);
-      max-width: 600px;
-      margin: 0 auto 28px;
+      font-size: 16px;
+      color: rgba(255,255,255,0.85);
+      max-width: 560px;
+      margin: 0 auto 32px;
       line-height: 1.7;
     }
     .cta-banner-btn {
-      display: inline-flex; align-items: center; gap: 10px;
-      padding: 16px 40px; border-radius: 50px;
-      background: var(--grad);
-      font-size: 15px; font-weight: 700; color: #fff;
-      box-shadow: 0 10px 40px rgba(168,85,247,0.35);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 40px;
+      background: #fff;
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: 700;
+      color: #a855f7;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
       transition: transform 0.3s, box-shadow 0.3s;
     }
-    .cta-banner-btn:hover { transform: translateY(-3px); box-shadow: 0 15px 50px rgba(168,85,247,0.5); }
+    .cta-banner-btn:hover { transform: translateY(-3px); box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
 
     /* ===================== CONTACTS ===================== */
-    .contacts { background: var(--bg2); }
+    .contacts { background: var(--bg); }
     .contacts-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: clamp(40px, 6vw, 80px);
       align-items: start;
+    }
+    .contacts-head {
+      margin-bottom: 30px;
     }
     .contacts-tag {
       display: inline-block;
@@ -1042,23 +1099,24 @@
       font-size: 14px;
       color: var(--text-light);
       line-height: 1.7;
-      margin-bottom: 30px;
     }
     .contacts-methods {
       display: flex;
       flex-direction: column;
       gap: 16px;
-      margin-bottom: 30px;
+      margin: 30px 0;
     }
     .contact-method {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 16px;
       background: var(--card);
       border: 1px solid var(--card-border);
       border-radius: 12px;
       padding: 16px;
+      transition: border-color 0.3s;
     }
+    .contact-method:hover { border-color: rgba(168,85,247,0.3); }
     .contact-method-icon {
       font-size: 24px;
       flex-shrink: 0;
@@ -1068,22 +1126,19 @@
       font-size: 12px;
       font-weight: 700;
       color: var(--text-muted);
-      margin-bottom: 2px;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
     }
     .contact-method span {
       display: block;
       font-size: 14px;
       font-weight: 500;
     }
-    .contact-method a { transition: color 0.3s; }
+    .contact-method a { color: var(--text); transition: color 0.3s; }
     .contact-method a:hover { color: var(--accent1); }
-    .socials {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
+
+    .socials { display: flex; gap: 12px; flex-wrap: wrap; }
     .soc-link {
       width: 44px; height: 44px;
       border-radius: 12px;
@@ -1092,6 +1147,7 @@
       display: flex; align-items: center; justify-content: center;
       font-size: 18px;
       transition: transform 0.3s, background 0.3s, border-color 0.3s;
+      text-decoration: none;
     }
     .soc-link:hover { transform: translateY(-3px); }
     .soc-link.tg:hover { background: rgba(38,165,228,0.15); }
@@ -1099,7 +1155,7 @@
     .soc-link.vk:hover { background: rgba(0,119,255,0.15); }
     .soc-link.yt:hover { background: rgba(255,0,0,0.15); }
 
-    /* Form */
+    /* FORM */
     .contact-form {
       background: var(--card);
       border: 1px solid var(--card-border);
@@ -1114,98 +1170,110 @@
       font-size: 12px;
       font-weight: 600;
       color: var(--text-muted);
-      margin-bottom: 8px;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
     }
     .form-group input,
     .form-group select,
     .form-group textarea {
       width: 100%;
-      background: rgba(255,255,255,0.04);
+      background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 12px;
-      padding: 13px 16px;
+      border-radius: 10px;
+      padding: 12px 16px;
       font-size: 14px;
-      font-family: inherit;
       color: var(--text);
+      font-family: 'Inter', sans-serif;
       transition: border-color 0.3s, background 0.3s;
       outline: none;
+      -webkit-appearance: none;
     }
+    .form-group select option { background: #1a1a2e; }
     .form-group input:focus,
     .form-group select:focus,
     .form-group textarea:focus {
       border-color: rgba(168,85,247,0.5);
-      background: rgba(168,85,247,0.05);
+      background: rgba(255,255,255,0.07);
     }
-    .form-group select option { background: #1a1a2e; }
-    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-group textarea { min-height: 100px; resize: vertical; }
     .form-btn {
       width: 100%;
       padding: 14px;
-      border-radius: 50px;
       background: var(--grad);
       border: none;
+      border-radius: 50px;
       font-size: 14px;
       font-weight: 700;
-      font-family: inherit;
       color: #fff;
       cursor: pointer;
       transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
-      box-shadow: 0 10px 30px rgba(168,85,247,0.3);
+      font-family: 'Inter', sans-serif;
     }
-    .form-btn:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 15px 40px rgba(168,85,247,0.45); }
-    .form-btn:disabled { opacity: 0.7; cursor: not-allowed; }
+    .form-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(168,85,247,0.4); }
+    .form-btn:disabled { opacity: 0.6; transform: none; cursor: not-allowed; }
 
     /* ===================== FOOTER ===================== */
     footer {
-      background: var(--bg3);
+      background: var(--bg2);
       border-top: 1px solid rgba(255,255,255,0.06);
       padding: 60px 0 30px;
     }
     .footer-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr 1fr;
       gap: 40px;
       margin-bottom: 40px;
     }
     .footer-logo {
-      display: flex; align-items: center; gap: 12px;
-      margin-bottom: 16px; cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      cursor: pointer;
     }
     .footer-logo-icon {
-      width: 40px; height: 40px;
+      width: 42px; height: 42px;
       background: var(--grad);
       border-radius: 10px;
       display: flex; align-items: center; justify-content: center;
-      font-size: 20px;
-      box-shadow: 0 4px 20px rgba(168,85,247,0.3);
+      font-size: 22px;
+      box-shadow: 0 4px 20px rgba(168,85,247,0.4);
     }
     .footer-logo-text strong {
-      display: block; font-size: 13px; font-weight: 700;
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
     }
     .footer-logo-text span {
-      display: block; font-size: 11px;
+      display: block;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2px;
       background: var(--grad);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-      font-weight: 600;
+      text-transform: uppercase;
     }
     .footer-desc {
       font-size: 13px;
-      color: var(--text-light);
-      line-height: 1.6;
+      color: var(--text-muted);
+      line-height: 1.7;
       margin-bottom: 20px;
     }
     .footer-section h4 {
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       color: var(--text-muted);
       margin-bottom: 16px;
     }
-    .footer-section ul { list-style: none; }
-    .footer-section ul li { margin-bottom: 10px; }
+    .footer-section ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
     .footer-section ul li a {
       font-size: 13px;
       color: var(--text-light);
@@ -1213,15 +1281,15 @@
     }
     .footer-section ul li a:hover { color: var(--accent1); }
     .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.06);
-      padding-top: 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 10px;
+      gap: 20px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 24px;
       font-size: 12px;
       color: var(--text-muted);
+      flex-wrap: wrap;
     }
 
     /* ===================== TOAST ===================== */
@@ -1229,36 +1297,27 @@
       position: fixed;
       bottom: 30px;
       left: 50%;
-      transform: translateX(-50%) translateY(20px);
-      background: rgba(30,30,50,0.97);
-      border: 1px solid rgba(255,255,255,0.1);
+      transform: translateX(-50%) translateY(80px);
+      padding: 14px 24px;
       border-radius: 50px;
-      padding: 14px 28px;
       font-size: 14px;
-      font-weight: 500;
+      font-weight: 600;
       color: #fff;
       z-index: 9999;
       opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.4s, transform 0.4s, visibility 0.4s;
-      backdrop-filter: blur(20px);
-      text-align: center;
-      max-width: 90vw;
+      transition: opacity 0.3s, transform 0.3s;
+      white-space: nowrap;
     }
-    .toast.show {
-      opacity: 1;
-      visibility: visible;
-      transform: translateX(-50%) translateY(0);
-    }
-    .toast.ok { border-color: rgba(168,85,247,0.4); }
-    .toast.err { border-color: rgba(239,68,68,0.4); }
+    .toast.ok { background: linear-gradient(135deg, #22c55e, #16a34a); }
+    .toast.err { background: linear-gradient(135deg, #ef4444, #dc2626); }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
     /* ===================== DESC LIGHTBOX ===================== */
     #descLightbox {
       position: fixed;
       inset: 0;
       background: rgba(0,0,0,0.95);
-      z-index: 2000;
+      z-index: 1000;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1270,56 +1329,178 @@
       opacity: 1;
       visibility: visible;
     }
-    #descLightbox img {
+    #descLbClose {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      cursor: pointer;
+      transition: background 0.3s;
+      z-index: 1001;
+    }
+    #descLbClose:hover { background: rgba(255,255,255,0.2); }
+    #descLbImg {
       max-width: 90vw;
       max-height: 90vh;
       object-fit: contain;
       border-radius: 8px;
     }
-    #descLbClose {
-      position: absolute;
-      top: 20px; right: 20px;
-      width: 50px; height: 50px;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
-      color: #fff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      cursor: pointer;
-      transition: background 0.3s;
-      z-index: 2001;
-    }
-    #descLbClose:hover { background: rgba(255,255,255,0.2); }
 
     /* ===================== RESPONSIVE ===================== */
-    @media (max-width: 900px) {
-      .hero-grid { grid-template-columns: 1fr; text-align: center; }
-      .hero-tag { margin: 0 auto 16px; }
-      .hero-cta { margin: 0 auto; }
-      .hero-right { margin-top: 30px; }
-      .hero-pic-wrap { max-width: 320px; margin: 0 auto; }
-      .hero-badge-1 { right: 0; }
-      .hero-badge-2 { left: 0; }
-      .hero-stats { grid-template-columns: repeat(2, 1fr); }
-      .about-grid { grid-template-columns: 1fr; }
-      .approach-grid { grid-template-columns: 1fr; }
-      .contacts-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+    @media (max-width: 1024px) {
+      /* Tablet hero */
+      .hero {
+        min-height: 100svh;
+        height: 100svh;
+        max-height: 100svh;
+      }
+      .hero > .con {
+        padding-top: 66px;
+        padding-bottom: 10px;
+      }
+      .hero-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .hero-h1 {
+        font-size: clamp(22px, 3.2vw, 40px);
+      }
+      .hero-stats {
+        gap: 6px;
+        margin-top: 12px;
+      }
+      .hero-badge {
+        display: none;
+      }
+      .hero-pic-wrap {
+        max-width: min(340px, 44vw);
+      }
+      .hero-pic-wrap img {
+        max-height: calc(100svh - 110px);
+      }
+    }
+
+    @media (max-width: 768px) {
       nav { display: none; }
       .h-cta { display: none; }
       .mbtn { display: flex; }
-      .book-grid { grid-template-columns: 1fr; }
-      .book-pic-wrap { text-align: center; }
-      .book-pic-wrap img { margin: 0 auto; }
+
+      /* Mobile hero — стек колонок */
+      .hero {
+        min-height: 100svh;
+        height: 100svh;
+        max-height: 100svh;
+        align-items: flex-start;
+      }
+      .hero > .con {
+        padding-top: 62px;
+        padding-bottom: 10px;
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+      .hero-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 10px;
+        width: 100%;
+        align-items: center;
+      }
+      .hero-left {
+        order: 2;
+      }
+      .hero-right {
+        order: 1;
+        justify-content: center;
+      }
+      .hero-pic-wrap {
+        max-width: 180px;
+        margin: 0 auto;
+      }
+      .hero-pic-wrap img {
+        max-height: 30svh;
+        border-radius: 14px;
+      }
+      .hero-badge { display: none; }
+      .hero-tag {
+        font-size: 9px;
+        padding: 4px 10px;
+        margin-bottom: 6px;
+      }
+      .hero-h1 {
+        font-size: clamp(22px, 6vw, 32px);
+        margin-bottom: 5px;
+      }
+      .hero-role {
+        font-size: 12px;
+        margin-bottom: 6px;
+      }
+      .hero-desc {
+        font-size: 12px;
+        margin-bottom: 10px;
+        line-height: 1.5;
+      }
+      .hero-cta {
+        padding: 9px 18px;
+        font-size: 11px;
+      }
+      .hero-stats {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+        margin-top: 10px;
+      }
+      .hero-stat {
+        padding: 7px 4px;
+        border-radius: 8px;
+      }
+      .hero-stat-num {
+        font-size: 14px;
+      }
+      .hero-stat-label {
+        font-size: 8px;
+      }
+
+      /* Other sections mobile */
+      .about-grid { grid-template-columns: 1fr; }
+      .about-pic-wrap { max-width: 100%; order: -1; }
+      .about-stat-row { grid-template-columns: repeat(3, 1fr); }
+      .approach-grid { grid-template-columns: 1fr; }
+      .contacts-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; gap: 10px; }
+      .book-grid { grid-template-columns: 1fr; text-align: center; }
+      .book-cover-wrap { margin: 0 auto; }
+      .book-head { text-align: center; }
     }
 
-    @media (max-width: 500px) {
-      .hero-stats { grid-template-columns: repeat(2, 1fr); }
-      .hero-badge { display: none; }
-      .about-stat-row { grid-template-columns: 1fr; }
+    @media (max-width: 480px) {
+      .hero-pic-wrap {
+        max-width: 140px;
+      }
+      .hero-pic-wrap img {
+        max-height: 25svh;
+      }
+      .hero-h1 {
+        font-size: clamp(20px, 5.5vw, 28px);
+      }
+      .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+      }
+      .hero-stat-num { font-size: 15px; }
+      .hero-stat-label { font-size: 8px; }
+      .hero-desc { display: none; }
+      .services-grid { grid-template-columns: 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
     }
 
   </style>
@@ -1340,16 +1521,16 @@
         <div class="logo" id="logoTop">
           <div class="logo-icon">⚡</div>
           <div class="logo-text">
-            <span class="logo-name">ЮЛИЯ САВИЦКАЯ</span>
+            <span class="logo-name">Юлия Савицкая</span>
             <span class="logo-sub">Super Jump</span>
           </div>
         </div>
         <nav>
           <a href="#about">Обо мне</a>
+          <a href="#gallery">Галерея</a>
           <a href="#services">Направления</a>
           <a href="#program">Программа</a>
           <a href="#reviews">Отзывы</a>
-          <a href="#contacts">Контакты</a>
         </nav>
         <a href="#contacts" class="h-cta">Записаться ⚡</a>
         <button class="mbtn" id="mbtn" aria-label="Меню">
@@ -1375,20 +1556,20 @@
     <div class="con">
       <div class="hero-grid">
         <!-- Left -->
-        <div>
-          <div class="hero-tag reveal">Интеллект-тренер · Super Jump</div>
-          <h1 class="hero-h1 reveal reveal-d1">
+        <div class="hero-left">
+          <div class="hero-tag">Интеллект-тренер · Super Jump</div>
+          <h1 class="hero-h1">
             Юлия<br>
             <span class="grad-text">Савицкая</span>
           </h1>
-          <p class="hero-role reveal reveal-d2">
+          <p class="hero-role">
             <strong>Онлайн-формат</strong> &nbsp;·&nbsp; Ментальный рост · Энергия · Результат
           </p>
-          <p class="hero-desc reveal reveal-d3">
+          <p class="hero-desc">
             Помогаю людям открыть внутренние ресурсы, восстановить энергию и выстроить жизнь, где есть место и успеху, и радости. Без магии — только рабочие инструменты для ума.
           </p>
-          <a href="#contacts" class="hero-cta reveal reveal-d4">Записаться на курс ⚡</a>
-          <div class="hero-stats reveal reveal-d5">
+          <a href="#contacts" class="hero-cta">Записаться на курс ⚡</a>
+          <div class="hero-stats">
             <div class="hero-stat">
               <span class="hero-stat-num">10</span>
               <span class="hero-stat-label">дней интенсива</span>
@@ -1441,20 +1622,20 @@
       <div class="about-grid">
         <!-- Left -->
         <div>
-          <div class="about-head reveal-left">
+          <div class="about-head reveal">
             <span class="about-tag">Обо мне</span>
             <h2 class="about-title">Твой проводник к <span class="grad-text">ресурсному состоянию</span></h2>
           </div>
-          <p class="about-desc reveal-left reveal-d1">
+          <p class="about-desc reveal">
             «Я верю, что каждый человек способен на больше — стоит лишь научить мозг работать в правильном режиме. Именно этим я и занимаюсь.»
           </p>
-          <p class="about-desc reveal-left reveal-d2">
+          <p class="about-desc reveal">
             Я интеллект-тренер международной системы Super Jump — запатентованной методики, разработанной Владимиром Довганём. Моя работа — помогать людям находить внутреннюю опору, управлять своим состоянием и двигаться к целям без выгорания и потери себя.
           </p>
-          <p class="about-desc reveal-left reveal-d3">
+          <p class="about-desc reveal">
             В своей практике я объединяю 8 проверенных ментальных инструментов: от техник управления эмоциями до дофаминового марафона и ментальной йоги. Каждый инструмент прошёл проверку сотнями участников по всему миру — и продолжает работать.
           </p>
-          <div class="about-stat-row reveal-left reveal-d4">
+          <div class="about-stat-row reveal">
             <div class="about-stat">
               <div class="about-stat-icon">🌍</div>
               <span class="about-stat-num">20+</span>
@@ -1472,21 +1653,21 @@
             </div>
           </div>
           <div class="about-features">
-            <div class="about-feature reveal-left reveal-d2">
+            <div class="about-feature reveal reveal-d1">
               <div class="about-feature-icon">🏅</div>
               <div>
                 <strong>Сертифицированный интеллект-тренер</strong>
                 <span>Международная система Super Jump · ассоциация интеллект-тренеров</span>
               </div>
             </div>
-            <div class="about-feature reveal-left reveal-d3">
+            <div class="about-feature reveal reveal-d2">
               <div class="about-feature-icon">📱</div>
               <div>
                 <strong>Онлайн-формат — без привязки к месту</strong>
                 <span>Zoom · Skype · Telegram — работаю с участниками по всему миру</span>
               </div>
             </div>
-            <div class="about-feature reveal-left reveal-d4">
+            <div class="about-feature reveal reveal-d3">
               <div class="about-feature-icon">💯</div>
               <div>
                 <strong>Гарантия результата</strong>
@@ -1518,21 +1699,18 @@
       </div>
       <div class="gallery-grid">
         <div class="gallery-item reveal" data-index="0">
-          <img src="img/2.jpg" alt="Фото" loading="lazy">
-        </div>
-        <div class="gallery-item reveal reveal-d1" data-index="1">
           <img src="img/3.jpg" alt="Фото" loading="lazy">
         </div>
-        <div class="gallery-item reveal reveal-d2" data-index="2">
+        <div class="gallery-item reveal reveal-d1" data-index="1">
           <img src="img/4.jpg" alt="Фото" loading="lazy">
         </div>
-        <div class="gallery-item reveal reveal-d3" data-index="3">
+        <div class="gallery-item reveal reveal-d2" data-index="2">
           <img src="img/5.jpg" alt="Фото" loading="lazy">
         </div>
-        <div class="gallery-item reveal reveal-d4" data-index="4">
+        <div class="gallery-item reveal reveal-d3" data-index="3">
           <img src="img/6.jpg" alt="Фото" loading="lazy">
         </div>
-        <div class="gallery-item reveal reveal-d5" data-index="5">
+        <div class="gallery-item reveal reveal-d4" data-index="4">
           <img src="img/cert-1.png" alt="Сертификат" loading="lazy">
         </div>
       </div>
@@ -1541,9 +1719,9 @@
 
   <!-- Gallery Lightbox -->
   <div id="lightbox">
-    <button class="lb-btn" id="lbClose" aria-label="Закрыть">✕</button>
-    <button class="lb-btn" id="lbPrev" aria-label="Назад">‹</button>
-    <button class="lb-btn" id="lbNext" aria-label="Вперёд">›</button>
+    <button class="lb-btn" id="lbClose">×</button>
+    <button class="lb-btn" id="lbPrev">‹</button>
+    <button class="lb-btn" id="lbNext">›</button>
     <img src="" alt="Фото" id="lbImg">
   </div>
 
@@ -1576,19 +1754,19 @@
           <p class="service-desc">Когда голова забита всем подряд, трудно двигаться к целям. Помогаю расчистить пространство и найти своё направление.</p>
           <span class="service-tag">Целеполагание</span>
         </div>
-        <div class="service-card reveal reveal-d3">
+        <div class="service-card reveal">
           <div class="service-icon">👑</div>
           <h3 class="service-title">Уверенность и лидерство</h3>
           <p class="service-desc">Ораторство, самопрезентация, осанка победителя — навыки, которые меняют то, как вас воспринимают окружающие и как вы воспринимаете себя.</p>
           <span class="service-tag">Soft Skills</span>
         </div>
-        <div class="service-card reveal reveal-d4">
+        <div class="service-card reveal reveal-d1">
           <div class="service-icon">🌱</div>
           <h3 class="service-title">Привычки успешных людей</h3>
           <p class="service-desc">Не разовые всплески мотивации, а устойчивые ежедневные ритуалы. Формируем то, что остаётся с вами навсегда.</p>
           <span class="service-tag">Трансформация</span>
         </div>
-        <div class="service-card reveal reveal-d5">
+        <div class="service-card reveal reveal-d2">
           <div class="service-icon">🚀</div>
           <h3 class="service-title">Профессия интеллект-тренера</h3>
           <p class="service-desc">Хотите обучать других и строить доход на помощи людям? Расскажу, как стать интеллект-тренером в системе Super Jump.</p>
@@ -1620,56 +1798,56 @@
           <div class="program-icon">😊</div>
           <h3 class="program-title">«200 улыбок»</h3>
           <p class="program-desc">Запускает выработку гормонов счастья, снимает усталость и повышает продуктивность — без кофе и стимуляторов.</p>
-          <span class="program-result">Бодрость с утра</span>
+          <span class="program-tag">Бодрость с утра</span>
         </div>
         <div class="program-card reveal reveal-d1">
           <span class="program-num">02</span>
           <div class="program-icon">🧠</div>
           <h3 class="program-title">«Я — хозяин мыслей»</h3>
           <p class="program-desc">Снижает поток негативных мыслей. Учит переключать внимание и управлять ментальным фоном.</p>
-          <span class="program-result">Минус 90% стресса</span>
+          <span class="program-tag">Минус 90% стресса</span>
         </div>
         <div class="program-card reveal reveal-d2">
           <span class="program-num">03</span>
           <div class="program-icon">👑</div>
           <h3 class="program-title">«Осанка короля»</h3>
           <p class="program-desc">Телесная практика, которая меняет внутреннее ощущение и внешнее впечатление. Уверенность, которую видно.</p>
-          <span class="program-result">Уверенность в себе</span>
+          <span class="program-tag">Уверенность в себе</span>
         </div>
-        <div class="program-card reveal reveal-d3">
+        <div class="program-card reveal">
           <span class="program-num">04</span>
           <div class="program-icon">💧</div>
           <h3 class="program-title">«Будьте здоровы»</h3>
           <p class="program-desc">Стимулирует нестандартное мышление и открывает поток новых идей. Мощный ментальный детокс.</p>
-          <span class="program-result">Свежий взгляд</span>
+          <span class="program-tag">Свежий взгляд</span>
         </div>
-        <div class="program-card reveal reveal-d4">
+        <div class="program-card reveal reveal-d1">
           <span class="program-num">05</span>
           <div class="program-icon">❤️</div>
           <h3 class="program-title">«Я — хозяин чувств»</h3>
           <p class="program-desc">Управление эмоциональными реакциями. Стрессоустойчивость в отношениях, работе, любой неожиданной ситуации.</p>
-          <span class="program-result">Спокойствие</span>
+          <span class="program-tag">Спокойствие</span>
         </div>
-        <div class="program-card reveal reveal-d5">
+        <div class="program-card reveal reveal-d2">
           <span class="program-num">06</span>
           <div class="program-icon">🎧</div>
           <h3 class="program-title">Аудиотренинг</h3>
           <p class="program-desc">Работа с подсознанием: перепрограммирование установок на успех, изобилие и уверенность в своих силах.</p>
-          <span class="program-result">Новые установки</span>
+          <span class="program-tag">Новые установки</span>
         </div>
         <div class="program-card reveal">
           <span class="program-num">07</span>
           <div class="program-icon">🛡️</div>
           <h3 class="program-title">Защита от инфошума</h3>
           <p class="program-desc">Освобождает мозг от лишнего, улучшает концентрацию и память. Ментальное здоровье в эпоху перегрузок.</p>
-          <span class="program-result">Ясный ум</span>
+          <span class="program-tag">Ясный ум</span>
         </div>
         <div class="program-card reveal reveal-d1">
           <span class="program-num">08</span>
           <div class="program-icon">🌟</div>
           <h3 class="program-title">Сверхцель</h3>
           <p class="program-desc">Помогает обрести смысл, найти призвание и выйти на новый уровень осознанности. Жизнь с вектором.</p>
-          <span class="program-result">Предназначение</span>
+          <span class="program-tag">Предназначение</span>
         </div>
       </div>
     </div>
@@ -1692,7 +1870,7 @@
               <div class="approach-item-icon">⏱️</div>
               <div>
                 <h4>Всего 1 час в день</h4>
-                <p>Без многодневных ретритов и походов на курсы. Занятия встраиваются в любой расписание — даже самое плотное.</p>
+                <p>Без многодневных ретритов и походов на курсы. Занятия встраиваются в любое расписание — даже самое плотное.</p>
               </div>
             </div>
             <div class="approach-item reveal-left reveal-d2">
@@ -1732,7 +1910,7 @@
             <p class="approach-card-desc">
               10 дней онлайн-занятий в мини-группе или индивидуально. Каждый день — одна практика, одна новая привычка. К финалу — новое состояние, которое остаётся с вами.
             </p>
-            <a href="#contacts" class="approach-cta">Записаться →</a>
+            <a href="#contacts" class="approach-btn">Записаться →</a>
           </div>
         </div>
       </div>
@@ -1745,16 +1923,15 @@
   <section class="book" id="book">
     <div class="con">
       <div class="book-grid">
-        <div class="book-pic-wrap reveal-left">
+        <div class="book-cover-wrap reveal-left">
           <img src="img/book.jpg" alt="Книга Квантовый прыжок к мечте — Владимир Довгань" loading="lazy" onclick="openDescLightbox('img/book.jpg')" title="Нажмите для увеличения">
-          <div class="book-bestseller">
-            <span>📚</span>
-            <span>Бест-<br>селлер</span>
-          </div>
+          <div class="book-badge">📚 Бест-<br>селлер</div>
         </div>
         <div class="reveal-right">
-          <span class="book-tag">Книга-основа</span>
-          <h2 class="book-title">Квантовый <span class="grad-text">прыжок к мечте</span></h2>
+          <div class="book-head">
+            <span class="book-tag">Книга-основа</span>
+            <h2 class="book-title">Квантовый <span class="grad-text">прыжок к мечте</span></h2>
+          </div>
           <p class="book-desc">
             Владимир Довгань — предприниматель, который несколько раз начинал с нуля и каждый раз приходил к успеху. В этой книге он делится не просто историей, а системой: сочетанием аутотренинга и жизненной философии, которая позволяет выйти на новый уровень — и в бизнесе, и в жизни. Методика Super Jump выросла именно отсюда.
           </p>
@@ -2092,6 +2269,7 @@
       currentLbIndex = (currentLbIndex + 1) % galleryImages.length;
       lbImg.src = galleryImages[currentLbIndex];
     }
+
     document.querySelectorAll('.gallery-item').forEach(function(item) {
       item.addEventListener('click', function() {
         openLightbox(parseInt(item.getAttribute('data-index')));
@@ -2184,7 +2362,6 @@
         var phone = (document.getElementById('fi_phone').value || '').trim();
         var focus = (document.getElementById('fi_focus').value || '').trim();
         var msg = (document.getElementById('fi_msg').value || '').trim();
-
         if (!name) {
           showToast('Пожалуйста, введите ваше имя', 'err');
           return;
@@ -2193,20 +2370,16 @@
           showToast('Введите корректный номер телефона', 'err');
           return;
         }
-
         fsub.disabled = true;
         fsub.textContent = 'Отправка...';
-
         // Формируем текст для Telegram
         var tgText = 'Заявка с сайта Юлии Савицкой:\n\n';
         tgText += 'Имя: ' + name + '\n';
         tgText += 'Телефон: ' + phone + '\n';
         if (focus) tgText += 'Что хочу развить: ' + focus + '\n';
         if (msg) tgText += 'Сообщение: ' + msg;
-
         var tgUsername = 'Yuliya_Savitskaya';
         var tgUrl = 'https://t.me/' + tgUsername + '?text=' + encodeURIComponent(tgText);
-
         showToast('Сообщение готово! Откроется Telegram. ✅', 'ok');
         setTimeout(function() {
           window.open(tgUrl, '_blank');
